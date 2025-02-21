@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        pitkerBlue: '#003769',
+        pitkerRed: '#E63237',
+        pitkerGray: '#AAAAAA',
+        pitkerGrey: '#F5F5F5',
       },
     },
   },
