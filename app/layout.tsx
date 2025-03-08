@@ -2,6 +2,8 @@
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/lib/context/LanguageContext";
+import { AnimatedLanguageWrapper } from '@/components/animation/AnimatedLanguageWrapper';
 
 const sen = Sen({
   subsets: ["latin"],
@@ -9,8 +11,8 @@ const sen = Sen({
 });
 
 export const metadata: Metadata = {
-  title: "Pitker",
-  description: "Cabinet de Conseil",
+  title: "Pitker - Executive Search Consulting",
+  description: "Pitker is an executive search consulting firm based in Paris, serving mainly mid-market companies in healthcare, private equity, and industry.",
   icons: {
     icon: "/favicon.svg",
   },
@@ -25,7 +27,11 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body className={`${sen.className} antialiased`}>
-        {children}
+        <LanguageProvider>
+          <AnimatedLanguageWrapper>
+            {children}
+          </AnimatedLanguageWrapper>
+        </LanguageProvider>
       </body>
     </html>
   );

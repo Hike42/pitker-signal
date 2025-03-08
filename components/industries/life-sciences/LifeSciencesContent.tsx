@@ -1,19 +1,7 @@
-import Image from 'next/image';
+'use client';
 
-const keyPoints = [
-  {
-    title: "Industry Knowledge",
-    description: "Deep understanding of the sector and its leaders, both in France and internationally."
-  },
-  {
-    title: "Strategic Excellence",
-    description: "Proven expertise in conducting the sector's most strategic searches."
-  },
-  {
-    title: "Long-term Relationships",
-    description: "Long-term approach to building high-level trust relationships."
-  }
-];
+import Image from 'next/image';
+import { useLanguage } from '@/lib/context/LanguageContext';
 
 const recentSearches = [
   "CEO - European pharmaceutical laboratory",
@@ -29,70 +17,53 @@ const recentSearches = [
 ];
 
 const LifeSciencesContent = () => {
+  const { t } = useLanguage();
+
   return (
-    <div className="bg-white">
-      {/* Hero Section améliorée */}
+    <div className="w-full">
+      {/* Hero Section */}
       <div className="relative h-[50vh]">
         <Image
-          src="/lifesciences2.jpg"
-          alt="Life Sciences"
+          src="/lifesciences.jpg"
+          alt={t.practices.lifesciences.title}
           fill
-          sizes="100vw"
-          className="object-cover mask-image-gradient object-[center_30%]"
-          priority
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
         <div className="absolute inset-0 flex items-end p-8">
           <div className="container mx-auto">
-            <h1 className="text-pitkerRed uppercase text-5xl font-light mb-4">Life Sciences</h1>
-            <p className="text-white text-xl max-w-2xl mb-8">
-              Supporting pharmaceutical, biotech and medtech companies in their leadership challenges
-            </p>
+            <h1 className="text-pitkerRed uppercase text-5xl font-light mb-4">{t.practices.lifesciences.title}</h1>
           </div>
         </div>
       </div>
 
-      {/* Main Content avec design amélioré mais texte original */}
+      {/* Main Content */}
       <div className="container mx-auto px-4">
         {/* Introduction section */}
         <div className="py-16 border-b border-gray-200">
           <div className="grid md:grid-cols-2 gap-16">
             <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                The life sciences sector stands out for its innovative nature, international dimension, 
-                demanding regulatory framework, and diverse stakeholders: pharmaceuticals (prescription 
-                and OTC medicines, generics and biosimilars, etc.), biotechnology (including rare diseases), 
-                medical equipment and devices, diagnostics, active ingredients, development and production 
-                outsourcing, veterinary health, and more.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Identifying leaders in these industries requires deep sector knowledge and trusted relationships 
-                with key players. PITKER meets these requirements by investing daily in understanding this 
-                constantly evolving sector, where people play a crucial role beyond science.
-              </p>
+              {t.practices.lifesciences.intro.slice(0, 2).map((paragraph, index) => (
+                <p key={index} className="text-lg text-gray-700 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
             <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                For healthcare industries, which represent more than half of its clients, PITKER conducts 
-                searches in France and abroad through a network of privileged partners. While specializing 
-                in CEO and general management searches, the firm covers all core executive team functions 
-                (finance, human resources, etc.) as well as sector-specific roles (pharmaceutical affairs, 
-                market access, medical affairs, etc.).
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Operating across the entire value chain - R&D, production, and commercialization - the firm 
-                assists clients ranging from large groups to mid-sized companies owned by family shareholders 
-                and/or investment funds.
-              </p>
+              {t.practices.lifesciences.intro.slice(2).map((paragraph, index) => (
+                <p key={index} className="text-lg text-gray-700 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Our Strengths section */}
         <div className="py-16 border-b border-gray-200">
-          <h2 className="text-3xl font-light text-pitkerBlue mb-12 text-center">Our Strengths</h2>
+          <h2 className="text-3xl font-light text-pitkerBlue mb-12 text-center">{t.practices.lifesciences.strengths.title}</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {keyPoints.map((point, index) => (
+            {t.practices.lifesciences.strengths.points.map((point, index) => (
               <div key={index} className="group p-8 bg-white border border-gray-200 hover:border-pitkerBlue transition-all duration-300">
                 <h3 className="text-xl font-bold text-pitkerBlue mb-4 group-hover:text-pitkerRed transition-colors">
                   {point.title}
@@ -107,7 +78,7 @@ const LifeSciencesContent = () => {
 
         {/* Recent Searches section */}
         <div className="py-16">
-          <h2 className="text-3xl font-light text-pitkerBlue mb-12 text-center">Examples of Recent Searches</h2>
+          <h2 className="text-3xl font-light text-pitkerBlue mb-12 text-center">{t.practices.lifesciences.recentSearches.title}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {recentSearches.map((search, index) => (
               <div 

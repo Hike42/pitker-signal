@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { SOCIAL_LINKS } from '@/lib/constants/social';
+
+const SOCIAL_LINKS = {
+  LINKEDIN: 'https://www.linkedin.com/company/pitker'
+} as const;
 
 export const SocialLinks = () => (
   <div className="flex space-x-4">

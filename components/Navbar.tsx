@@ -4,14 +4,16 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FrenchFlag } from './navigation/FrenchFlag';
+import { LanguageToggle } from './navigation/LanguageToggle';
 import { MenuButton } from './navigation/MenuButton';
-import { NAV_LINKS } from '@/constants/navigation';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/context/LanguageContext';
+import { translations } from '@/lib/translations';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const { language } = useLanguage();
 
   useEffect(() => {
     setIsVisible(true);
@@ -44,6 +46,13 @@ const Navbar = () => {
     }
   };
 
+  const NAV_LINKS = [
+    { href: '/what-we-do', label: translations[language].navigation['what-we-do'] },
+    { href: '/people', label: translations[language].navigation['people'] },
+    { href: '/practices', label: translations[language].navigation['practices'] },
+    { href: '/contact', label: translations[language].navigation['contact'] }
+  ];
+
   return (
     <motion.div
       initial="hidden"
@@ -53,7 +62,7 @@ const Navbar = () => {
       {/* Bandeau supérieur */}
       <div className="bg-gray-100 py-2 hidden md:block">
         <div className="container mx-auto px-4 flex justify-end">
-          <FrenchFlag />
+          <LanguageToggle />
         </div>
       </div>
 
@@ -89,11 +98,12 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Bouton Menu Mobile */}
+            {/* Bouton Menu Mobile et Language Toggle */}
             <motion.div 
               variants={linkVariants}
-              className="flex items-center md:hidden"
+              className="flex items-center gap-4 md:hidden"
             >
+              <LanguageToggle />
               <MenuButton isOpen={isOpen} onClick={toggleMenu} />
             </motion.div>
           </div>

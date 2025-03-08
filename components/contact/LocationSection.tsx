@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useRef } from 'react';
+import { useLanguage } from '@/lib/context/LanguageContext';
+import { translations } from '@/lib/translations';
 
 declare global {
   interface Window {
@@ -20,6 +22,8 @@ const LocationSection: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<google.maps.Map | null>(null);
   const scriptRef = useRef<HTMLScriptElement | null>(null);
+  const { language } = useLanguage();
+  const t = translations[language].contact;
 
   useEffect(() => {
     if (window.google) {
@@ -146,7 +150,7 @@ const LocationSection: React.FC = () => {
       <div className="absolute inset-y-0 left-0 w-full md:w-1/2 lg:w-1/3 bg-gradient-to-r from-pitkerBlue/90 to-transparent">
         <div className="container mx-auto h-full flex items-center justify-start px-4 md:px-8 lg:px-12">
           <div className="w-full max-w-md bg-white p-6 md:p-8 rounded-sm shadow-lg">
-            <h2 className="text-2xl font-bold text-pitkerBlue mb-4">Our Paris Office</h2>
+            <h3 className="text-xl font-light text-pitkerBlue mb-4">{t.location.title}</h3>
             <address className="not-italic text-gray-600 mb-6">
               143 Boulevard Haussmann<br />
               75009 Paris, France
@@ -157,7 +161,7 @@ const LocationSection: React.FC = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center text-pitkerBlue hover:text-pitkerRed transition-colors"
             >
-              <span>View on Maps</span>
+              <span>{t.location.viewOnMaps}</span>
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

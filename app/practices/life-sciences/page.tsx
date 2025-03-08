@@ -4,7 +4,7 @@ import IndustryContact from '@/components/industries/IndustryContact';
 import { getPartnerByMajor } from '@/lib/constants/partners';
 
 export default function LifeSciencesPage() {
-  const partner = getPartnerByMajor('Healthcare');
+  const partner = getPartnerByMajor('Life Sciences');
   
   return (
     <MainLayout>

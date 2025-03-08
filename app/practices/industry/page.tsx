@@ -4,7 +4,7 @@ import IndustryContact from '@/components/industries/IndustryContact';
 import { getPartnerByMajor } from '@/lib/constants/partners';
 
 export default function IndustryPage() {
-  const partner = getPartnerByMajor('Industry');
+  const partner = getPartnerByMajor('Manufacturing Industries');
   
   // Exception pour l'image de Maud
   const partnerWithCorrectImage = partner ? {

@@ -1,19 +1,7 @@
-import Image from 'next/image';
+'use client';
 
-const keyPoints = [
-  {
-    title: "Multi-sector Knowledge",
-    description: "Deep understanding of multiple industrial sectors."
-  },
-  {
-    title: "Leadership Transitions",
-    description: "Proven experience in executive search during governance changes (succession, merger, LBO, etc.)."
-  },
-  {
-    title: "Innovative Approach",
-    description: "Innovative and differentiating approach in candidate identification and evaluation, favoring new and relevant perspectives."
-  }
-];
+import Image from 'next/image';
+import { useLanguage } from '@/lib/context/LanguageContext';
 
 const recentSearches = [
   "CEO - Family-owned mid-cap - Automotive Equipment",
@@ -28,20 +16,22 @@ const recentSearches = [
 ];
 
 const IndustryContent = () => {
+  const { t } = useLanguage();
+
   return (
-    <div className="bg-white">
+    <div className="w-full">
       {/* Hero Section */}
       <div className="relative h-[50vh]">
         <Image
           src="/industry.jpg"
-          alt="Industry"
+          alt={t.practices.manufacturing.title}
           fill
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
         <div className="absolute inset-0 flex items-end p-8">
           <div className="container mx-auto">
-            <h1 className="text-pitkerRed uppercase text-5xl font-light mb-4">Manufacturing Industries</h1>
+            <h1 className="text-pitkerRed uppercase text-5xl font-light mb-4">{t.practices.manufacturing.title}</h1>
           </div>
         </div>
       </div>
@@ -52,38 +42,27 @@ const IndustryContent = () => {
         <div className="py-16 border-b border-gray-200">
           <div className="grid md:grid-cols-2 gap-16">
             <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                At PITKER, the Industry practice is built on a deep expertise of the specific challenges and requirements of this sector. 
-                We primarily work with SMEs and mid-sized companies owned by investment funds or families, where strategic, operational, 
-                and human dimensions are at the heart of challenges. We have excellent knowledge of key industrial functions, particularly 
-                site management, industrial management, and operations management.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                With our experience in various specialized sectors such as machine tools, precision mechanics, engineering, renewable energies, 
-                electrical engineering, food industry, and automotive, we have developed an extensive network covering a wide range of industrial 
-                issues and executive profiles.
-              </p>
+              {t.practices.manufacturing.intro.slice(0, 2).map((paragraph, index) => (
+                <p key={index} className="text-lg text-gray-700 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
             <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                The industrial sector is currently undergoing profound transformations, particularly the growing integration of digitalization 
-                and artificial intelligence, which are redefining processes and necessary skills, requiring creativity, boldness, and innovation 
-                in approaching executive search in this sector.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                PITKER supports its clients in finding talents capable of driving operational transformations, innovating in a competitive 
-                environment, and ensuring business sustainability. Through our tailored approach and deep understanding of industrial ecosystems, 
-                we help companies meet their challenges, whether local or international.
-              </p>
+              {t.practices.manufacturing.intro.slice(2).map((paragraph, index) => (
+                <p key={index} className="text-lg text-gray-700 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Our Strengths section */}
         <div className="py-16 border-b border-gray-200">
-          <h2 className="text-3xl font-light text-pitkerBlue mb-12 text-center">Our Strengths</h2>
+          <h2 className="text-3xl font-light text-pitkerBlue mb-12 text-center">{t.practices.manufacturing.strengths.title}</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {keyPoints.map((point, index) => (
+            {t.practices.manufacturing.strengths.points.map((point, index) => (
               <div key={index} className="group p-8 bg-white border border-gray-200 hover:border-pitkerBlue transition-all duration-300">
                 <h3 className="text-xl font-bold text-pitkerBlue mb-4 group-hover:text-pitkerRed transition-colors">
                   {point.title}
@@ -98,7 +77,7 @@ const IndustryContent = () => {
 
         {/* Recent Searches section */}
         <div className="py-16">
-          <h2 className="text-3xl font-light text-pitkerBlue mb-12 text-center">Examples of Recent Searches</h2>
+          <h2 className="text-3xl font-light text-pitkerBlue mb-12 text-center">{t.practices.manufacturing.recentSearches.title}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {recentSearches.map((search, index) => (
               <div 

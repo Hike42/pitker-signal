@@ -1,14 +1,20 @@
 // components/WhatWeDoMobile.tsx
-import Image from 'next/image';
-import React from 'react';
+'use client';
 
-const WhatWeDoMobile: React.FC = () => {
+import Image from 'next/image';
+import { useLanguage } from '@/lib/context/LanguageContext';
+import { translations } from '@/lib/translations';
+
+export const WhatWeDoMobile = () => {
+  const { language } = useLanguage();
+  const t = translations[language].whatWeDo;
+
   return (
     <section className="md:hidden">
       {/* Header avec image et texte en overlay */}
       <div className="relative h-[30rem] w-screen">
         <Image
-          src="/whatwedo-hero.jpg" // Votre image dans le dossier public
+          src="/whatwedo-hero.jpg"
           alt="What We Do Background"
           fill
           className="object-cover"
@@ -16,9 +22,9 @@ const WhatWeDoMobile: React.FC = () => {
         {/* Overlay avec dégradé pour améliorer la lisibilité */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
         <div className="absolute inset-0 flex flex-col justify-end p-4">
-          <h1 className="text-white text-3xl font-bold">What we do</h1>
+          <h1 className="text-white text-3xl font-bold">{t.hero.title}</h1>
           <p className="text-white text-base my-2">
-            Founded in 2020, <strong className='text-pitkerRed'>PITKER</strong> is an executive search consulting firm based in Paris, serving mainly mid-market companies in healthcare, private equity, and industry.
+            {t.hero.description}
           </p>
         </div>
       </div>
@@ -42,5 +48,3 @@ const WhatWeDoMobile: React.FC = () => {
     </section>
   );
 };
-
-export default WhatWeDoMobile;
