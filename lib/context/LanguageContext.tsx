@@ -12,9 +12,9 @@ interface LanguageContextType {
 }
 
 export const LanguageContext = createContext<LanguageContextType>({
-  language: 'fr',
+  language: 'en',
   setLanguage: () => {},
-  t: translations.fr,
+  t: translations.en,
 });
 
 interface LanguageProviderProps {
@@ -22,7 +22,7 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  const [language, setLanguage] = useState<Language>('fr');
+  const [language, setLanguage] = useState<Language>('en');
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>

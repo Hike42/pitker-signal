@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { WhatWeDoSection } from '@/components/what-we-do/WhatWeDoSection';
 import { KeyStatsSection } from '@/components/what-we-do/KeyStatsSection';
-import CapabilitiesSection from '@/components/what-we-do/CapabilitiesSection';
 import { motion } from 'framer-motion';
 
 export default function WhatWeDoPage() {
@@ -20,18 +19,6 @@ export default function WhatWeDoPage() {
         >
           <WhatWeDoSection />
         </motion.div>
-
-        {/* Capabilities Section avec animation */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <CapabilitiesSection />
-        </motion.div>
-
-        {/* Stats Section avec animation */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

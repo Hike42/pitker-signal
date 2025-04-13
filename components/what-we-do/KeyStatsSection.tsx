@@ -43,7 +43,7 @@ const StatCard: React.FC<StatCardProps> = ({ number, description, index }) => {
             </span>
             <div className="absolute -bottom-2 left-0 w-16 h-0.5 bg-pitkerRed transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
           </div>
-          <p className="mt-4 text-lg font-medium text-gray-600 group-hover:text-pitkerRed transition-colors duration-300">
+          <p className="mt-4 text-base font-medium text-gray-600 group-hover:text-pitkerRed transition-colors duration-300">
             {description}
           </p>
         </div>
@@ -55,29 +55,6 @@ const StatCard: React.FC<StatCardProps> = ({ number, description, index }) => {
 export const KeyStatsSection = () => {
   const { language } = useLanguage();
   const t = translations[language].whatWeDo.keyStats;
-
-  const stats = [
-    {
-      number: "3",
-      description: "Senior Partners"
-    },
-    {
-      number: "2020",
-      description: "Année de création"
-    },
-    {
-      number: "2/3",
-      description: "Clients ETI"
-    },
-    {
-      number: "1/4",
-      description: "Recrutements CEO"
-    },
-    {
-      number: "100%",
-      description: "C-Suite couverte"
-    }
-  ];
 
   return (
     <section id="key-stats" className="py-16 bg-white">
@@ -102,7 +79,7 @@ export const KeyStatsSection = () => {
           </div>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {stats.map((stat, index) => (
+          {t.stats.map((stat, index) => (
             <StatCard
               key={index}
               number={stat.number}

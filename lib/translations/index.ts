@@ -13,12 +13,16 @@ export const translations = {
       'all-rights-reserved': 'All rights reserved.',
       'legal-mentions': 'Legal Mentions',
       'privacy-policy': 'Privacy Policy',
-      'office-title': 'Paris Office'
+      'office-title': 'Paris Office',
+      copyright: `© ${new Date().getFullYear()} PITKER. All rights reserved.`
     },
     home: {
       hero: {
-        title: 'Designed to conduct the most complex C-level executive searches.',
-        description: 'PITKER is a premium executive search boutique firm serving both midsized companies and large corporates, with a specific focus on life sciences, industrial and private equity.'
+        title: {
+          firstLine: 'Designed to conduct the most complex',
+          secondLine: 'C-level executive searches.'
+        },
+        description: 'PITKER is a premium executive search boutique firm serving both midsized companies and large corporates, with a specific focus on Life Sciences, Industrial & Private Equity.'
       },
       practices: {
         title: 'Our',
@@ -32,39 +36,51 @@ export const translations = {
           description: 'Assisting investment funds and their portfolio companies in key recruitment.'
         },
         industry: {
-          title: 'Industry',
+          title: 'Industrial',
           description: 'Helping industrial companies recruit their future leaders.'
+        },
+        ceoSearch: {
+          title: 'CEO Search',
+          description: 'Dedicated expertise in selecting exceptional CEO and GM across sectors.'
         }
       },
       getConnected: {
-        title: 'Connect with us',
-        titleHighlight: 'on Linkedln'
+        title: 'News & Insights',
+        linkedin: 'Follow us on LinkedIn',
+        button: 'Follow us on LinkedIn'
+      },
+      news: {
+        title: 'News & Insights',
+        articles: {
+          newPartner: {
+            title: 'New partner at PITKER',
+            description: 'Discover our latest addition to the team.'
+          },
+          careerDevelopment: {
+            title: 'Our view on career development and headhunting',
+            description: 'Insights on career progression and executive search.'
+          },
+          careerOrganization: {
+            title: 'Get organized to develop your career',
+            description: 'Tips and strategies for career advancement.'
+          }
+        }
       }
     },
     whatWeDo: {
       hero: {
         title: 'What we do',
-        description: 'Founded in 2020, PITKER is an executive search consulting firm based in Paris, serving mainly mid-market companies in healthcare, private equity, and industry.'
+        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsized companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nInterestingly, in its three preferred sectors and beyond, the firm prides itself for handling a significant number of number one searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
       },
       keyStats: {
         title: 'Key Figures',
         stats: [
-          { number: '20+', description: 'PE funds served since 2022' },
-          { number: '6', description: 'Research team members' },
-          { number: '3', description: 'Major industries covered' },
-          { number: '25%', description: 'International hires' },
-          { number: '3', description: 'Experienced partners' },
-          { number: '5', description: 'Years of excellence' },
-          { number: '25', description: 'Years of experience in life sciences' },
-          { number: '25%', description: 'CEO Roles' },
-          { number: '66%', description: 'Mid-Size companies' }
+          { number: '3', description: 'Senior Partners' },
+          { number: '2020', description: 'Date of birth' },
+          { number: '2/3', description: 'Midsized Companies' },
+          { number: '1/4', description: '"CEO searches"' },
+          { number: '100%', description: 'C-suite coverage' }
         ]
-      },
-      capabilities: {
-        title: 'Our',
-        titleHighlight: 'Capabilities',
-        description: 'Pitker covers all functions of an executive team, with strong expertise in the roles of Chairman and CEO. Combining rigor, in-depth analysis, and discretion, Pitker offers tailored and effective solutions for its clients, both in France and internationally, through a network of partner firms.',
-        cta: 'Discover our industries'
       }
     },
     people: {
@@ -76,7 +92,6 @@ export const translations = {
       partners: {
         emailLabel: 'Email',
         linkedinLabel: 'LinkedIn',
-        major: 'Major'
       }
     },
     practices: {
@@ -88,7 +103,7 @@ export const translations = {
           description: "Supporting pharmaceutical, biotech and medtech companies in their development."
         },
         manufacturing: {
-          title: "Manufacturing Industries",
+          title: "Industrial",
           description: "Tailored solutions for transforming industrial companies."
         },
         privateEquity: {
@@ -97,7 +112,7 @@ export const translations = {
         },
         ceoSearch: {
           title: "CEO Search",
-          description: "Specialized expertise in identifying and recruiting exceptional CEOs across all sectors."
+          description: "Dedicated expertise in selecting exceptional CEO and GM across sectors."
         },
         learnMore: "Learn more"
       },
@@ -136,7 +151,7 @@ export const translations = {
         }
       },
       manufacturing: {
-        title: "Manufacturing Industries",
+        title: "Industrial",
         intro: [
           "At PITKER, the Industry practice is built on a deep expertise of the specific challenges and requirements of this sector. We primarily work with SMEs and mid-sized companies owned by investment funds or families, where strategic, operational, and human dimensions are at the heart of challenges. We have excellent knowledge of key industrial functions, particularly site management, industrial management, and operations management.",
           "With our experience in various specialized sectors such as machine tools, precision mechanics, engineering, renewable energies, electrical engineering, food industry, and automotive, we have developed an extensive network covering a wide range of industrial issues and executive profiles.",
@@ -230,11 +245,15 @@ export const translations = {
       'all-rights-reserved': 'Tous droits réservés.',
       'legal-mentions': 'Mentions légales',
       'privacy-policy': 'Politique de confidentialité',
-      'office-title': 'Notre Bureau à Paris'
+      'office-title': 'Notre Bureau à Paris',
+      copyright: `© ${new Date().getFullYear()} PITKER. Tous droits réservés.`
     },
     home: {
       hero: {
-        title: 'Une expertise spécialisée pour votre croissance future',
+        title: {
+          firstLine: 'Une expertise spécialisée',
+          secondLine: 'pour votre croissance future'
+        },
         description: 'Notre expertise sectorielle apporte une connaissance approfondie, une expérience et un réseau spécifiques à chaque client.'
       },
       practices: {
@@ -249,41 +268,51 @@ export const translations = {
           description: 'Assistance aux fonds d\'investissement et à leurs participations dans leurs recrutements clés.'
         },
         industry: {
-          title: 'Industrie',
+          title: 'Industriel',
           description: 'Aide aux entreprises industrielles dans le recrutement de leurs futurs dirigeants.'
+        },
+        ceoSearch: {
+          title: 'Recrutement de PDG',
+          description: 'Expertise spécialisée dans l\'identification et le recrutement de PDG d\'exception tous secteurs confondus.'
         }
       },
       getConnected: {
-        title: 'Restez',
-        titleHighlight: 'Connecté',
-        description: 'Suivez nos dernières actualités et opportunités.',
-        linkedin: 'Suivez-nous sur LinkedIn'
+        title: 'Actualités & Insights',
+        linkedin: 'Suivez-nous sur LinkedIn',
+        button: 'Suivez-nous sur LinkedIn'
+      },
+      news: {
+        title: 'Actualités & Insights',
+        articles: {
+          newPartner: {
+            title: 'Nouveau partenaire chez PITKER',
+            description: 'Découvrez notre dernière recrue.'
+          },
+          careerDevelopment: {
+            title: 'Notre vision du développement de carrière et du recrutement',
+            description: 'Perspectives sur la progression de carrière et le recrutement de cadres dirigeants.'
+          },
+          careerOrganization: {
+            title: 'Organisez-vous pour développer votre carrière',
+            description: 'Conseils et stratégies pour faire progresser votre carrière.'
+          }
+        }
       }
     },
     whatWeDo: {
       hero: {
-        title: 'Notre expertise',
-        description: 'Fondé en 2020, PITKER est un cabinet de conseil en recrutement basé à Paris, accompagnant principalement les entreprises mid-market dans les secteurs de la santé, du private equity et de l\'industrie.'
+        title: 'Ce que nous faisons',
+        description: 'Fondé en 2020 et dirigé par trois associés, PITKER est un cabinet de chasse de têtes premium basé à Paris, au service des entreprises de taille moyenne et des grands groupes dans divers secteurs, avec comme trois axes principaux les Sciences de la Vie, l\'Industrie et le Private Equity.\n\nPITKER couvre 100% des fonctions d\'une équipe dirigeante : direction générale, finance, ressources humaines, marketing, ventes, juridique, R&D, production & supply, etc.\n\nFait notable, dans ses trois secteurs de prédilection et au-delà, le cabinet se distingue par la conduite d\'un nombre significatif de recherches de numéro un, c\'est-à-dire de Directeurs Généraux, Présidents Directeurs Généraux, etc. Ces "recherches de DG" représentent un quart des missions de PITKER.\n\nCombinant des standards de qualité élevés, une analyse approfondie et un haut degré de confidentialité, PITKER propose à ses clients des solutions efficaces et sur mesure, en France et à l\'étranger, grâce à un réseau de cabinets partenaires de confiance.'
       },
       keyStats: {
         title: 'Chiffres clés',
         stats: [
-          { number: '20+', description: 'Fonds de PE accompagnés depuis 2022' },
-          { number: '6', description: 'Membres de l\'équipe de recherche' },
-          { number: '3', description: 'Secteurs majeurs couverts' },
-          { number: '25%', description: 'Recrutements internationaux' },
-          { number: '3', description: 'Associés expérimentés' },
-          { number: '5', description: 'Années d\'excellence' },
-          { number: '25', description: 'Années d\'expérience en sciences de la vie' },
-          { number: '25%', description: 'Postes de PDG' },
-          { number: '66%', description: 'Entreprises mid-market' }
+          { number: '3', description: 'Associés seniors' },
+          { number: '2020', description: 'Année de création' },
+          { number: '2/3', description: 'Clients ETI' },
+          { number: '1/4', description: '"Recherches de DG"' },
+          { number: '100%', description: 'Couverture C-suite' }
         ]
-      },
-      capabilities: {
-        title: 'Nos',
-        titleHighlight: 'Compétences',
-        description: 'Pitker couvre l\'ensemble des fonctions d\'une équipe de direction, avec une expertise particulière pour les rôles de Président et de Directeur Général. Alliant rigueur, analyse approfondie et discrétion, Pitker propose des solutions sur mesure et efficaces pour ses clients, tant en France qu\'à l\'international, grâce à un réseau de cabinets partenaires.',
-        cta: 'Découvrir nos secteurs'
       }
     },
     people: {
@@ -295,7 +324,7 @@ export const translations = {
       partners: {
         emailLabel: 'Email',
         linkedinLabel: 'LinkedIn',
-        major: 'Spécialité'
+        major: '★'
       }
     },
     practices: {
@@ -307,7 +336,7 @@ export const translations = {
           description: "Accompagnement des entreprises pharmaceutiques, biotech et medtech dans leur développement."
         },
         manufacturing: {
-          title: "Industries Manufacturières",
+          title: "Industrial",
           description: "Solutions sur mesure pour la transformation des entreprises industrielles."
         },
         privateEquity: {
@@ -355,7 +384,7 @@ export const translations = {
         }
       },
       manufacturing: {
-        title: "Industries Manufacturières",
+        title: "Industrial",
         intro: [
           "Chez PITKER, la pratique Industrie s'appuie sur une expertise approfondie des enjeux et exigences spécifiques de ce secteur. Nous travaillons principalement avec des PME et ETI détenues par des fonds d'investissement ou des familles, où les dimensions stratégiques, opérationnelles et humaines sont au cœur des défis. Nous avons une excellente connaissance des fonctions industrielles clés, notamment la direction de site, la direction industrielle et la direction des opérations.",
           "Avec notre expérience dans divers secteurs spécialisés tels que les machines-outils, la mécanique de précision, l'ingénierie, les énergies renouvelables, le génie électrique, l'industrie alimentaire et l'automobile, nous avons développé un réseau étendu couvrant un large éventail de problématiques industrielles et de profils de direction.",

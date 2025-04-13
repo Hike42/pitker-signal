@@ -7,13 +7,13 @@ import Link from 'next/link';
 import { FaMicroscope, FaIndustry, FaLaptopCode, FaCompass } from 'react-icons/fa';
 
 interface Translations {
-  practices: {
-    grid: {
+  home: {
+    practices: {
       title: string;
-      highlight: string;
-      lifesciences: { title: string };
-      manufacturing: { title: string };
+      titleHighlight: string;
+      healthcare: { title: string };
       privateEquity: { title: string };
+      industry: { title: string };
       ceoSearch: { title: string };
     }
   }
@@ -21,7 +21,7 @@ interface Translations {
 
 const getPractices = (t: Translations) => [
   {
-    title: t.practices.grid.lifesciences.title,
+    title: t.home.practices.healthcare.title,
     icon: FaMicroscope,
     href: "/practices/life-sciences",
     color: "bg-pitkerBlue",
@@ -29,7 +29,7 @@ const getPractices = (t: Translations) => [
     textColor: "text-pitkerBlue"
   },
   {
-    title: t.practices.grid.manufacturing.title,
+    title: t.home.practices.industry.title,
     icon: FaIndustry,
     href: "/practices/industry",
     color: "bg-pitkerRed",
@@ -37,7 +37,7 @@ const getPractices = (t: Translations) => [
     textColor: "text-pitkerRed"
   },
   {
-    title: t.practices.grid.privateEquity.title,
+    title: t.home.practices.privateEquity.title,
     icon: FaLaptopCode,
     href: "/practices/private-equity",
     color: "bg-gray-800",
@@ -45,7 +45,7 @@ const getPractices = (t: Translations) => [
     textColor: "text-gray-800"
   },
   {
-    title: t.practices.grid.ceoSearch.title,
+    title: t.home.practices.ceoSearch.title,
     icon: FaCompass,
     href: "/practices/ceo-search",
     color: "bg-pitkerBlue",
@@ -69,7 +69,7 @@ export const PracticesSection = () => {
           className="mb-20 max-w-6xl mx-auto text-center"
         >
           <h2 className="text-5xl font-light text-pitkerBlue tracking-wide">
-            {t.practices.grid.title} <span className="text-pitkerRed">{t.practices.grid.highlight}</span>
+            {t.home.practices.title} <span className="text-pitkerRed">{t.home.practices.titleHighlight}</span>
           </h2>
           <div className="flex items-center justify-center mt-6">
             <div className="w-16 h-px bg-gray-300"></div>
@@ -88,36 +88,25 @@ export const PracticesSection = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group h-full"
               >
-                <div className={`relative bg-white border ${practice.borderColor} border-opacity-20 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-500 shadow-lg hover:shadow-2xl h-full flex flex-col`}>
-                  {/* Top accent line */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 ${practice.color}`}></div>
+                <div className={`relative bg-white rounded-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-500 h-full flex flex-col group`}>
+                  {/* Card flap effect */}
+                  <div className={`absolute top-0 left-0 w-full h-1/2 ${practice.color} bg-opacity-20 transform origin-top group-hover:scale-y-0 transition-transform duration-500`}></div>
                   
                   {/* Content */}
-                  <div className="p-8 flex flex-col flex-grow">
+                  <div className="p-8 flex flex-col flex-grow relative">
                     {/* Icon container */}
-                    <div className="mb-6 relative">
-                      <div className={`w-20 h-20 rounded-lg ${practice.color} bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300`}>
-                        <practice.icon className={`text-4xl ${practice.textColor}`} />
+                    <div className="mb-8">
+                      <div className={`w-16 h-16 ${practice.color} bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300`}>
+                        <practice.icon className={`text-3xl ${practice.textColor}`} />
                       </div>
-                      <div className={`absolute -bottom-2 -right-2 w-10 h-10 ${practice.color} bg-opacity-10 rounded-lg`}></div>
                     </div>
                     
-                    {/* Text content */}
-                    <div className="flex-grow flex flex-col">
-                      <h3 className={`text-2xl font-light mb-4 text-gray-800 group-hover:${practice.textColor} transition-colors duration-300`}>
-                        {practice.title}
-                      </h3>
-                      
-                      {/* Decorative elements */}
-                      <div className="mt-auto flex items-center">
-                        <div className={`w-8 h-px ${practice.color} bg-opacity-50`}></div>
-                        <div className={`w-1.5 h-1.5 rounded-full ${practice.color} ml-2`}></div>
-                      </div>
-                    </div>
+                    {/* Title */}
+                    <h3 className={`text-2xl font-light ${practice.textColor} mb-4 group-hover:opacity-90 transition-opacity duration-300`}>{practice.title}</h3>
+                    
+                    {/* Decorative line */}
+                    <div className={`mt-auto h-1 w-20 ${practice.color} bg-opacity-80`}></div>
                   </div>
-                  
-                  {/* Hover overlay */}
-                  <div className={`absolute inset-0 ${practice.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                 </div>
               </motion.div>
             </Link>

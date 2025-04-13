@@ -4,8 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PARTNERS } from '@/lib/constants/partners';
 import { motion } from 'framer-motion';
-import { useLanguage } from '@/lib/context/LanguageContext';
-import { translations } from '@/lib/translations';
 
 interface TeamMemberProps {
   name: string;
@@ -65,8 +63,6 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, image, email, linke
 );
 
 const TeamSection: React.FC = () => {
-  const { language } = useLanguage();
-  const t = translations[language].people;
   const teamMembers = PARTNERS.map(partner => ({
     ...partner
   }));
@@ -82,7 +78,7 @@ const TeamSection: React.FC = () => {
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-24">
             <h2 className="text-4xl md:text-5xl font-light text-pitkerBlue">
-              {t.hero.title} <span className="text-pitkerRed">{t.hero.titleHighlight}</span>
+              Contact <span className="text-pitkerRed">us</span>
             </h2>
             <div className="h-px md:w-1/3 bg-pitkerRed mt-8 md:mt-0" />
           </div>

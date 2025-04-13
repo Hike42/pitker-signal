@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "^12.4.7",
-    "html-entities": "^2.5.3",
-    "next": "15.1.7",
+    "next": "^15.3.0",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",

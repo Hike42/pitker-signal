@@ -7,19 +7,49 @@ import { translations } from '@/lib/translations';
 import { getLinkedInPreview } from '@/lib/linkedin-preview';
 import { useEffect, useState } from 'react';
 
+interface NewsPreview {
+  title: string;
+  image: string;
+  url: string;
+}
+
+interface Translations {
+  home: {
+    getConnected: {
+      title: string;
+      description: string;
+      linkedin: string;
+      button: string;
+    };
+    news: {
+      articles: {
+        newPartner: {
+          title: string;
+        };
+        careerDevelopment: {
+          title: string;
+        };
+        careerOrganization: {
+          title: string;
+        };
+      };
+    };
+  };
+}
+
 const NEWS_LINKS = [
   {
-    title: "L'arrivée de Patrice",
+    key: 'newPartner',
     url: "https://www.linkedin.com/feed/update/urn:li:activity:7298376379413200896/",
     date: "Mars 2024"
   },
   {
-    title: "Prise de parole avec Maud sur les carrières",
+    key: 'careerDevelopment',
     url: "https://www.linkedin.com/feed/update/urn:li:activity:7269785504617742341/",
     date: "Mars 2024"
   },
   {
-    title: "Actualité PITKER",
+    key: 'careerOrganization',
     url: "https://www.linkedin.com/feed/update/urn:li:activity:7196456640341000192/",
     date: "Mars 2024"
   }
@@ -29,15 +59,9 @@ const SOCIAL_LINKS = {
   LINKEDIN: 'https://www.linkedin.com/company/pitker'
 } as const;
 
-interface NewsPreview {
-  title: string;
-  image: string;
-  url: string;
-}
-
 export const GetConnectedSection = () => {
   const { language } = useLanguage();
-  const t = translations[language];
+  const t = translations[language] as unknown as Translations;
   const [previews, setPreviews] = useState<Record<string, NewsPreview>>({});
   const [loading, setLoading] = useState(true);
 
@@ -56,7 +80,7 @@ export const GetConnectedSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[800px] overflow-hidden">
+    <section className="relative min-h-[600px] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -70,7 +94,7 @@ export const GetConnectedSection = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative h-full container mx-auto px-4 py-16">
+      <div className="relative h-full container mx-auto px-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,9 +102,9 @@ export const GetConnectedSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto"
         >
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-              Nos Actualités
+              {t.home.getConnected.title}
             </h2>
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-px bg-white/30"></div>
@@ -88,7 +112,7 @@ export const GetConnectedSection = () => {
               <div className="w-16 h-px bg-white/30"></div>
             </div>
             <p className="text-xl text-white/80">
-              Découvrez nos dernières actualités et prises de parole
+              {t.home.getConnected.description}
             </p>
           </div>
 
@@ -115,14 +139,14 @@ export const GetConnectedSection = () => {
                   <div className="relative aspect-video rounded-lg overflow-hidden mb-4">
                     <Image
                       src={previews[news.url]?.image || '/placeholder.jpg'}
-                      alt={news.title}
+                      alt={t.home.news.articles[news.key].title}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <h3 className="text-white text-lg font-light mb-2 group-hover:text-pitkerRed transition-colors duration-300">
-                    {news.title}
+                    {t.home.news.articles[news.key].title}
                   </h3>
                   <p className="text-white/60 text-sm">{news.date}</p>
                 </a>
@@ -130,7 +154,7 @@ export const GetConnectedSection = () => {
             </div>
           )}
 
-          <div className="text-center mt-16">
+          <div className="text-center mt-12">
             <a 
               href={SOCIAL_LINKS.LINKEDIN}
               target="_blank" 
@@ -146,7 +170,7 @@ export const GetConnectedSection = () => {
               </div>
               <div className="flex items-center space-x-4">
                 <span className="text-xl font-light text-white group-hover:text-pitkerRed transition-colors duration-300">
-                  Suivez-nous sur LinkedIn
+                  {t.home.getConnected.button}
                 </span>
                 <svg 
                   className="w-5 h-5 text-white group-hover:text-pitkerRed transform group-hover:translate-x-1 transition-all duration-300" 

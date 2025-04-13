@@ -119,7 +119,7 @@ const PartnersSection = () => {
                     className="text-pitkerRed"
                   />
                   <p className="text-white text-sm">
-                    {t.partners.major}: <span className="text-pitkerRed">{partner.major}</span>
+                    <span className="text-white">{partner.major}</span>
                   </p>
                 </div>
               </div>
