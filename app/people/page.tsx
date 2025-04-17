@@ -1,4 +1,5 @@
-import PeoplePage from '@/components/pages/PeoplePage';
+import MainLayout from '@/components/layouts/MainLayout';
+import PartnersSection from '@/components/people/PartnersSection';
 
 export const metadata = {
   title: 'Our Team | Pitker',
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <PeoplePage />;
+  return (
+    <MainLayout>
+      <PartnersSection />
+    </MainLayout>
+  );
 } 

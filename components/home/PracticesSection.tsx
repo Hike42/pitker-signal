@@ -54,64 +54,91 @@ const getPractices = (t: Translations) => [
   }
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
+
 export const PracticesSection = () => {
   const { language } = useLanguage();
   const t = translations[language] as unknown as Translations;
   const practices = getPractices(t);
 
   return (
-    <section className="py-12 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-8 md:py-12 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 max-w-6xl mx-auto text-center"
+          className="mb-12 md:mb-20 max-w-6xl mx-auto text-center"
+          transition={{ duration: 0.5 }}
         >
-          <h2 className="text-5xl font-light text-pitkerBlue tracking-wide">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-pitkerBlue tracking-wide">
             {t.home.practices.title} <span className="text-pitkerRed">{t.home.practices.titleHighlight}</span>
           </h2>
-          <div className="flex items-center justify-center mt-6">
-            <div className="w-16 h-px bg-gray-300"></div>
-            <div className="w-2 h-2 rounded-full bg-pitkerRed mx-4"></div>
-            <div className="w-16 h-px bg-gray-300"></div>
+          <div className="flex items-center justify-center mt-4 md:mt-6">
+            <div className="w-12 md:w-16 h-px bg-gray-300"></div>
+            <div className="w-2 h-2 rounded-full bg-pitkerRed mx-3 md:mx-4"></div>
+            <div className="w-12 md:w-16 h-px bg-gray-300"></div>
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {practices.map((practice, index) => (
             <Link href={practice.href} key={index} className="block h-full">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                variants={itemVariants}
+                whileHover={{ 
+                  scale: 1.05,
+                  transition: { duration: 0.2 }
+                }}
                 className="group h-full"
               >
-                <div className={`relative bg-white rounded-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-500 h-full flex flex-col group`}>
+                <div className={`relative bg-white rounded-lg overflow-hidden transform transition-all duration-500 h-full flex flex-col group`}>
                   {/* Card flap effect */}
                   <div className={`absolute top-0 left-0 w-full h-1/2 ${practice.color} bg-opacity-20 transform origin-top group-hover:scale-y-0 transition-transform duration-500`}></div>
                   
                   {/* Content */}
-                  <div className="p-8 flex flex-col flex-grow relative">
-                    {/* Icon container */}
-                    <div className="mb-8">
-                      <div className={`w-16 h-16 ${practice.color} bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-300`}>
-                        <practice.icon className={`text-3xl ${practice.textColor}`} />
-                      </div>
+                  <div className="relative p-6 flex-grow flex flex-col">
+                    <div className={`w-12 h-12 ${practice.color} bg-opacity-10 rounded-lg flex items-center justify-center mb-4`}>
+                      <practice.icon className={`w-6 h-6 ${practice.textColor}`} />
                     </div>
-                    
-                    {/* Title */}
-                    <h3 className={`text-2xl font-light ${practice.textColor} mb-4 group-hover:opacity-90 transition-opacity duration-300`}>{practice.title}</h3>
-                    
-                    {/* Decorative line */}
-                    <div className={`mt-auto h-1 w-20 ${practice.color} bg-opacity-80`}></div>
+                    <h3 className={`text-xl font-medium ${practice.textColor} mb-4`}>{practice.title}</h3>
+                    <div className="mt-auto">
+                      <div className={`w-8 h-1 ${practice.color} rounded-full transform group-hover:scale-x-150 transition-transform duration-500`}></div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
             </Link>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pitker - Site Web
 
-## Getting Started
+Ce projet est un site web moderne construit avec Next.js, TypeScript et Tailwind CSS.
 
-First, run the development server:
+## 🚀 Fonctionnalités
+
+- Architecture moderne avec Next.js 14
+- TypeScript pour un code plus sûr et maintenable
+- Styling avec Tailwind CSS
+- Composants réutilisables et modulaires
+- Optimisation des performances
+- Support multilingue (prêt pour l'internationalisation)
+
+## 📋 Prérequis
+
+- Node.js 18.17 ou supérieur
+- npm ou yarn
+- Git
+
+## 🛠 Installation
+
+1. Clonez le repository :
+
+```bash
+git clone [URL_DU_REPO]
+cd pitker
+```
+
+2. Installez les dépendances :
+
+```bash
+npm install
+# ou
+yarn install
+```
+
+3. Créez un fichier `.env.local` à la racine du projet avec les variables d'environnement nécessaires :
+
+```env
+NEXT_PUBLIC_API_URL=votre_url_api
+# Autres variables d'environnement...
+```
+
+## 🚀 Démarrage
+
+Pour lancer le serveur de développement :
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour voir le résultat.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Structure du Projet
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+pitker/
+├── app/                 # Pages et routes de l'application
+├── components/          # Composants React
+│   ├── home/           # Composants spécifiques à la page d'accueil
+│   ├── industries/     # Composants liés aux industries
+│   ├── practices/      # Composants liés aux pratiques
+│   └── shared/         # Composants réutilisables
+├── public/             # Fichiers statiques
+├── styles/             # Fichiers de style globaux
+└── types/              # Types TypeScript
+```
 
-## Learn More
+## 🧪 Tests
 
-To learn more about Next.js, take a look at the following resources:
+Pour lancer les tests :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run test
+# ou
+yarn test
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗 Build
 
-## Deploy on Vercel
+Pour construire l'application pour la production :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+# ou
+yarn build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Déploiement
+
+Le déploiement est configuré pour Vercel. Pour déployer :
+
+1. Poussez vos changements sur la branche main
+2. Le déploiement automatique se déclenchera sur Vercel
+
+## 📚 Documentation
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+
+## 🤝 Contribution
+
+1. Fork le projet
+2. Créez votre branche (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Poussez vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
+
+## 📝 Guidelines de Code
+
+- Utilisez des commits conventionnels
+- Suivez les règles ESLint et Prettier
+- Écrivez des tests pour les nouvelles fonctionnalités
+- Documentez les changements majeurs
+
+## 🔒 Sécurité
+
+- Ne committez jamais de données sensibles
+- Utilisez des variables d'environnement pour les secrets
+- Maintenez les dépendances à jour
+
+## 📞 Support
+
+Pour toute question ou problème, veuillez ouvrir une issue sur GitHub.
+
+## 📄 Licence
+
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.

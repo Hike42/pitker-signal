@@ -30,7 +30,7 @@ const Footer = () => {
             <address className="not-italic text-sm leading-relaxed">
               <p className="font-semibold mb-2">{t['office-title']}</p>
               143 Boulevard Haussmann<br />
-              75009 Paris, France
+              75008 Paris, France
             </address>
           </div>
 

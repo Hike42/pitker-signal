@@ -1,6 +1,8 @@
 // pages/what-we-do.tsx
 import React from 'react';
-import WhatWeDoPage from '@/components/pages/WhatWeDoPage';
+import MainLayout from '@/components/layouts/MainLayout';
+import { WhatWeDoSection } from '@/components/what-we-do/WhatWeDoSection';
+import { KeyStatsSection } from '@/components/what-we-do/KeyStatsSection';
 
 export const metadata = {
   title: 'What We Do | Pitker',
@@ -8,5 +10,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <WhatWeDoPage />;
+  return (
+    <MainLayout>
+      <WhatWeDoSection />
+      <KeyStatsSection />
+    </MainLayout>
+  );
 }

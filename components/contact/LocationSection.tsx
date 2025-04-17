@@ -153,19 +153,8 @@ const LocationSection: React.FC = () => {
             <h3 className="text-xl font-light text-pitkerBlue mb-4">{t.location.title}</h3>
             <address className="not-italic text-gray-600 mb-6">
               143 Boulevard Haussmann<br />
-              75009 Paris, France
+              75008 Paris, France
             </address>
-            <a
-              href="https://g.co/kgs/4axXzRF"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-pitkerBlue hover:text-pitkerRed transition-colors"
-            >
-              <span>{t.location.viewOnMaps}</span>
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
           </div>
         </div>
       </div>

@@ -21,19 +21,6 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const navVariants = {
-    hidden: { y: -100, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-        staggerChildren: 0.1
-      }
-    }
-  };
-
   const linkVariants = {
     hidden: { y: -20, opacity: 0 },
     visible: { 
@@ -54,11 +41,7 @@ const Navbar = () => {
   ];
 
   return (
-    <motion.div
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={navVariants}
-    >
+    <div>
       {/* Bandeau supérieur */}
       <div className="bg-gray-100 py-2 hidden md:block">
         <div className="container mx-auto px-4 flex justify-end">
@@ -71,7 +54,7 @@ const Navbar = () => {
         <div className="container mx-auto py-4 px-4">
           <div className="flex justify-between h-16 items-center">
             {/* Logo */}
-            <motion.div variants={linkVariants}>
+            <div>
               <Link href="/" className="flex items-center">
                 <div className="relative w-40 h-10">
                   <Image
@@ -82,28 +65,29 @@ const Navbar = () => {
                   />
                 </div>
               </Link>
-            </motion.div>
+            </div>
 
             {/* Menu Desktop */}
             <div className="hidden md:flex md:items-center md:space-x-8">
               {NAV_LINKS.map(({ href, label }) => (
-                <motion.div key={href} variants={linkVariants}>
+                <div key={href}>
                   <Link
                     href={href}
                     className="text-pitkerBlue hover:text-pitkerRed border-b-2 border-transparent hover:border-pitkerBlue transition-colors duration-300"
                   >
                     {label}
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Bouton Menu Mobile et Language Toggle */}
             <motion.div 
               variants={linkVariants}
+              initial="hidden"
+              animate={isVisible ? "visible" : "hidden"}
               className="flex items-center gap-4 md:hidden"
             >
-              <LanguageToggle />
               <MenuButton isOpen={isOpen} onClick={toggleMenu} />
             </motion.div>
           </div>
@@ -117,14 +101,22 @@ const Navbar = () => {
             opacity: isOpen ? 1 : 0
           }}
           transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden"
+          className="md:hidden overflow-hidden bg-white fixed top-16 left-0 right-0 z-50"
+          role="navigation"
+          aria-label="Menu principal"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-4 py-4 space-y-2">
+            <div className="py-2">
+              <LanguageToggle />
+            </div>
             {NAV_LINKS.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="text-pitkerBlue hover:text-pitkerRed block px-3 py-2 text-base font-medium"
+                className="text-pitkerBlue hover:text-pitkerRed block py-3 text-base font-medium border-b border-gray-100 last:border-0 focus:outline-none focus:ring-2 focus:ring-pitkerRed focus:ring-offset-2"
+                onClick={() => setIsOpen(false)}
+                role="menuitem"
+                tabIndex={isOpen ? 0 : -1}
               >
                 {label}
               </Link>
@@ -132,7 +124,7 @@ const Navbar = () => {
           </div>
         </motion.div>
       </nav>
-    </motion.div>
+    </div>
   );
 };
 

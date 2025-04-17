@@ -41,17 +41,17 @@ const NEWS_LINKS = [
   {
     key: 'newPartner',
     url: "https://www.linkedin.com/feed/update/urn:li:activity:7298376379413200896/",
-    date: "Mars 2024"
+    date: "2025"
   },
   {
     key: 'careerDevelopment',
     url: "https://www.linkedin.com/feed/update/urn:li:activity:7269785504617742341/",
-    date: "Mars 2024"
+    date: "2024"
   },
   {
     key: 'careerOrganization',
     url: "https://www.linkedin.com/feed/update/urn:li:activity:7196456640341000192/",
-    date: "Mars 2024"
+    date: "2024"
   }
 ] as const;
 

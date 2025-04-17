@@ -28,8 +28,8 @@ export const translations = {
         title: 'Our',
         titleHighlight: 'Practices',
         healthcare: {
-          title: 'Healthcare',
-          description: 'Supporting healthcare companies in their development through strategic recruitment.'
+          title: 'Life Sciences',
+          description: 'Supporting pharmaceutical, biotech and medtech companies in their development.'
         },
         privateEquity: {
           title: 'Private Equity',
@@ -70,16 +70,16 @@ export const translations = {
     whatWeDo: {
       hero: {
         title: 'What we do',
-        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsized companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nInterestingly, in its three preferred sectors and beyond, the firm prides itself for handling a significant number of number one searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
+        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsized companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nIn its three preferred sectors and beyond, the firm prides itself for handling a significant number of number one searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
       },
       keyStats: {
         title: 'Key Figures',
         stats: [
-          { number: '3', description: 'Senior Partners' },
           { number: '2020', description: 'Date of birth' },
-          { number: '2/3', description: 'Midsized Companies' },
-          { number: '1/4', description: '"CEO searches"' },
-          { number: '100%', description: 'C-suite coverage' }
+          { number: '3', description: 'Senior Partners' },
+          { number: '100%', description: 'C-suite coverage' },
+          { number: '2/3', description: 'of our clients are midsized companies' },
+          { number: '1/4', description: '"CEO searches"' }
         ]
       }
     },
@@ -126,7 +126,7 @@ export const translations = {
         intro: [
           "The life sciences sector stands out for its innovative nature, international dimension, demanding regulatory framework, and diverse stakeholders: pharmaceuticals (prescription and OTC medicines, generics and biosimilars, etc.), biotechnology (including rare diseases), medical equipment and devices, diagnostics, active ingredients, development and production outsourcing, veterinary health, and more.",
           "Identifying leaders in these industries requires deep sector knowledge and trusted relationships with key players. PITKER meets these requirements by investing daily in understanding this constantly evolving sector, where people play a crucial role beyond science.",
-          "For healthcare industries, which represent more than half of its clients, PITKER conducts searches in France and abroad through a network of privileged partners. While specializing in CEO and general management searches, the firm covers all core executive team functions (finance, human resources, etc.) as well as sector-specific roles (pharmaceutical affairs, market access, medical affairs, etc.).",
+          "For Life Sciences industries, which represent more than half of its clients, PITKER conducts searches in France and abroad through a network of privileged partners. While specializing in CEO and general management searches, the firm covers all core executive team functions (finance, human resources, etc.) as well as sector-specific roles (pharmaceutical affairs, market access, medical affairs, etc.).",
           "Operating across the entire value chain - R&D, production, and commercialization - the firm assists clients ranging from large groups to mid-sized companies owned by family shareholders and/or investment funds."
         ],
         strengths: {
@@ -216,6 +216,35 @@ export const translations = {
         },
         recentSearches: {
           title: "Examples of Recent Searches"
+        },
+        ceoSearch: {
+          title: "CEO Search",
+          intro: [
+            "Our CEO Search practice stands out for its rigorous, personalised approach to identifying and recruiting the best talent for executive positions. We combine in-depth meetings with all the people involved in the search, with exhaustive information gathering on the sector, the company, its competitors, and the technological and regulatory environment.",
+            "For each assignment, we put together an ad hoc team, comprising one or more partners and a research consultant, to mobilise the skills needed to meet the specific requirements of each project. Our partners are involved in all links of the value chain, where other recruitment players sometimes have a more compartmentalised approach.",
+            "We define a research strategy that combines a systematic approach, drawing on all available sources of information, with targeted, high-level conversations with trusted people in the market.",
+            "We pay particular attention to all interactions to ensure both efficiency and fluidity in the research process. Confidentiality and the care taken in writing correspondence with our clients and the candidates under consideration are just some of the elements of our approach. Our offices, offering a premium setting, are available to our clients, both French and foreign, to organise discreet meetings."
+          ],
+          strengths: {
+            title: "Our Strengths",
+            points: [
+              {
+                title: "Rigorous Approach",
+                description: "In-depth analysis and comprehensive information gathering for each search."
+              },
+              {
+                title: "Personalized Service",
+                description: "Tailored approach with dedicated teams for each assignment."
+              },
+              {
+                title: "Confidentiality",
+                description: "High level of discretion and professional handling of sensitive information."
+              }
+            ]
+          },
+          recentSearches: {
+            title: "Examples of Recent Searches"
+          }
         }
       }
     },
@@ -226,8 +255,7 @@ export const translations = {
         scrollCTA: 'Contact our partners'
       },
       location: {
-        title: 'Our Offices',
-        viewOnMaps: 'View on Maps'
+        title: 'Our Office',
       }
     }
   },
@@ -260,7 +288,7 @@ export const translations = {
         title: 'Nos',
         titleHighlight: 'Expertises',
         healthcare: {
-          title: 'Santé',
+          title: 'Life Sciences',
           description: 'Accompagnement des entreprises de santé dans leur développement par le recrutement stratégique.'
         },
         privateEquity: {
@@ -307,11 +335,11 @@ export const translations = {
       keyStats: {
         title: 'Chiffres clés',
         stats: [
-          { number: '3', description: 'Associés seniors' },
           { number: '2020', description: 'Année de création' },
-          { number: '2/3', description: 'Clients ETI' },
-          { number: '1/4', description: '"Recherches de DG"' },
-          { number: '100%', description: 'Couverture C-suite' }
+          { number: '3', description: 'Associés seniors' },
+          { number: '100%', description: 'Couverture C-suite' },
+          { number: '2/3', description: 'de nos clients sont des ETI' },
+          { number: '1/4', description: '"Recherches de DG"' }
         ]
       }
     },
@@ -449,6 +477,35 @@ export const translations = {
         },
         recentSearches: {
           title: "Exemples de Recherches Récentes"
+        },
+        ceoSearch: {
+          title: "CEO Search",
+          intro: [
+            "Our CEO Search practice stands out for its rigorous, personalised approach to identifying and recruiting the best talent for executive positions. We combine in-depth meetings with all the people involved in the search, with exhaustive information gathering on the sector, the company, its competitors, and the technological and regulatory environment.",
+            "For each assignment, we put together an ad hoc team, comprising one or more partners and a research consultant, to mobilise the skills needed to meet the specific requirements of each project. Our partners are involved in all links of the value chain, where other recruitment players sometimes have a more compartmentalised approach.",
+            "We define a research strategy that combines a systematic approach, drawing on all available sources of information, with targeted, high-level conversations with trusted people in the market.",
+            "We pay particular attention to all interactions to ensure both efficiency and fluidity in the research process. Confidentiality and the care taken in writing correspondence with our clients and the candidates under consideration are just some of the elements of our approach. Our offices, offering a premium setting, are available to our clients, both French and foreign, to organise discreet meetings."
+          ],
+          strengths: {
+            title: "Our Strengths",
+            points: [
+              {
+                title: "Rigorous Approach",
+                description: "In-depth analysis and comprehensive information gathering for each search."
+              },
+              {
+                title: "Personalized Service",
+                description: "Tailored approach with dedicated teams for each assignment."
+              },
+              {
+                title: "Confidentiality",
+                description: "High level of discretion and professional handling of sensitive information."
+              }
+            ]
+          },
+          recentSearches: {
+            title: "Examples of Recent Searches"
+          }
         }
       }
     },
@@ -459,8 +516,7 @@ export const translations = {
         scrollCTA: 'Contacter nos associés'
       },
       location: {
-        title: 'Nos Bureaux',
-        viewOnMaps: 'Voir sur Maps'
+        title: 'Notre Bureau',
       }
     }
   }

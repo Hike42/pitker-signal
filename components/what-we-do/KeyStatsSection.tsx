@@ -43,7 +43,7 @@ const StatCard: React.FC<StatCardProps> = ({ number, description, index }) => {
             </span>
             <div className="absolute -bottom-2 left-0 w-16 h-0.5 bg-pitkerRed transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
           </div>
-          <p className="mt-4 text-base font-medium text-gray-600 group-hover:text-pitkerRed transition-colors duration-300">
+          <p className="mt-4 text-sm font-medium text-gray-600 group-hover:text-pitkerRed transition-colors duration-300 leading-tight">
             {description}
           </p>
         </div>
