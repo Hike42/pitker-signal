@@ -30,7 +30,7 @@ export const AnimatedLanguageWrapper = ({ children }: AnimatedLanguageWrapperPro
         <motion.div
           key={`overlay-${language}`}
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.15 }}
+          animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
           className="fixed inset-0 bg-pitkerBlue pointer-events-none z-50"
