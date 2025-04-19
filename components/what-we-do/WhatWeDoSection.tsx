@@ -14,9 +14,9 @@ export const WhatWeDoSection = () => {
   const formatText = (text: string) => {
     return text
       .replace(/PITKER/g, '<strong>PITKER</strong>')
-      .replace(/Life Sciences/g, '<strong>Life Sciences</strong>')
-      .replace(/Industrial/g, '<strong>Industrial</strong>')
-      .replace(/Private Equity/g, '<strong>Private Equity</strong>');
+      .replace(/Life Sciences/g, '<strong class="font-bold">Life Sciences</strong>')
+      .replace(/Industrial/g, '<strong class="font-bold">Industrial</strong>')
+      .replace(/Private Equity/g, '<strong class="font-bold">Private Equity</strong>');
   };
 
   return (
@@ -57,7 +57,7 @@ export const WhatWeDoSection = () => {
                 </div>
 
                 <div 
-                  className="text-lg sm:text-xl md:text-2xl text-gray-200 text-left"
+                  className="text-lg sm:text-xl md:text-2xl text-gray-200 text-left font-light"
                   dangerouslySetInnerHTML={{ __html: formatText(t.description.split('\n\n')[0]) }}
                 />
               </motion.div>
@@ -106,11 +106,11 @@ export const WhatWeDoSection = () => {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pitkerBlue to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-light text-pitkerRed mb-6 pb-4 border-b border-gray-100 group-hover:border-pitkerBlue transition-colors duration-300">
-                    CEO Searches
+                    Our Approach
                   </h3>
                   <div 
                     className="text-gray-700 text-left leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: formatText(t.description.split('\n\n')[2]) }}
+                    dangerouslySetInnerHTML={{ __html: formatText(t.description.split('\n\n')[3]) }}
                   />
                 </div>
               </motion.div>
@@ -125,11 +125,11 @@ export const WhatWeDoSection = () => {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pitkerBlue to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative z-10">
                   <h3 className="text-2xl font-light text-pitkerRed mb-6 pb-4 border-b border-gray-100 group-hover:border-pitkerBlue transition-colors duration-300">
-                    Our Approach
+                    CEO Searches
                   </h3>
                   <div 
                     className="text-gray-700 text-left leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: formatText(t.description.split('\n\n')[3]) }}
+                    dangerouslySetInnerHTML={{ __html: formatText(t.description.split('\n\n')[2]) }}
                   />
                 </div>
               </motion.div>

@@ -53,9 +53,6 @@ const Footer = () => {
           {/* Colonne droite */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold">{t['connect-with-us']}</h3>
-            <p className="text-sm text-gray-300">
-              {t['follow-linkedin']}
-            </p>
             <SocialLinks />
           </div>
         </div>

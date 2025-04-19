@@ -70,7 +70,7 @@ export const translations = {
     whatWeDo: {
       hero: {
         title: 'What we do',
-        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsized companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nIn its three preferred sectors and beyond, the firm prides itself for handling a significant number of number one searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
+        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsized companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nIn its three preferred sectors and beyond, the firm prides itself for handling a significant number of "number one" searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
       },
       keyStats: {
         title: 'Key Figures',
@@ -79,7 +79,7 @@ export const translations = {
           { number: '3', description: 'Senior Partners' },
           { number: '100%', description: 'C-suite coverage' },
           { number: '2/3', description: 'of our clients are midsized companies' },
-          { number: '1/4', description: '"CEO searches"' }
+          { number: '1/4', description: 'of our searches concern CEO/GM functions' }
         ]
       }
     },
@@ -330,7 +330,7 @@ export const translations = {
     whatWeDo: {
       hero: {
         title: 'Ce que nous faisons',
-        description: 'Fondé en 2020 et dirigé par trois associés, PITKER est un cabinet de chasse de têtes premium basé à Paris, au service des entreprises de taille moyenne et des grands groupes dans divers secteurs, avec comme trois axes principaux les Sciences de la Vie, l\'Industrie et le Private Equity.\n\nPITKER couvre 100% des fonctions d\'une équipe dirigeante : direction générale, finance, ressources humaines, marketing, ventes, juridique, R&D, production & supply, etc.\n\nFait notable, dans ses trois secteurs de prédilection et au-delà, le cabinet se distingue par la conduite d\'un nombre significatif de recherches de numéro un, c\'est-à-dire de Directeurs Généraux, Présidents Directeurs Généraux, etc. Ces "recherches de DG" représentent un quart des missions de PITKER.\n\nCombinant des standards de qualité élevés, une analyse approfondie et un haut degré de confidentialité, PITKER propose à ses clients des solutions efficaces et sur mesure, en France et à l\'étranger, grâce à un réseau de cabinets partenaires de confiance.'
+        description: 'Fondé en 2020 et dirigé par trois associés, PITKER est un cabinet de chasse de têtes premium basé à Paris, au service des entreprises de taille moyenne et des grands groupes dans divers secteurs, avec comme trois axes principaux les Sciences de la Vie, l\'Industrie et le Private Equity.\n\nPITKER couvre 100% des fonctions d\'une équipe dirigeante : direction générale, finance, ressources humaines, marketing, ventes, juridique, R&D, production & supply, etc.\n\nFait notable, dans ses trois secteurs de prédilection et au-delà, le cabinet se distingue par la conduite d\'un nombre significatif de recherches de "numéro un", c\'est-à-dire de Directeurs Généraux, Présidents Directeurs Généraux, etc. Ces "recherches de DG" représentent un quart des missions de PITKER.\n\nCombinant des standards de qualité élevés, une analyse approfondie et un haut degré de confidentialité, PITKER propose à ses clients des solutions efficaces et sur mesure, en France et à l\'étranger, grâce à un réseau de cabinets partenaires de confiance.'
       },
       keyStats: {
         title: 'Chiffres clés',
@@ -339,7 +339,7 @@ export const translations = {
           { number: '3', description: 'Associés seniors' },
           { number: '100%', description: 'Couverture C-suite' },
           { number: '2/3', description: 'de nos clients sont des ETI' },
-          { number: '1/4', description: '"Recherches de DG"' }
+          { number: '1/4', description: 'de nos recherches concernent des fonctions de DG/PDG' }
         ]
       }
     },

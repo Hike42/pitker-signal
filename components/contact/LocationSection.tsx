@@ -52,7 +52,7 @@ const LocationSection: React.FC = () => {
   const loadMap = () => {
     if (!mapRef.current || mapInstance.current) return;
 
-    const location = { lat: 48.87494, lng: 2.31365 };
+    const location = { lat: 48.8735, lng: 2.3105 };
 
     const mapStyles = [
       {
@@ -140,18 +140,21 @@ const LocationSection: React.FC = () => {
   };
 
   return (
-    <section className="relative w-screen h-[600px]">
+    <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
       {/* Carte en premier plan */}
       <div className="absolute inset-0">
         <div ref={mapRef} className="w-full h-full" />
       </div>
       
-      {/* Gradient et info box avec meilleur responsive */}
-      <div className="absolute inset-y-0 left-0 w-full md:w-1/2 lg:w-1/3 bg-gradient-to-r from-pitkerBlue/90 to-transparent">
-        <div className="container mx-auto h-full flex items-center justify-start px-4 md:px-8 lg:px-12">
-          <div className="w-full max-w-md bg-white p-6 md:p-8 rounded-sm shadow-lg">
-            <h3 className="text-xl font-light text-pitkerBlue mb-4">{t.location.title}</h3>
-            <address className="not-italic text-gray-600 mb-6">
+      {/* Gradient sur toute la carte */}
+      <div className="absolute inset-0 bg-gradient-to-r from-pitkerBlue/90 to-transparent" />
+      
+      {/* Info box */}
+      <div className="absolute bottom-0 left-0 w-full md:w-1/2 lg:w-1/3">
+        <div className="container mx-auto h-full flex items-end justify-start px-4 md:px-8 lg:px-12 pb-4 md:pb-6 lg:pb-8">
+          <div className="w-full max-w-md bg-white p-4 md:p-6 lg:p-8 rounded-sm shadow-lg">
+            <h3 className="text-lg md:text-xl font-light text-pitkerBlue mb-2 md:mb-4">{t.location.title}</h3>
+            <address className="not-italic text-sm md:text-base text-gray-600 mb-4 md:mb-6">
               143 Boulevard Haussmann<br />
               75008 Paris, France
             </address>
