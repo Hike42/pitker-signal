@@ -2,24 +2,32 @@
 
 import PracticeContent from '@/components/practices/PracticeContent';
 
-const recentSearches = [
-  "CEO - Private Equity portfolio company",
-  "CFO - Mid-market investment fund",
-  "Investment Director - Growth capital fund",
-  "Portfolio Director - Buyout fund",
-  "Operating Partner - Industrial sector",
-  "HR Director - Private Equity firm",
-  "CEO - Healthcare portfolio company",
-  "CFO - Consumer goods portfolio company",
-  "CEO - Industrial portfolio company",
-  "CEO - Technology portfolio company"
+const recentSearchesFr = [
+  "Direction Générale - ETI sous LBO - Santé",
+  "Direction Générale - ETI en forte croissance détenue par un fond de growth equity - Décarbonation",
+  "Direction Générale - PME détenue par un family office - Fabrication et distrib. de produits de consommation premium",
+  "Direction Financière - ETI sous LBO - Packaging",
+  "Direction Financière - ETI en forte croissance détenue par un fonds d'infrastructure - Énergies renouvelables",
+  "Direction Financière - Family office - Activités diversifiées",
+  "Secrétariat Général - Family office - Activités diversifiées"
+];
+
+const recentSearchesEn = [
+  "CEO - Mid-cap under LBO - Healthcare",
+  "CEO - High-growth mid-cap backed by a growth equity fund - Decarbonization",
+  "CEO - SME owned by a family office - Manufacturing and distribution of premium consumer products",
+  "CFO - Mid-cap under LBO - Packaging",
+  "CFO - High-growth mid-cap backed by an infrastructure fund - Renewable energy",
+  "CFO - Family office - Diversified activities",
+  "General counsel - Family office - Diversified activities"
 ];
 
 const PrivateEquityContent = () => {
   return (
     <PracticeContent 
       practiceKey="privateEquity"
-      recentSearches={recentSearches}
+      recentSearchesFr={recentSearchesFr}
+      recentSearchesEn={recentSearchesEn}
     />
   );
 };

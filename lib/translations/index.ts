@@ -14,7 +14,7 @@ export const translations = {
       'legal-mentions': 'Legal Mentions',
       'privacy-policy': 'Privacy Policy',
       'office-title': 'Paris Office',
-      copyright: `© ${new Date().getFullYear()} PITKER. All rights reserved.`
+      copyright: 'PITKER. All rights reserved.'
     },
     home: {
       hero: {
@@ -22,7 +22,7 @@ export const translations = {
           firstLine: 'Designed to conduct the most complex',
           secondLine: 'C-level executive searches.'
         },
-        description: 'PITKER is a premium executive search boutique firm serving both midsized companies and large corporates, with a specific focus on Life Sciences, Industrial & Private Equity.'
+        description: 'PITKER is a premium executive search boutique firm serving both midsized companies and large corporates, with a specific focus on Life Sciences, Industry and Private Equity.'
       },
       practices: {
         title: 'Our',
@@ -36,7 +36,7 @@ export const translations = {
           description: 'Assisting investment funds and their portfolio companies in key recruitment.'
         },
         industry: {
-          title: 'Industrial',
+          title: 'Industry',
           description: 'Helping industrial companies recruit their future leaders.'
         },
         ceoSearch: {
@@ -70,7 +70,7 @@ export const translations = {
     whatWeDo: {
       hero: {
         title: 'What we do',
-        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsized companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nIn its three preferred sectors and beyond, the firm prides itself for handling a significant number of "number one" searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
+        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsized companies and large groups in various sectors with Life Sciences, Industry and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nInterestingly, in its three preferred sectors and beyond, the firm prides itself for handling a significant number of number one searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
       },
       keyStats: {
         title: 'Key Figures',
@@ -92,18 +92,20 @@ export const translations = {
       partners: {
         emailLabel: 'Email',
         linkedinLabel: 'LinkedIn',
+        major: '★',
+        description: 'PITKER is a human-centered venture, born from numerous encounters where each individual contributes to the collective through their unique experiences and personalities. Maud Chabert, Jean-Marie Verdier, and Patrice de Fournas have developed a distinctive approach to the profession, characterized by authenticity, character, and commitment. For every search, they design a tailored process that makes it possible to answer complex search assignments.'
       }
     },
     practices: {
       grid: {
-        title: "Nos",
-        highlight: "Expertises",
+        title: "Our",
+        highlight: "Practices",
         lifesciences: {
           title: "Life Sciences",
           description: "Supporting pharmaceutical, biotech and medtech companies in their development."
         },
         manufacturing: {
-          title: "Industrial",
+          title: "Industry",
           description: "Tailored solutions for transforming industrial companies."
         },
         privateEquity: {
@@ -124,39 +126,38 @@ export const translations = {
       lifesciences: {
         title: "Life Sciences",
         intro: [
-          "The life sciences sector stands out for its innovative nature, international dimension, demanding regulatory framework, and diverse stakeholders: pharmaceuticals (prescription and OTC medicines, generics and biosimilars, etc.), biotechnology (including rare diseases), medical equipment and devices, diagnostics, active ingredients, development and production outsourcing, veterinary health, and more.",
-          "Identifying leaders in these industries requires deep sector knowledge and trusted relationships with key players. PITKER meets these requirements by investing daily in understanding this constantly evolving sector, where people play a crucial role beyond science.",
-          "For Life Sciences industries, which represent more than half of its clients, PITKER conducts searches in France and abroad through a network of privileged partners. While specializing in CEO and general management searches, the firm covers all core executive team functions (finance, human resources, etc.) as well as sector-specific roles (pharmaceutical affairs, market access, medical affairs, etc.).",
-          "Operating across the entire value chain - R&D, production, and commercialization - the firm assists clients ranging from large groups to mid-sized companies owned by family shareholders and/or investment funds."
+          "The Life Sciences sector stands out for its relentless innovation, global reach, stringent regulatory environment, and the diversity of its players: pharmaceuticals (prescription, OTC, generics and biosimilars), biotechnology (including rare diseases), medical devices and equipment, diagnostics, active ingredients, CDMOs, animal health, and more.",
+          "Identifying senior executives in these industries requires in-depth sector expertise and trusted relationships with key stakeholders. PITKER meets these demands by investing daily in understanding this ever-evolving sector, where people make a difference that goes far beyond science.",
+          "Serving a client base where Life Sciences industries represent more than half of our portfolio, PITKER conducts executive searches both in France and internationally, leveraging a privileged network of partners. While we have a strong track record in CEO and general management searches, our firm covers all core executive functions (finance, human resources, etc.) as well as sector-specific roles (regulatory affairs, market access, medical affairs, and more).",
+          "Operating across the entire value chain - from R&D to manufacturing and commercialization -PITKER supports both large groups and mid-sized companies, whether owned by family shareholders or private equity."
         ],
         strengths: {
           title: "Our Strengths",
           points: [
             {
-              title: "Industry Knowledge",
-              description: "Deep understanding of the sector and its leaders, both in France and internationally."
+              title: "Deep sector knowledge",
+              description: "Deep sector knowledge and an extensive network of executives, both in France and internationally."
             },
             {
-              title: "Strategic Excellence",
-              description: "Proven expertise in conducting the sector's most strategic searches."
+              title: "Proven expertise",
+              description: "Proven expertise in managing the most strategic searches within the industry."
             },
             {
-              title: "Long-term Relationships",
-              description: "Long-term approach to building high-level trust relationships."
+              title: "Long-term approach",
+              description: "A long-term approach focused on building high-level, trusted relationships."
             }
           ]
         },
         recentSearches: {
-          title: "Examples of Recent Searches"
+          title: "Examples of searches conducted by PITKER"
         }
       },
       manufacturing: {
-        title: "Industrial",
+        title: "Industry",
         intro: [
-          "At PITKER, the Industry practice is built on a deep expertise of the specific challenges and requirements of this sector. We primarily work with SMEs and mid-sized companies owned by investment funds or families, where strategic, operational, and human dimensions are at the heart of challenges. We have excellent knowledge of key industrial functions, particularly site management, industrial management, and operations management.",
-          "With our experience in various specialized sectors such as machine tools, precision mechanics, engineering, renewable energies, electrical engineering, food industry, and automotive, we have developed an extensive network covering a wide range of industrial issues and executive profiles.",
-          "The industrial sector is currently undergoing profound transformations, particularly the growing integration of digitalization and artificial intelligence, which are redefining processes and necessary skills, requiring creativity, boldness, and innovation in approaching executive search in this sector.",
-          "PITKER supports its clients in finding talents capable of driving operational transformations, innovating in a competitive environment, and ensuring business sustainability. Through our tailored approach and deep understanding of industrial ecosystems, we help companies meet their challenges, whether local or international."
+          "Our Industry practice is dedicated to supporting companies in their transformation and growth. We have excellent knowledge of key industrial functions, particularly site management, industrial management, and operations management.",
+          "Our team has extensive experience in the industrial sector, with a comprehensive network covering a wide range of industrial issues and executive profiles.",
+          "The industrial sector is currently undergoing profound transformations, particularly the growing integration of digitalization and artificial intelligence, which are redefining processes and necessary skills. Through our tailored approach and deep understanding of industrial ecosystems, we help companies meet their challenges, whether local or international."
         ],
         strengths: {
           title: "Our Strengths",
@@ -186,65 +187,64 @@ export const translations = {
           [
             "Strong entrepreneurial spirit and risk appetite",
             "Ability to accelerate and adapt",
-            "Capacity to achieve more with limited resources",
-            "Understanding of shareholder constraints, particularly regarding cash flow and investments"
+            "Capacity to achieve much with limited resources",
+            "Consideration of shareholder constraints, particularly regarding cash flow and investments"
           ],
           "PITKER partners' expertise covers the main investment sectors of funds: healthcare, industry, infrastructure, and consumer/retail.",
-          "We recruit for all executive committee positions, with specific expertise in CEO and CFO roles.",
-          "For each assignment, we form an ad hoc team, consisting of one or more partners and a research consultant, to mobilize the necessary skills to meet each project's specific requirements."
+          "We recruit all executive committee functions, with specific expertise in CEO and CFO roles."
         ],
         strengths: {
           title: "Our Strengths",
           points: [
             {
               title: "PE Expertise",
-              description: "Strong experience in Private Equity recruitment providing relevant judgment on candidates"
+              description: "Strong experience in Private Equity recruitment that gives us relevant judgment on candidates"
             },
             {
               title: "Network",
-              description: "Extensive PE network, with benchmarks and references on profiles we approach and evaluate"
+              description: "A network in the PE world, with benchmarks and references on the profiles we approach and evaluate"
             },
             {
               title: "Agility",
-              description: "Agile operating model aligned with our clients' way of working"
+              description: "Agility in our operating mode, aligned with our clients' operations"
             },
             {
               title: "Multi-sector Coverage",
-              description: "Comprehensive coverage across multiple sectors"
+              description: "Multi-sector coverage"
             }
           ]
         },
         recentSearches: {
           title: "Examples of Recent Searches"
+        }
+      },
+      ceoSearch: {
+        title: "CEO Search",
+        intro: [
+          "Notre pratique CEO Search se distingue par une approche rigoureuse et personnalisée, garantissant l'identification et le recrutement des meilleurs talents pour les postes de direction. Nous combinons une rencontre approfondie avec tous les interlocuteurs concernés par la recherche, un recueil exhaustif d'informations sur le secteur, l'entreprise, ses concurrents, ainsi que l'environnement technologique et réglementaire.",
+          "Pour chaque mission, nous constituons une équipe ad hoc, composée d'un(e) ou plusieurs associés et d'un(e) consultant(e) recherche, afin de mobiliser les compétences nécessaires pour répondre aux exigences spécifiques de chaque projet. Nos associés s'impliquent sur l'ensemble des maillons de la chaîne de valeur, là où d'autres acteurs du recrutement ont parfois une approche plus cloisonnée.",
+          "Nous définissons une stratégie de recherche qui allie une approche systématique, tirant parti de toutes les sources d'information disponibles, et des conversations ciblées de haut niveau avec des personnes de confiance dans le marché.",
+          "Nous portons une attention particulière à toutes les interactions pour garantir à la fois l'efficacité et la fluidité du processus de recherche. La confidentialité et le soin apporté au rédactionnel dans les correspondances avec nos clients et les candidats considérés participent, entre autres éléments, de notre démarche. Nos bureaux, offrant un cadre premium, sont à la disposition de nos clients, français et étrangers, pour organiser des rencontres discrètes."
+        ],
+        strengths: {
+          title: "Our Strengths",
+          points: [
+            {
+              title: "Seniority",
+              description: "The seniority and commitment of our team of partners."
+            },
+            {
+              title: "Personalized Approach",
+              description: "The size of our firm allows for a high-level, fully personalized approach."
+            },
+            {
+              title: "Mid-cap Expertise",
+              description: "Experience in numerous searches at this level, with a preference for mid-cap environments (family ownership or investment funds)."
+            }
+          ]
         },
-        ceoSearch: {
-          title: "CEO Search",
-          intro: [
-            "Our CEO Search practice stands out for its rigorous, personalised approach to identifying and recruiting the best talent for executive positions. We combine in-depth meetings with all the people involved in the search, with exhaustive information gathering on the sector, the company, its competitors, and the technological and regulatory environment.",
-            "For each assignment, we put together an ad hoc team, comprising one or more partners and a research consultant, to mobilise the skills needed to meet the specific requirements of each project. Our partners are involved in all links of the value chain, where other recruitment players sometimes have a more compartmentalised approach.",
-            "We define a research strategy that combines a systematic approach, drawing on all available sources of information, with targeted, high-level conversations with trusted people in the market.",
-            "We pay particular attention to all interactions to ensure both efficiency and fluidity in the research process. Confidentiality and the care taken in writing correspondence with our clients and the candidates under consideration are just some of the elements of our approach. Our offices, offering a premium setting, are available to our clients, both French and foreign, to organise discreet meetings."
-          ],
-          strengths: {
-            title: "Our Strengths",
-            points: [
-              {
-                title: "Rigorous Approach",
-                description: "In-depth analysis and comprehensive information gathering for each search."
-              },
-              {
-                title: "Personalized Service",
-                description: "Tailored approach with dedicated teams for each assignment."
-              },
-              {
-                title: "Confidentiality",
-                description: "High level of discretion and professional handling of sensitive information."
-              }
-            ]
-          },
-          recentSearches: {
-            title: "Examples of Recent Searches"
-          }
+        recentSearches: {
+          title: "Examples of Recent Searches"
         }
       }
     },
@@ -254,6 +254,9 @@ export const translations = {
         description: 'Our team is at your disposal to discuss your leadership challenges.',
         scrollCTA: 'Contact our partners'
       },
+      team: {
+        title: 'Contact us'
+      },
       location: {
         title: 'Our Office',
       }
@@ -261,9 +264,9 @@ export const translations = {
   },
   fr: {
     navigation: {
-      'what-we-do': 'Notre expertise',
-      'people': 'Notre équipe',
-      'practices': 'Practices',
+      'what-we-do': 'Savoir-faire',
+      'people': 'Équipe',
+      'practices': 'Majeures',
       'contact': 'Contact'
     },
     footer: {
@@ -273,73 +276,73 @@ export const translations = {
       'all-rights-reserved': 'Tous droits réservés.',
       'legal-mentions': 'Mentions légales',
       'privacy-policy': 'Politique de confidentialité',
-      'office-title': 'Notre Bureau à Paris',
-      copyright: `© ${new Date().getFullYear()} PITKER. Tous droits réservés.`
+      'office-title': 'Nos Bureaux',
+      copyright: 'PITKER. Tous droits réservés.'
     },
     home: {
       hero: {
         title: {
-          firstLine: 'Une expertise spécialisée',
-          secondLine: 'pour votre croissance future'
+          firstLine: 'Conçu pour mener les recherches',
+          secondLine: 'de cadres dirigeants les plus complexes.'
         },
-        description: 'Notre expertise sectorielle apporte une connaissance approfondie, une expérience et un réseau spécifiques à chaque client.'
+        description: 'PITKER accompagne les entreprises de taille intermédiaire et les grands groupes dans la recherche de leurs dirigeants, avec une expertise reconnue dans les secteurs des sciences de la vie, de l\'industrie et du private equity.'
       },
       practices: {
         title: 'Nos',
-        titleHighlight: 'Expertises',
+        titleHighlight: 'Majeures',
         healthcare: {
-          title: 'Life Sciences',
-          description: 'Accompagnement des entreprises de santé dans leur développement par le recrutement stratégique.'
+          title: 'Industries de Santé',
+          description: 'Accompagnement des entreprises pharmaceutiques, biotech et medtech dans leur développement.'
         },
         privateEquity: {
           title: 'Private Equity',
-          description: 'Assistance aux fonds d\'investissement et à leurs participations dans leurs recrutements clés.'
+          description: 'Accompagnement des fonds d\'investissement et de leurs participations dans leurs recrutements clés.'
         },
         industry: {
-          title: 'Industriel',
-          description: 'Aide aux entreprises industrielles dans le recrutement de leurs futurs dirigeants.'
+          title: 'Industrie',
+          description: 'Accompagnement des entreprises industrielles dans le recrutement de leurs futurs dirigeants.'
         },
         ceoSearch: {
-          title: 'Recrutement de PDG',
+          title: 'CEO Search',
           description: 'Expertise spécialisée dans l\'identification et le recrutement de PDG d\'exception tous secteurs confondus.'
         }
       },
       getConnected: {
-        title: 'Actualités & Insights',
+        title: 'Actualités',
         linkedin: 'Suivez-nous sur LinkedIn',
         button: 'Suivez-nous sur LinkedIn'
       },
       news: {
-        title: 'Actualités & Insights',
+        title: 'Actualités',
         articles: {
           newPartner: {
-            title: 'Nouveau partenaire chez PITKER',
-            description: 'Découvrez notre dernière recrue.'
+            title: 'Nouvel associé chez PITKER',
+            description: 'Discover our latest addition to the team.'
           },
           careerDevelopment: {
-            title: 'Notre vision du développement de carrière et du recrutement',
-            description: 'Perspectives sur la progression de carrière et le recrutement de cadres dirigeants.'
+            title: 'Réflexions sur le développement des carrières et l\'executive search',
+            description: 'Insights on career progression and executive search.'
           },
           careerOrganization: {
-            title: 'Organisez-vous pour développer votre carrière',
-            description: 'Conseils et stratégies pour faire progresser votre carrière.'
+            title: 'Soyez organisé(e) pour gérer votre développement professionnel',
+            description: 'Tips and strategies for career advancement.'
           }
         }
       }
     },
     whatWeDo: {
       hero: {
-        title: 'Ce que nous faisons',
-        description: 'Fondé en 2020 et dirigé par trois associés, PITKER est un cabinet de chasse de têtes premium basé à Paris, au service des entreprises de taille moyenne et des grands groupes dans divers secteurs, avec comme trois axes principaux les Sciences de la Vie, l\'Industrie et le Private Equity.\n\nPITKER couvre 100% des fonctions d\'une équipe dirigeante : direction générale, finance, ressources humaines, marketing, ventes, juridique, R&D, production & supply, etc.\n\nFait notable, dans ses trois secteurs de prédilection et au-delà, le cabinet se distingue par la conduite d\'un nombre significatif de recherches de "numéro un", c\'est-à-dire de Directeurs Généraux, Présidents Directeurs Généraux, etc. Ces "recherches de DG" représentent un quart des missions de PITKER.\n\nCombinant des standards de qualité élevés, une analyse approfondie et un haut degré de confidentialité, PITKER propose à ses clients des solutions efficaces et sur mesure, en France et à l\'étranger, grâce à un réseau de cabinets partenaires de confiance.'
+        title: 'Savoir-faire',
+        description: 'Fondé en 2020 et dirigé par trois associés seniors, PITKER est un cabinet de conseil en recherche de dirigeants basé à Paris. Le cabinet accompagne des entreprises de taille intermédiaire et des grands groupes dans leurs recherches de cadres dirigeants, en France comme à l\'international. Si PITKER intervient dans de nombreux secteurs, l\'expertise du cabinet s\'exprime particulièrement dans les sciences de la vie, l\'industrie et le private equity.\n\nPITKER couvre 100 % des fonctions d\'une équipe de direction : direction générale, finance, ressources humaines, marketing, ventes, juridique, R&D, production & supply, etc.\n\nAlliant exigence de qualité, analyse approfondie et confidentialité absolue, PITKER propose à ses clients des solutions efficaces et sur mesure, en France et à l\'international, grâce à un réseau de cabinets partenaires de confiance.\n\nDans ses trois secteurs de prédilection et au-delà, le cabinet mène un nombre significatif de recherches de "numéro un", ie. de (Présidents) Directeurs généraux, etc. Ces recherches de dirigeants représentent un quart de l\'ensemble des missions confiées à PITKER.'
       },
       keyStats: {
         title: 'Chiffres clés',
         stats: [
-          { number: '2020', description: 'Année de création' },
-          { number: '3', description: 'Associés seniors' },
-          { number: '100%', description: 'Couverture C-suite' },
-          { number: '2/3', description: 'de nos clients sont des ETI' },
-          { number: '1/4', description: 'de nos recherches concernent des fonctions de DG/PDG' }
+          { number: '2020', description: 'année de création' },
+          { number: '3', description: 'associés seniors' },
+          { number: '100%', description: 'des fonctions d\'une équipe de direction' },
+          { number: '2/3', description: 'de nos clients sont des ETI (familiales, sous LBO, etc.)' },
+          { number: '1/4', description: 'de nos recherches concernent des fonctions de CEO/GM' }
         ]
       }
     },
@@ -347,24 +350,25 @@ export const translations = {
       hero: {
         title: 'Notre',
         titleHighlight: 'Équipe',
-        subtitle: 'Dirigeante'
+        subtitle: ''
       },
       partners: {
         emailLabel: 'Email',
         linkedinLabel: 'LinkedIn',
-        major: '★'
+        major: '★',
+        description: 'PITKER est une aventure humaine, née de multiples rencontres où chacun enrichit le collectif, par ses expériences et sa personnalité. Maud Chabert, Jean-Marie Verdier et Patrice de Fournas ont construit une approche singulière du métier, faite d\'authenticité, de caractère et d\'engagement. Pour chacune des recherches qui leur est confiée, ils conçoivent un dispositif adapté qui permet de résoudre l\'équation posée'
       }
     },
     practices: {
       grid: {
         title: "Nos",
-        highlight: "Expertises",
+        highlight: "Majeures",
         lifesciences: {
-          title: "Sciences de la Vie",
+          title: "Industries de Santé",
           description: "Accompagnement des entreprises pharmaceutiques, biotech et medtech dans leur développement."
         },
         manufacturing: {
-          title: "Industrial",
+          title: "Industrie",
           description: "Solutions sur mesure pour la transformation des entreprises industrielles."
         },
         privateEquity: {
@@ -372,7 +376,7 @@ export const translations = {
           description: "Expertise dédiée aux fonds d'investissement et à leurs participations."
         },
         ceoSearch: {
-          title: "Recrutement de PDG",
+          title: "CEO Search",
           description: "Expertise spécialisée dans l'identification et le recrutement de PDG d'exception tous secteurs confondus."
         },
         learnMore: "En savoir plus"
@@ -383,56 +387,55 @@ export const translations = {
         linkedinLabel: "LinkedIn"
       },
       lifesciences: {
-        title: "Sciences de la Vie",
+        title: "Industries de Santé",
         intro: [
-          "Le secteur des sciences de la vie se distingue par son caractère innovant, sa dimension internationale, son cadre réglementaire exigeant et la diversité de ses acteurs : pharmaceutique (médicaments sur ordonnance et OTC, génériques et biosimilaires, etc.), biotechnologie (incluant les maladies rares), équipements et dispositifs médicaux, diagnostic, principes actifs, sous-traitance de développement et de production, santé vétérinaire, etc.",
-          "L'identification des leaders dans ces industries nécessite une connaissance approfondie du secteur et des relations de confiance avec les acteurs clés. PITKER répond à ces exigences en investissant quotidiennement dans la compréhension de ce secteur en constante évolution, où l'humain joue un rôle crucial au-delà de la science.",
-          "Pour les industries de santé, qui représentent plus de la moitié de ses clients, PITKER mène des recherches en France et à l'étranger grâce à un réseau de partenaires privilégiés. Tout en se spécialisant dans la recherche de PDG et de direction générale, le cabinet couvre toutes les fonctions clés de l'équipe de direction (finance, ressources humaines, etc.) ainsi que les rôles spécifiques au secteur (affaires pharmaceutiques, accès au marché, affaires médicales, etc.).",
-          "Opérant sur l'ensemble de la chaîne de valeur - R&D, production et commercialisation - le cabinet accompagne des clients allant des grands groupes aux entreprises de taille moyenne détenues par des actionnaires familiaux et/ou des fonds d'investissement."
+          "Le secteur des Industries de Santé se distingue par son caractère innovant, sa dimension internationale, son cadre réglementaire exigeant et la diversité de ses acteurs : pharmacie (médicaments de prescription et sans ordonnance, génériques et biosimilaires, etc.), biotechnologies (incl. le domaine des maladies rares), équipements et dispositifs médicaux, diagnostic, ingrédients actifs, sous-traitance de développement et de production, santé vétérinaire, etc.",
+          "Identifier un(e) dirigeant(e) dans ces industries nécessite une connaissance approfondie du secteur et une relation de confiance avec ses acteurs clés. PITKER répond à ces exigences en investissant quotidiennement dans la compréhension de ce secteur en constante mutation, où les femmes et les hommes jouent un rôle crucial au-delà de la science.",
+          "Pour les Industries de Santé qui représentent plus de la moitié de ses clients, PITKER conduit des recherches en France et à l'étranger grâce à un réseau de partenaires privilégiés. S'il a une prédilection pour les recherches de CEO et de direction générale, le cabinet couvre l'ensemble des fonctions régaliennes d'une équipe de direction (finance, ressources humaines, etc.) autant que celles propres à ce secteur (affaires pharmaceutiques, accès au marché, affaires médicales, etc.).",
+          "Le cabinet qui intervient sur l'ensemble de la chaîne de valeur - R&D, production et commercialisation – assiste des clients qui sont à la fois des grands groupes et des entreprises de taille intermédiaire qui appartiennent à des actionnaires familiaux et/ou des fonds d'investissement."
         ],
         strengths: {
           title: "Nos Forces",
           points: [
             {
-              title: "Connaissance du Secteur",
-              description: "Compréhension approfondie du secteur et de ses leaders, tant en France qu'à l'international."
+              title: "Connaissance du secteur",
+              description: "Connaissance approfondie du secteur et de ses dirigeant(e)s, en France et à l'étranger."
             },
             {
-              title: "Excellence Stratégique",
+              title: "Excellence stratégique",
               description: "Expertise éprouvée dans la conduite des recherches les plus stratégiques du secteur."
             },
             {
-              title: "Relations Durables",
-              description: "Approche à long terme pour construire des relations de confiance de haut niveau."
+              title: "Relations à long terme",
+              description: "Approche inscrite dans la durée, pour tisser des relations de confiance, à haut niveau."
             }
           ]
         },
         recentSearches: {
-          title: "Exemples de Recherches Récentes"
+          title: "Exemples de recherches récentes"
         }
       },
       manufacturing: {
-        title: "Industrial",
+        title: "Industrie",
         intro: [
-          "Chez PITKER, la pratique Industrie s'appuie sur une expertise approfondie des enjeux et exigences spécifiques de ce secteur. Nous travaillons principalement avec des PME et ETI détenues par des fonds d'investissement ou des familles, où les dimensions stratégiques, opérationnelles et humaines sont au cœur des défis. Nous avons une excellente connaissance des fonctions industrielles clés, notamment la direction de site, la direction industrielle et la direction des opérations.",
-          "Avec notre expérience dans divers secteurs spécialisés tels que les machines-outils, la mécanique de précision, l'ingénierie, les énergies renouvelables, le génie électrique, l'industrie alimentaire et l'automobile, nous avons développé un réseau étendu couvrant un large éventail de problématiques industrielles et de profils de direction.",
-          "Le secteur industriel connaît actuellement de profondes transformations, notamment l'intégration croissante de la digitalisation et de l'intelligence artificielle, qui redéfinissent les processus et les compétences nécessaires, exigeant créativité, audace et innovation dans l'approche de la recherche de dirigeants dans ce secteur.",
-          "PITKER accompagne ses clients dans la recherche de talents capables de conduire les transformations opérationnelles, d'innover dans un environnement concurrentiel et d'assurer la pérennité des entreprises. Grâce à notre approche sur mesure et notre compréhension approfondie des écosystèmes industriels, nous aidons les entreprises à relever leurs défis, qu'ils soient locaux ou internationaux."
+          "Notre pratique Industrie est dédiée à l'accompagnement des entreprises dans leur transformation et leur croissance. Nous avons une excellente connaissance des fonctions industrielles clés, notamment la gestion de site, la gestion industrielle et la gestion des opérations.",
+          "Notre équipe dispose d'une vaste expérience dans le secteur industriel, avec un réseau complet couvrant un large éventail de problématiques industrielles et de profils de dirigeants.",
+          "Le secteur industriel connaît actuellement des transformations profondes, notamment l'intégration croissante de la digitalisation et de l'intelligence artificielle, qui redéfinissent les processus et les compétences nécessaires. Grâce à notre approche sur mesure et notre compréhension approfondie des écosystèmes industriels, nous aidons les entreprises à relever leurs défis, qu'ils soient locaux ou internationaux."
         ],
         strengths: {
           title: "Nos Forces",
           points: [
             {
               title: "Connaissance Multisectorielle",
-              description: "Compréhension approfondie de multiples secteurs industriels."
+              description: "Connaissance multi-sectorielle de l'industrie."
             },
             {
               title: "Transitions de Leadership",
-              description: "Expérience éprouvée dans la recherche de dirigeants lors de changements de gouvernance (succession, fusion, LBO, etc.)."
+              description: "Expérience éprouvée en recherche de dirigeants dans des contextes de changement de gouvernance (succession, fusion, LBO, etc.)."
             },
             {
               title: "Approche Innovante",
-              description: "Approche innovante et différenciante dans l'identification et l'évaluation des candidats, favorisant des perspectives nouvelles et pertinentes."
+              description: "Approche novatrice et différenciante dans l'identification et l'évaluation des candidats, privilégiant des perspectives nouvelles et pertinentes."
             }
           ]
         },
@@ -443,80 +446,82 @@ export const translations = {
       privateEquity: {
         title: "Private Equity",
         intro: [
-          "Notre expérience significative dans le recrutement Private Equity nous permet d'identifier des profils caractérisés par :",
+          "Notre expérience significative en recrutement Private Equity nous permet d'identifier des profils caractérisés par :",
           [
             "Un fort esprit entrepreneurial et une appétence pour le risque",
             "Une capacité à accélérer et à s'adapter",
-            "Une capacité à faire plus avec des ressources limitées",
-            "Une compréhension des contraintes actionnaires, notamment en matière de trésorerie et d'investissements"
+            "Une capacité à réaliser beaucoup avec des ressources limitées",
+            "Une prise en compte des contraintes actionnariales, notamment en matière de trésorerie et d'investissements"
           ],
-          "L'expertise des associés PITKER couvre les principaux secteurs d'investissement des fonds : santé, industrie, infrastructure et consommation/retail.",
-          "Nous recrutons pour tous les postes de comité de direction, avec une expertise particulière pour les rôles de PDG et de DAF.",
-          "Pour chaque mission, nous constituons une équipe ad hoc, composée d'un ou plusieurs associés et d'un consultant en recherche, afin de mobiliser les compétences nécessaires pour répondre aux exigences spécifiques de chaque projet."
+          "L'expertise des associés de PITKER couvre les principaux secteurs d'investissement des fonds : santé, industrie, infrastructure et consommation/distribution.",
+          "Nous recrutons toutes les fonctions de comité exécutif, avec une expertise particulière dans les rôles de DG et DAF."
         ],
         strengths: {
           title: "Nos Forces",
           points: [
             {
               title: "Expertise PE",
-              description: "Forte expérience dans le recrutement Private Equity permettant un jugement pertinent sur les candidats"
+              description: "Une forte expérience des recrutements pour les fonds de Private Equity qui nous donne une pertinence de jugement sur les candidats"
             },
             {
               title: "Réseau",
-              description: "Réseau PE étendu, avec des benchmarks et références sur les profils que nous approchons et évaluons"
+              description: "Un réseau dans le monde du PE, avec des repères et des références sur les profils que nous approchons et que nous évaluons"
             },
             {
               title: "Agilité",
-              description: "Modèle opérationnel agile aligné sur le mode de fonctionnement de nos clients"
+              description: "Une agilité dans notre mode de fonctionnement, en adéquation avec le fonctionnement de nos clients"
             },
             {
               title: "Couverture Multisectorielle",
-              description: "Couverture complète à travers de multiples secteurs"
+              description: "Une couverture multi-sectorielle"
             }
           ]
         },
         recentSearches: {
           title: "Exemples de Recherches Récentes"
+        }
+      },
+      ceoSearch: {
+        title: "CEO Search",
+        intro: [
+          "Notre pratique CEO Search se distingue par une approche rigoureuse et personnalisée, garantissant l'identification et le recrutement des meilleurs talents pour les postes de direction. Nous combinons une rencontre approfondie avec tous les interlocuteurs concernés par la recherche, un recueil exhaustif d'informations sur le secteur, l'entreprise, ses concurrents, ainsi que l'environnement technologique et réglementaire.",
+          "Pour chaque mission, nous constituons une équipe ad hoc, composée d'un(e) ou plusieurs associés et d'un(e) consultant(e) recherche, afin de mobiliser les compétences nécessaires pour répondre aux exigences spécifiques de chaque projet. Nos associés s'impliquent sur l'ensemble des maillons de la chaîne de valeur, là où d'autres acteurs du recrutement ont parfois une approche plus cloisonnée.",
+          "Nous définissons une stratégie de recherche qui allie une approche systématique, tirant parti de toutes les sources d'information disponibles, et des conversations ciblées de haut niveau avec des personnes de confiance dans le marché.",
+          "Nous portons une attention particulière à toutes les interactions pour garantir à la fois l'efficacité et la fluidité du processus de recherche. La confidentialité et le soin apporté au rédactionnel dans les correspondances avec nos clients et les candidats considérés participent, entre autres éléments, de notre démarche. Nos bureaux, offrant un cadre premium, sont à la disposition de nos clients, français et étrangers, pour organiser des rencontres discrètes."
+        ],
+        strengths: {
+          title: "Nos Forces",
+          points: [
+            {
+              title: "Séniorité",
+              description: "La séniorité et l'engagement de notre équipe d'associés."
+            },
+            {
+              title: "Approche Personnalisée",
+              description: "La taille de notre cabinet qui permet une approche de haut niveau, totalement personnalisée."
+            },
+            {
+              title: "Expertise ETI",
+              description: "L'expérience de nombreuses recherches de ce niveau, avec une prédilection pour les environnements de type ETI (actionnariat familial ou fonds d'investissement)."
+            }
+          ]
         },
-        ceoSearch: {
-          title: "CEO Search",
-          intro: [
-            "Our CEO Search practice stands out for its rigorous, personalised approach to identifying and recruiting the best talent for executive positions. We combine in-depth meetings with all the people involved in the search, with exhaustive information gathering on the sector, the company, its competitors, and the technological and regulatory environment.",
-            "For each assignment, we put together an ad hoc team, comprising one or more partners and a research consultant, to mobilise the skills needed to meet the specific requirements of each project. Our partners are involved in all links of the value chain, where other recruitment players sometimes have a more compartmentalised approach.",
-            "We define a research strategy that combines a systematic approach, drawing on all available sources of information, with targeted, high-level conversations with trusted people in the market.",
-            "We pay particular attention to all interactions to ensure both efficiency and fluidity in the research process. Confidentiality and the care taken in writing correspondence with our clients and the candidates under consideration are just some of the elements of our approach. Our offices, offering a premium setting, are available to our clients, both French and foreign, to organise discreet meetings."
-          ],
-          strengths: {
-            title: "Our Strengths",
-            points: [
-              {
-                title: "Rigorous Approach",
-                description: "In-depth analysis and comprehensive information gathering for each search."
-              },
-              {
-                title: "Personalized Service",
-                description: "Tailored approach with dedicated teams for each assignment."
-              },
-              {
-                title: "Confidentiality",
-                description: "High level of discretion and professional handling of sensitive information."
-              }
-            ]
-          },
-          recentSearches: {
-            title: "Examples of Recent Searches"
-          }
+        recentSearches: {
+          title: "Exemples de Recherches Récentes"
         }
       }
     },
     contact: {
       hero: {
-        title: 'Contact',
+        title: 'Nous contacter',
         description: 'Notre équipe est à votre disposition pour échanger sur vos enjeux de leadership.',
         scrollCTA: 'Contacter nos associés'
       },
+      team: {
+        title: 'Nous contacter'
+      },
       location: {
-        title: 'Notre Bureau',
+        title: 'Nos Bureaux',
       }
     }
   }

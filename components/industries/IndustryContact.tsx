@@ -9,7 +9,7 @@ interface IndustryContactProps {
 }
 
 const IndustryContact = ({ partner }: IndustryContactProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   if (!partner) return null;
   
@@ -17,7 +17,7 @@ const IndustryContact = ({ partner }: IndustryContactProps) => {
     <div className="flex flex-col items-center md:items-end space-y-6">
       <div className="relative w-32 h-32">
         <Image
-          src={partner.image}
+          src={partner.imageOff}
           alt={partner.name}
           fill
           className="object-cover rounded-full"
@@ -26,8 +26,8 @@ const IndustryContact = ({ partner }: IndustryContactProps) => {
       </div>
       <div className="text-center md:text-right">
         <h3 className="text-xl font-bold text-pitkerBlue">{partner.name}</h3>
-        <p className="text-gray-600 mb-2">{partner.role}</p>
-        <p className="text-sm text-gray-500 mb-4">{partner.major}</p>
+        <p className="text-gray-600 mb-2">{partner.roleTranslations[language]}</p>
+        <p className="text-sm text-gray-500 mb-4">{partner.majorTranslations[language]}</p>
         <div className="flex items-center justify-center md:justify-end space-x-4">
           <a 
             href={`mailto:${partner.email}`}

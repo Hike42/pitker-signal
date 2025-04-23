@@ -1,7 +1,7 @@
 // components/Navbar.tsx
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { LanguageToggle } from './navigation/LanguageToggle';
@@ -12,12 +12,8 @@ import { translations } from '@/lib/translations';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible] = useState(true);
   const { language } = useLanguage();
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -40,40 +36,48 @@ const Navbar = () => {
     { href: '/contact', label: translations[language].navigation['contact'] }
   ];
 
+  const menuStyles = {
+    base: "text-pitkerBlue hover:text-pitkerRed transition-colors duration-300",
+    desktop: "border-b-2 border-transparent hover:border-pitkerBlue",
+    mobile: "block py-3 text-base font-medium border-b border-gray-100 last:border-0 focus:outline-none focus:ring-2 focus:ring-pitkerRed focus:ring-offset-2"
+  };
+
   return (
-    <div>
+    <header role="banner">
       {/* Bandeau supérieur */}
-      <div className="bg-gray-100 py-2 hidden md:block">
+      <div className="bg-gray-100 py-2 hidden md:block" role="complementary" aria-label="Barre de langue">
         <div className="container mx-auto px-4 flex justify-end">
           <LanguageToggle />
         </div>
       </div>
 
       {/* Navbar principale */}
-      <nav className="bg-white shadow">
+      <nav className="bg-white shadow" role="navigation" aria-label="Navigation principale">
         <div className="container mx-auto py-4 px-4">
           <div className="flex justify-between h-16 items-center">
             {/* Logo */}
             <div>
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center" aria-label="Retour à l'accueil">
                 <div className="relative w-40 h-10">
                   <Image
                     src="/navbarlogo.png"
                     alt="Pitker Logo"
                     fill
                     className="object-contain"
+                    priority
                   />
                 </div>
               </Link>
             </div>
 
             {/* Menu Desktop */}
-            <div className="hidden md:flex md:items-center md:space-x-8">
+            <div className="hidden md:flex md:items-center md:space-x-8" role="menubar">
               {NAV_LINKS.map(({ href, label }) => (
-                <div key={href}>
+                <div key={href} role="none">
                   <Link
                     href={href}
-                    className="text-pitkerBlue hover:text-pitkerRed border-b-2 border-transparent hover:border-pitkerBlue transition-colors duration-300"
+                    className={`${menuStyles.base} ${menuStyles.desktop}`}
+                    role="menuitem"
                   >
                     {label}
                   </Link>
@@ -87,8 +91,9 @@ const Navbar = () => {
               initial="hidden"
               animate={isVisible ? "visible" : "hidden"}
               className="flex items-center gap-4 md:hidden"
+              style={{ willChange: 'transform, opacity' }}
             >
-              <MenuButton isOpen={isOpen} onClick={toggleMenu} />
+              <MenuButton isOpen={isOpen} onClick={toggleMenu} aria-expanded={isOpen} />
             </motion.div>
           </div>
         </div>
@@ -102,8 +107,9 @@ const Navbar = () => {
           }}
           transition={{ duration: 0.3 }}
           className="md:hidden overflow-hidden bg-white fixed top-16 left-0 right-0 z-50"
-          role="navigation"
-          aria-label="Menu principal"
+          role="menu"
+          aria-label="Menu mobile"
+          style={{ willChange: 'height, opacity' }}
         >
           <div className="px-4 py-4 space-y-2">
             <div className="py-2">
@@ -113,7 +119,7 @@ const Navbar = () => {
               <Link
                 key={href}
                 href={href}
-                className="text-pitkerBlue hover:text-pitkerRed block py-3 text-base font-medium border-b border-gray-100 last:border-0 focus:outline-none focus:ring-2 focus:ring-pitkerRed focus:ring-offset-2"
+                className={`${menuStyles.base} ${menuStyles.mobile}`}
                 onClick={() => setIsOpen(false)}
                 role="menuitem"
                 tabIndex={isOpen ? 0 : -1}
@@ -124,7 +130,7 @@ const Navbar = () => {
           </div>
         </motion.div>
       </nav>
-    </div>
+    </header>
   );
 };
 

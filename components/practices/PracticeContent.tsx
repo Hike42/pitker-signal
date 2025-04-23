@@ -6,7 +6,8 @@ import Image from 'next/image';
 
 interface PracticeContentProps {
   practiceKey: 'lifesciences' | 'manufacturing' | 'privateEquity' | 'ceoSearch';
-  recentSearches: string[];
+  recentSearchesFr: string[];
+  recentSearchesEn: string[];
 }
 
 interface PracticeContent {
@@ -24,16 +25,17 @@ interface PracticeContent {
   };
 }
 
-const PracticeContent = ({ practiceKey, recentSearches }: PracticeContentProps) => {
-  const { t } = useLanguage();
+const PracticeContent = ({ practiceKey, recentSearchesFr, recentSearchesEn }: PracticeContentProps) => {
+  const { t, language } = useLanguage();
+  const recentSearches = language === 'fr' ? recentSearchesFr : recentSearchesEn;
   const practicePartner = PARTNERS.find((p: Partner) => {
     switch (practiceKey) {
       case 'lifesciences':
-        return p.major === 'Life Sciences';
+        return p.majorTranslations.en === 'Life Sciences';
       case 'manufacturing':
-        return p.major === 'Industrial';
+        return p.majorTranslations.en === 'Industry';
       case 'privateEquity':
-        return p.major === 'Private Equity';
+        return p.majorTranslations.en === 'Private Equity';
       case 'ceoSearch':
         return false; // Pas de partenaire spécifique pour CEO Search
       default:
@@ -41,41 +43,35 @@ const PracticeContent = ({ practiceKey, recentSearches }: PracticeContentProps) 
     }
   });
 
-  // Exception pour l'image de Maud
-  const partnerWithCorrectImage = practicePartner && practicePartner.major === 'Industrial' ? {
-    ...practicePartner,
-    image: "/team/maud.jpg"
-  } : practicePartner;
-
   const getPracticeContent = () => {
     if (practiceKey === 'ceoSearch') {
       return {
         title: t.practices.grid.ceoSearch.title,
         intro: [
-          "Our CEO Search practice stands out for its rigorous, personalised approach to identifying and recruiting the best talent for executive positions. We combine in-depth meetings with all the people involved in the search, with exhaustive information gathering on the sector, the company, its competitors, and the technological and regulatory environment.",
-          "For each assignment, we put together an ad hoc team, comprising one or more partners and a research consultant, to mobilise the skills needed to meet the specific requirements of each project. Our partners are involved in all links of the value chain, where other recruitment players sometimes have a more compartmentalised approach.",
-          "We define a research strategy that combines a systematic approach, drawing on all available sources of information, with targeted, high-level conversations with trusted people in the market.",
-          "We pay particular attention to all interactions to ensure both efficiency and fluidity in the research process. Confidentiality and the care taken in writing correspondence with our clients and the candidates under consideration are just some of the elements of our approach. Our offices, offering a premium setting, are available to our clients, both French and foreign, to organise discreet meetings."
+          "Notre practice CEO Search se distingue par une approche rigoureuse et personnalisée, garantissant l'identification et le recrutement des meilleurs talents pour les postes de direction. Nous combinons une rencontre approfondie avec tous les interlocuteurs concernés par la recherche, un recueil exhaustif d'informations sur le secteur, l'entreprise, ses concurrents, ainsi que l'environnement technologique et réglementaire.",
+          "Pour chaque mission, nous constituons une équipe ad hoc, composée d'un(e) ou plusieurs associés et d'un(e) consultant(e) recherche, afin de mobiliser les compétences nécessaires pour répondre aux exigences spécifiques de chaque projet. Nos associés s'impliquent sur l'ensemble des maillons de la chaîne de valeur, là où d'autres acteurs du recrutement ont parfois une approche plus cloisonnée.",
+          "Nous définissons une stratégie de recherche qui allie une approche systématique, tirant parti de toutes les sources d'information disponibles, et des conversations ciblées de haut niveau avec des personnes de confiance dans le marché.",
+          "Nous portons une attention particulière à toutes les interactions pour garantir à la fois l'efficacité et la fluidité du processus de recherche. La confidentialité et le soin apporté au rédactionnel dans les correspondances avec nos clients et les candidats considérés participent, entre autres éléments, de notre démarche. Nos bureaux, offrant un cadre premium, sont à la disposition de nos clients, français et étrangers, pour organiser des rencontres discrètes."
         ],
         strengths: {
-          title: "Our Strengths",
+          title: "Nos Forces",
           points: [
             {
-              title: "Rigorous Approach",
-              description: "In-depth analysis and comprehensive information gathering for each search."
+              title: "Séniorité",
+              description: "La séniorité et l'engagement de notre équipe d'associés."
             },
             {
-              title: "Personalized Service",
-              description: "Tailored approach with dedicated teams for each assignment."
+              title: "Approche Personnalisée",
+              description: "La taille de notre cabinet qui permet une approche de haut niveau, totalement personnalisée."
             },
             {
-              title: "Confidentiality",
-              description: "High level of discretion and professional handling of sensitive information."
+              title: "Expertise ETI",
+              description: "L'expérience de nombreuses recherches de ce niveau, avec une prédilection pour les environnements de type ETI (actionnariat familial ou fonds d'investissement)."
             }
           ]
         },
         recentSearches: {
-          title: "Examples of Recent Searches"
+          title: "Exemples de Recherches Récentes"
         }
       };
     }
@@ -112,24 +108,49 @@ const PracticeContent = ({ practiceKey, recentSearches }: PracticeContentProps) 
     return (
       <div className="bg-pitkerBlue shadow-2xl p-4 md:p-6 lg:p-8 transform translate-y-8 md:translate-y-12 lg:translate-y-16">
         <div className="flex flex-col items-center space-y-4 md:space-y-6">
-          {partnerWithCorrectImage ? (
+          {practicePartner ? (
             <>
               <div className="relative w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32">
                 <Image
-                  src={partnerWithCorrectImage.image}
-                  alt={partnerWithCorrectImage.name}
+                  src={practicePartner.imageSmall}
+                  alt={practicePartner.name}
                   fill
                   className="object-cover rounded-full ring-4 ring-white/20"
-                  style={{ objectPosition: partnerWithCorrectImage.imagePosition }}
+                  style={{ objectPosition: practicePartner.imagePosition }}
                   sizes="(max-width: 768px) 96px, (max-width: 1024px) 112px, 128px"
                 />
               </div>
               <div className="text-center">
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                  {partnerWithCorrectImage.name}
+                  {practicePartner.name}
                 </h3>
-                <p className="text-sm md:text-base text-white/90 mb-1">{partnerWithCorrectImage.role}</p>
-                <p className="text-xs md:text-sm text-white/70 mb-4">{partnerWithCorrectImage.major}</p>
+                <p className="text-sm md:text-base text-white/90 mb-4">{practicePartner.roleTranslations[language]}</p>
+                <div className="flex justify-center space-x-4">
+                  {practicePartner.linkedin && (
+                    <a
+                      href={practicePartner.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
+                    >
+                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                      </svg>
+                      Linkedln
+                    </a>
+                  )}
+                  {practicePartner.email && (
+                    <a
+                      href={`mailto:${practicePartner.email}`}
+                      className="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
+                    >
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                      </svg>
+                      Email
+                    </a>
+                  )}
+                </div>
               </div>
             </>
           ) : null}

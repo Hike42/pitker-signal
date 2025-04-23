@@ -1,33 +1,33 @@
+'use client';
+
 import MainLayout from '@/components/layouts/MainLayout';
 import CeoSearchContent from '@/components/industries/ceo-search/CeoSearchContent';
 import { PARTNERS } from '@/lib/constants/partners';
 import Image from 'next/image';
-const CeoSearchContacts = () => {
-  const partners = PARTNERS.map(partner => ({
-    ...partner,
-    // Exception pour Maud : utiliser .jpg
-    image: partner.name === "Maud Chabert" ? "/team/maud.jpg" : partner.image
-  }));
+import { useLanguage } from '@/lib/context/LanguageContext';
 
+const CeoSearchContacts = () => {
+  const { language } = useLanguage();
+  
   return (
     <section className="bg-gray-50 py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold text-pitkerBlue mb-12 text-center">Your Contacts</h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {partners.map((partner, index) => (
+          {PARTNERS.map((partner, index) => (
             <div key={index} className="flex flex-col items-center">
               <div className="relative w-48 h-48 mb-6">
                 <Image
-                  src={partner.image}
+                  src={partner.imageSmall}
                   alt={partner.name}
                   width={192}
                   height={192}
                   className="object-cover rounded-full absolute w-full h-full"
-                  style={{ objectPosition: partner.imagePosition }}
+                  style={{ objectPosition: partner.imageSmallPosition }}
                 />
               </div>
               <h3 className="text-xl font-bold text-pitkerBlue">{partner.name}</h3>
-              <p className="text-gray-600 mb-4">{partner.role}</p>
+              <p className="text-gray-600 mb-4">{partner.role[language]}</p>
               <div className="flex gap-4">
                 <a
                   href={`mailto:${partner.email}`}

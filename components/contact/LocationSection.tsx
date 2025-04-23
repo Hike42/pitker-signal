@@ -52,7 +52,7 @@ const LocationSection: React.FC = () => {
   const loadMap = () => {
     if (!mapRef.current || mapInstance.current) return;
 
-    const location = { lat: 48.8735, lng: 2.3105 };
+    const location = { lat: 48.875018, lng: 2.312111 };
 
     const mapStyles = [
       {
@@ -121,7 +121,7 @@ const LocationSection: React.FC = () => {
     // Point central plus grand
     new google.maps.Circle({
       center: location,
-      radius: 50,
+      radius: 25,
       map: map,
       strokeWeight: 0,
       fillColor: '#E63237',
@@ -131,11 +131,11 @@ const LocationSection: React.FC = () => {
     // Halo lumineux plus grand
     new google.maps.Circle({
       center: location,
-      radius: 55,
+      radius: 30,
       map: map,
       strokeWeight: 0,
       fillColor: '#E63237',
-      fillOpacity: 0.2
+      fillOpacity: 0.15
     });
   };
 
