@@ -16,6 +16,24 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  openGraph: {
+    title: "Pitker - Executive Search Consulting",
+    description: "Pitker is an executive search consulting firm based in Paris, serving mainly mid-market companies in healthcare, private equity, and industry.",
+    images: [
+      {
+        url: "/logo.svg",
+        width: 1200,
+        height: 630,
+        alt: "Pitker Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pitker - Executive Search Consulting",
+    description: "Pitker is an executive search consulting firm based in Paris, serving mainly mid-market companies in healthcare, private equity, and industry.",
+    images: ["/logo.svg"],
+  },
 };
 
 export default function RootLayout({
