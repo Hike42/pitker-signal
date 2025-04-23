@@ -11,29 +11,26 @@ const sen = Sen({
 });
 
 export const metadata: Metadata = {
-  title: "Pitker - Executive Search Consulting",
+  title: "PITKER | Executive Search",
   description: "Pitker is an executive search consulting firm based in Paris, serving mainly mid-market companies in healthcare, private equity, and industry.",
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Pitker - Executive Search Consulting",
+    title: "PITKER | Executive Search",
     description: "Pitker is an executive search consulting firm based in Paris, serving mainly mid-market companies in healthcare, private equity, and industry.",
     images: [
       {
-        url: "/logo.svg",
+        url: "/navbarlogo.png",
         width: 1200,
         height: 630,
-        alt: "Pitker Logo",
+        alt: "PITKER Logo",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pitker - Executive Search Consulting",
-    description: "Pitker is an executive search consulting firm based in Paris, serving mainly mid-market companies in healthcare, private equity, and industry.",
-    images: ["/logo.svg"],
-  },
+    type: "website",
+    locale: "fr_FR",
+    siteName: "PITKER",
+  }
 };
 
 export default function RootLayout({
