@@ -53,9 +53,18 @@ export const HeroSection = () => {
               <div className="h-px w-12 md:w-16 bg-pitkerRed ml-3 md:ml-4"></div>
             </div>
             <div className="max-w-2xl">
-              <h1 className="text-xl md:text-2xl lg:text-4xl text-white font-light leading-tight mb-6 md:mb-8">
-                <div>{t.title.firstLine}</div>
-                <div className="mt-1 md:mt-2">{t.title.secondLine}</div>
+              <h1 className="text-xl md:text-3xl lg:text-5xl font-light leading-tight mb-6 md:mb-8">
+                {language === 'fr' ? (
+                  <>
+                    <span className="text-white">L&apos;art et la </span>
+                    <span className="text-pitkerRed">manière.</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-white">Skill and </span>
+                    <span className="text-pitkerRed">art.</span>
+                  </>
+                )}
               </h1>
             </div>
             

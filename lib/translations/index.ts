@@ -19,7 +19,7 @@ export const translations = {
     home: {
       hero: {
         title: {
-          firstLine: 'Designed to conduct the most complex',
+          firstLine: 'Skill and art.',
           secondLine: 'C-level executive searches.'
         },
         description: 'PITKER is a premium executive search boutique firm serving both midsized companies and large corporates, with a specific focus on Life Sciences, Industry and Private Equity.'
@@ -102,11 +102,11 @@ export const translations = {
         highlight: "Practices",
         lifesciences: {
           title: "Life Sciences",
-          description: "Supporting pharmaceutical, biotech and medtech companies in their development."
+          description: "Supporting pharmaceutical companies, biotech & medtech in their development through inspirational and transformative leaders."
         },
         manufacturing: {
           title: "Industry",
-          description: "Tailored solutions for transforming industrial companies."
+          description: "Tailored solutions for the transformation of industrial companies."
         },
         privateEquity: {
           title: "Private Equity",
@@ -114,7 +114,7 @@ export const translations = {
         },
         ceoSearch: {
           title: "CEO Search",
-          description: "Dedicated expertise in selecting exceptional CEO and GM across sectors."
+          description: "In search of exceptional leaders (CEOs & General Managers)."
         },
         learnMore: "Learn more"
       },
@@ -149,7 +149,7 @@ export const translations = {
           ]
         },
         recentSearches: {
-          title: "Examples of searches conducted by PITKER"
+          title: "Examples of Recent Searches"
         }
       },
       manufacturing: {
@@ -282,8 +282,7 @@ export const translations = {
     home: {
       hero: {
         title: {
-          firstLine: 'Conçu pour mener les recherches',
-          secondLine: 'de cadres dirigeants les plus complexes.'
+          firstLine: 'L\'art et la manière.',
         },
         description: 'PITKER accompagne les entreprises de taille intermédiaire et les grands groupes dans la recherche de leurs dirigeants, avec une expertise reconnue dans les secteurs des sciences de la vie, de l\'industrie et du private equity.'
       },
@@ -377,7 +376,7 @@ export const translations = {
         },
         ceoSearch: {
           title: "CEO Search",
-          description: "Expertise spécialisée dans l'identification et le recrutement de PDG d'exception tous secteurs confondus."
+          description: "Approche sur mesure pour des recherches d'exception (CEO/DG)."
         },
         learnMore: "En savoir plus"
       },
