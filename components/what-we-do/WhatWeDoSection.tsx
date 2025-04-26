@@ -14,6 +14,19 @@ interface SectionProps {
   index: number;
 }
 
+// Fonction utilitaire
+const formatText = (text: string) => {
+  if (!text) return '';
+  return text
+    .replace(/PITKER/g, '<strong>PITKER</strong>')
+    .replace(/Life Sciences/g, '<strong class="font-bold">Life Sciences</strong>')
+    .replace(/Industrial/g, '<strong class="font-bold">Industrial</strong>')
+    .replace(/Private Equity/g, '<strong class="font-bold">Private Equity</strong>')
+    .replace(/sciences de la vie/g, '<strong class="font-bold">sciences de la vie</strong>')
+    .replace(/industrie/g, '<strong class="font-bold">industrie</strong>')
+    .replace(/private equity/g, '<strong class="font-bold">private equity</strong>');
+};
+
 // Composants
 const HeroTitle = () => {
   const { language } = useLanguage();
@@ -48,18 +61,6 @@ const HeroTitle = () => {
 };
 
 const ContentSection = ({ title, content, index }: SectionProps) => {
-  const formatText = (text: string) => {
-    if (!text) return '';
-    return text
-      .replace(/PITKER/g, '<strong>PITKER</strong>')
-      .replace(/Life Sciences/g, '<strong class="font-bold">Life Sciences</strong>')
-      .replace(/Industry/g, '<strong class="font-bold">Industry</strong>')
-      .replace(/Private Equity/g, '<strong class="font-bold">Private Equity</strong>')
-      .replace(/sciences de la vie/g, '<strong class="font-bold">sciences de la vie</strong>')
-      .replace(/industrie/g, '<strong class="font-bold">industrie</strong>')
-      .replace(/private equity/g, '<strong class="font-bold">private equity</strong>');
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -83,18 +84,6 @@ const ContentSection = ({ title, content, index }: SectionProps) => {
 };
 
 const HeroContent = ({ content }: { content: string }) => {
-  const formatText = (text: string) => {
-    if (!text) return '';
-    return text
-      .replace(/PITKER/g, '<strong>PITKER</strong>')
-      .replace(/Life Sciences/g, '<strong class="font-bold">Life Sciences</strong>')
-      .replace(/Industry/g, '<strong class="font-bold">Industry</strong>')
-      .replace(/Private Equity/g, '<strong class="font-bold">Private Equity</strong>')
-      .replace(/sciences de la vie/g, '<strong class="font-bold">sciences de la vie</strong>')
-      .replace(/industrie/g, '<strong class="font-bold">industrie</strong>')
-      .replace(/private equity/g, '<strong class="font-bold">private equity</strong>');
-  };
-
   return (
     <div>
       <motion.div 

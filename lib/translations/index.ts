@@ -22,7 +22,7 @@ export const translations = {
           firstLine: 'Skill and art.',
           secondLine: 'C-level executive searches.'
         },
-        description: 'PITKER is a premium executive search boutique firm serving both midsized companies and large corporates, with a specific focus on Life Sciences, Industry and Private Equity.'
+        description: 'PITKER is a premium executive search boutique firm serving both midsized companies and large corporates, with a specific focus on Life Sciences, Industrial and Private Equity.'
       },
       practices: {
         title: 'Our',
@@ -36,7 +36,7 @@ export const translations = {
           description: 'Assisting investment funds and their portfolio companies in key recruitment.'
         },
         industry: {
-          title: 'Industry',
+          title: 'Industrial',
           description: 'Helping industrial companies recruit their future leaders.'
         },
         ceoSearch: {
@@ -70,7 +70,7 @@ export const translations = {
     whatWeDo: {
       hero: {
         title: 'What we do',
-        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsized companies and large groups in various sectors with Life Sciences, Industry and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nInterestingly, in its three preferred sectors and beyond, the firm prides itself for handling a significant number of number one searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
+        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsized companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nInterestingly, in its three preferred sectors and beyond, the firm prides itself for handling a significant number of number one searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
       },
       keyStats: {
         title: 'Key Figures',
@@ -105,7 +105,7 @@ export const translations = {
           description: "Supporting pharmaceutical companies, biotech & medtech in their development through inspirational and transformative leaders."
         },
         manufacturing: {
-          title: "Industry",
+          title: "Industrial",
           description: "Tailored solutions for the transformation of industrial companies."
         },
         privateEquity: {
@@ -153,9 +153,9 @@ export const translations = {
         }
       },
       manufacturing: {
-        title: "Industry",
+        title: "Industrial",
         intro: [
-          "Our Industry practice is dedicated to supporting companies in their transformation and growth. We have excellent knowledge of key industrial functions, particularly site management, industrial management, and operations management.",
+          "Our Industrial practice is dedicated to supporting companies in their transformation and growth. We have excellent knowledge of key industrial functions, particularly site management, industrial management, and operations management.",
           "Our team has extensive experience in the industrial sector, with a comprehensive network covering a wide range of industrial issues and executive profiles.",
           "The industrial sector is currently undergoing profound transformations, particularly the growing integration of digitalization and artificial intelligence, which are redefining processes and necessary skills. Through our tailored approach and deep understanding of industrial ecosystems, we help companies meet their challenges, whether local or international."
         ],

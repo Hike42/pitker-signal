@@ -70,8 +70,8 @@ export const HeroSection = () => {
             
             <div className="max-w-2xl">
               <p className="text-base md:text-lg text-white/80">
-                {t.description.split(/(PITKER|Life Sciences|Industry|Private Equity|sciences de la vie|industrie|private equity)/).map((part, index) => {
-                  if (['PITKER', 'Life Sciences', 'Industry', 'Private Equity', 'sciences de la vie', 'industrie', 'private equity'].includes(part)) {
+                {t.description.split(/(PITKER|Life Sciences|Industrial|Private Equity|sciences de la vie|industrie|private equity)/).map((part, index) => {
+                  if (['PITKER', 'Life Sciences', 'Industrial', 'Private Equity', 'sciences de la vie', 'industrie', 'private equity'].includes(part)) {
                     return (
                       <span key={index} className="font-bold">
                         {part}
