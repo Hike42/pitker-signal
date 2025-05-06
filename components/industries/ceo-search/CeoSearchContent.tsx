@@ -4,13 +4,13 @@ import { useLanguage } from '@/lib/context/LanguageContext';
 import { translations } from '@/lib/translations';
 
 const recentSearchesFr = [
-  "Direction générale - groupe familial - maison de champagne",
-  "Direction générale - groupe familial - construction & promotion",
-  "Président directeur général - groupe européen - laboratoire pharmaceutique",
-  "Direction générale - groupe familial - logistique d'œuvres d'art",
-  "Chief Executive Officer - groupe familial - santé grand public",
+  "Direction générale - Groupe familial - Maison de champagne",
+  "Direction générale - Groupe familial - Construction & promotion",
+  "Président directeur général - Groupe européen - Laboratoire pharmaceutique",
+  "Direction générale - Groupe familial - Logistique d'œuvres d'art",
+  "Chief Executive Officer - Groupe familial - Santé grand public",
   "Direction générale - Fédération professionnelle",
-  "Direction générale - start-up - logtech",
+  "Direction générale - Start-up - Logtech",
   "Direction générale - ETI familiale - Équipementier automobile",
   "Direction générale - ETI familiale - Machines-outils",
   "Direction générale - ETI sous fond - Énergies renouvelables",
@@ -19,16 +19,18 @@ const recentSearchesFr = [
 ];
 
 const recentSearchesEn = [
-  "CEO - European pharmaceutical group",
-  "CEO - Industrial automation company",
-  "CEO - Private Equity portfolio company",
-  "CEO - Family-owned industrial group",
-  "CEO - Technology startup",
-  "CEO - Consumer goods company",
-  "CEO - Healthcare services company",
-  "CEO - Renewable energy company",
-  "CEO - Professional services firm",
-  "CEO - Manufacturing company"
+  "General Manager - Family owned company – House of champagne",
+  "General Manager - Family owned group - Construction & real estate development",
+  "Chief Executive Officer – European group - Pharmaceutical company",
+  "General Manager - Family owned group - Fine art logistics",
+  "Chief Executive Officer - Family owned group – Life science",
+  "General Manager - Professional federation",
+  "General Manager - Start-up - logtech",
+  "General Manager - Mid size company family owned - Automotive supplier",
+  "General Manager - Mid size company family owned - Machines and tools manufacturing",
+  "General Manager - Mid size company private equity owned - Renewables energy",
+  "General Management - Mid size highly growing company under LBO – Decarbonization",
+  "General Management - Small size company family office owned - Premium consumer goods manufacturing and distribution"
 ];
 
 const CEOSearchContent = () => {

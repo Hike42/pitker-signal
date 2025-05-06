@@ -153,26 +153,29 @@ export const translations = {
         }
       },
       manufacturing: {
-        title: "Industrial",
+        title: "Industrial – Small & Mid size companies",
         intro: [
-          "Our Industrial practice is dedicated to supporting companies in their transformation and growth. We have excellent knowledge of key industrial functions, particularly site management, industrial management, and operations management.",
-          "Our team has extensive experience in the industrial sector, with a comprehensive network covering a wide range of industrial issues and executive profiles.",
-          "The industrial sector is currently undergoing profound transformations, particularly the growing integration of digitalization and artificial intelligence, which are redefining processes and necessary skills. Through our tailored approach and deep understanding of industrial ecosystems, we help companies meet their challenges, whether local or international."
+          "At PITKER, our industrial practice is dedicated to small and mid-size companies (SMEs), whether family or private equity owned, for which, strategic, operational and human-capital challenges are crucial. To address the specific needs of these small and mid-size organizations, we have developed, region by region, a deep and wide sector expertise and talent pools covering a large scope of industrial functions.",
+          "• Targeted SME's expertise\nWe primarily support companies generating turnovers between 50 and 500 million euros. Companies for which every hiring decision has a direct impact on performance and growth.",
+          "• Broad and local sector expertise\nDrawing on our experience in specialized and diverse fields such as machine and tools manufacturing, precision or industrial engineering, renewable energy, electrical components, food industry or automotive, we have built an extensive network which addresses a wide range of industrial issues and leadership profiles.\nThis sector expertise has been developed locally, in the regions, where our clients operate, allowing us to develop a solid network with local stakeholders and a tailored talent pools to each territory.",
+          "• Industrial leadership network\nOur talent pools include site directors, industrial directors, operations directors and general managers. All are carefully selected to drive transformation, foster innovation and ensure operational excellence.",
+          "• Anticipating transformation\nIn the face of growing digitalization, the rise of artificial intelligence and the intensification of global competition, we identify profiles combining entrepreneurial spirit, creativity and technical expertise, able to secure our clients' long-term resilience and competitiveness.",
+          "Through a tailor-made approach grounded in a deep and solid understanding of local industrial ecosystems, PITKER empowers SMEs to meet their challenges, whether regional or international."
         ],
         strengths: {
           title: "Our Strengths",
           points: [
             {
-              title: "Multi-sector Knowledge",
-              description: "Deep understanding of multiple industrial sectors."
+              title: "Multi-sector knowledge",
+              description: "Multi-sector industrial knowledge"
             },
             {
-              title: "Leadership Transitions",
-              description: "Proven experience in executive search during governance changes (succession, merger, LBO, etc.)."
+              title: "Local talent pools",
+              description: "Development of local talent pools"
             },
             {
-              title: "Innovative Approach",
-              description: "Innovative and differentiating approach in candidate identification and evaluation, favoring new and relevant perspectives."
+              title: "Governance change context experience",
+              description: "Proven track record in executive search within governance changes contexts (succession, mergers, LBOs, etc.)"
             }
           ]
         },
@@ -221,25 +224,25 @@ export const translations = {
       ceoSearch: {
         title: "CEO Search",
         intro: [
-          "Notre pratique CEO Search se distingue par une approche rigoureuse et personnalisée, garantissant l'identification et le recrutement des meilleurs talents pour les postes de direction. Nous combinons une rencontre approfondie avec tous les interlocuteurs concernés par la recherche, un recueil exhaustif d'informations sur le secteur, l'entreprise, ses concurrents, ainsi que l'environnement technologique et réglementaire.",
-          "Pour chaque mission, nous constituons une équipe ad hoc, composée d'un(e) ou plusieurs associés et d'un(e) consultant(e) recherche, afin de mobiliser les compétences nécessaires pour répondre aux exigences spécifiques de chaque projet. Nos associés s'impliquent sur l'ensemble des maillons de la chaîne de valeur, là où d'autres acteurs du recrutement ont parfois une approche plus cloisonnée.",
-          "Nous définissons une stratégie de recherche qui allie une approche systématique, tirant parti de toutes les sources d'information disponibles, et des conversations ciblées de haut niveau avec des personnes de confiance dans le marché.",
-          "Nous portons une attention particulière à toutes les interactions pour garantir à la fois l'efficacité et la fluidité du processus de recherche. La confidentialité et le soin apporté au rédactionnel dans les correspondances avec nos clients et les candidats considérés participent, entre autres éléments, de notre démarche. Nos bureaux, offrant un cadre premium, sont à la disposition de nos clients, français et étrangers, pour organiser des rencontres discrètes."
+          "Our CEO search practice is characterized by a tailor-made and comprehensive approach which enables the identification and recruitment of top-tier executive talents. We combine in-depth briefing sessions engaging all relevant decision-makers involved in the recruitment with market intelligence deeply rooted in the knowledge of the sector, the company and its competitors, as well as a technological and regulatory landscape analysis.",
+          "For each assignment, we set up an ad hoc team, gathering one or more partners and a dedicated research consultant, in order to bring together all specific competencies required by each project. Our partners remain fully engaged throughout each step of the entire process, whereas other search firms often operate in silos.",
+          "We design a search strategy that combines a systematic approach, leveraging every available information sources, with targeted high-level conversations with trusted market insiders.",
+          "We are highly attentive to each interaction with our candidates and clients, in order to guarantee both efficiency and a seamless experience throughout the entire process.\nConfidentiality and high editorial standards in our client and candidate communications, are both deeply embedded in our approach.\nWe provide our high-standard offices to our, French or international, clients, for them to be able to host confidential meetings with candidates in an optimal setting."
         ],
         strengths: {
           title: "Our Strengths",
           points: [
             {
-              title: "Seniority",
-              description: "The seniority and commitment of our team of partners."
+              title: "Seniority & Commitment",
+              description: "The seniority and commitment of our partners team"
             },
             {
-              title: "Personalized Approach",
-              description: "The size of our firm allows for a high-level, fully personalized approach."
+              title: "High-touch & Customized service",
+              description: "The boutique scale of our firm, which enables a truly high-touch and fully customized service"
             },
             {
-              title: "Mid-cap Expertise",
-              description: "Experience in numerous searches at this level, with a preference for mid-cap environments (family ownership or investment funds)."
+              title: "Mid-cap expertise",
+              description: "A proven experience on many executive searches, with a particular focus on mid-cap environments (family or private-equity owned)"
             }
           ]
         },
@@ -316,15 +319,15 @@ export const translations = {
         articles: {
           newPartner: {
             title: 'Nouvel associé chez PITKER',
-            description: 'Discover our latest addition to the team.'
+            description: 'Découvrez notre nouveau membre de l\'équipe.'
           },
           careerDevelopment: {
             title: 'Réflexions sur le développement des carrières et l\'executive search',
-            description: 'Insights on career progression and executive search.'
+            description: 'Réflexions sur l\'évolution professionnelle et la recherche de dirigeants.'
           },
           careerOrganization: {
             title: 'Soyez organisé(e) pour gérer votre développement professionnel',
-            description: 'Tips and strategies for career advancement.'
+            description: 'Conseils et stratégies pour l\'avancement de votre carrière.'
           }
         }
       }
@@ -415,31 +418,34 @@ export const translations = {
         }
       },
       manufacturing: {
-        title: "Industrie",
+        title: "Industrie - ETI & PME",
         intro: [
-          "Notre pratique Industrie est dédiée à l'accompagnement des entreprises dans leur transformation et leur croissance. Nous avons une excellente connaissance des fonctions industrielles clés, notamment la gestion de site, la gestion industrielle et la gestion des opérations.",
-          "Notre équipe dispose d'une vaste expérience dans le secteur industriel, avec un réseau complet couvrant un large éventail de problématiques industrielles et de profils de dirigeants.",
-          "Le secteur industriel connaît actuellement des transformations profondes, notamment l'intégration croissante de la digitalisation et de l'intelligence artificielle, qui redéfinissent les processus et les compétences nécessaires. Grâce à notre approche sur mesure et notre compréhension approfondie des écosystèmes industriels, nous aidons les entreprises à relever leurs défis, qu'ils soient locaux ou internationaux."
+          "Chez PITKER, notre practice Industrie se consacre tout particulièrement aux PME et ETI, qu'il s'agisse d'entreprises familiales ou soutenues par des fonds d'investissement, pour lesquelles les enjeux stratégiques, opérationnels et humains sont déterminants. Pour répondre aux besoins spécifiques de ces structures de taille intermédiaire, nous avons développé, région par région, une expertise pointue et des viviers de talents couvrant l'ensemble des métiers industriels.",
+          "• Expertise ciblée PME & ETI\nNous accompagnons prioritairement des sociétés dont le chiffres d'affaires annuel se situe entre 50 et 500 millions d'euros, pour lesquelles chaque décision de recrutement a un impact direct sur la performance et la croissance.",
+          "• Maîtrise sectorielle étendue et locale\nForts de notre expérience dans des secteurs variés et points tels que les machines-outils, la mécanique de précision, l'ingénierie, les énergies renouvelables, le génie électrique, l'agroalimentaire ou encore l'automobile, nous avons développé un réseau étendu couvrant un large éventail de problématiques industrielles et de profils de dirigeants. Une expertise sectorielle qui s'est construite en région, là où sont implantés nos clients, tissant des liens étroits avec les acteurs locaux et développant des viviers de talents adaptés à chaque territoire.",
+          "• Réseau de leadership industriel\nNos pools de candidats incluent directeurs de site, directeurs industriels, directeurs des opérations, ainsi que des directeurs généraux, rigoureusement sélectionnés pour piloter les transformations, impulser l'innovation et garantir l'excellence opérationnelle.",
+          "• Anticipation des transformations\nFace à l'accélération de la digitalisation, à l'essor de l'intelligence artificielle et à l'intensification de la concurrence globale, nous identifions des profils alliant audace, créativité et expertise technique, aptes à sécuriser la pérennité et la compétitivité de nos clients.",
+          "Grâce à une approche sur-mesure, fondée sur une connaissance fine des écosystèmes industriels locaux, PITKER aide les PME et ETI à relever leurs défis, qu'ils soient régionaux ou internationaux."
         ],
         strengths: {
           title: "Nos Forces",
           points: [
             {
-              title: "Connaissance Multisectorielle",
+              title: "Connaissance multi-sectorielle",
               description: "Connaissance multi-sectorielle de l'industrie."
             },
             {
-              title: "Transitions de Leadership",
-              description: "Expérience éprouvée en recherche de dirigeants dans des contextes de changement de gouvernance (succession, fusion, LBO, etc.)."
+              title: "Talent pools en région",
+              description: "Développement de talent pools locaux, en région."
             },
             {
-              title: "Approche Innovante",
-              description: "Approche novatrice et différenciante dans l'identification et l'évaluation des candidats, privilégiant des perspectives nouvelles et pertinentes."
+              title: "Contextes de changement de gouvernance",
+              description: "Expérience éprouvée en recherche de dirigeants dans des contextes de changement de gouvernance (succession, fusion, LBO, etc.)."
             }
           ]
         },
         recentSearches: {
-          title: "Exemples de Recherches Récentes"
+          title: "Exemples de recherches récentes"
         }
       },
       privateEquity: {
@@ -483,7 +489,7 @@ export const translations = {
       ceoSearch: {
         title: "CEO Search",
         intro: [
-          "Notre pratique CEO Search se distingue par une approche rigoureuse et personnalisée, garantissant l'identification et le recrutement des meilleurs talents pour les postes de direction. Nous combinons une rencontre approfondie avec tous les interlocuteurs concernés par la recherche, un recueil exhaustif d'informations sur le secteur, l'entreprise, ses concurrents, ainsi que l'environnement technologique et réglementaire.",
+          "Notre practice CEO Search se distingue par une approche rigoureuse et personnalisée, garantissant l'identification et le recrutement des meilleurs talents pour les postes de direction. Nous combinons une rencontre approfondie avec tous les interlocuteurs concernés par la recherche, un recueil exhaustif d'informations sur le secteur, l'entreprise, ses concurrents, ainsi que l'environnement technologique et réglementaire.",
           "Pour chaque mission, nous constituons une équipe ad hoc, composée d'un(e) ou plusieurs associés et d'un(e) consultant(e) recherche, afin de mobiliser les compétences nécessaires pour répondre aux exigences spécifiques de chaque projet. Nos associés s'impliquent sur l'ensemble des maillons de la chaîne de valeur, là où d'autres acteurs du recrutement ont parfois une approche plus cloisonnée.",
           "Nous définissons une stratégie de recherche qui allie une approche systématique, tirant parti de toutes les sources d'information disponibles, et des conversations ciblées de haut niveau avec des personnes de confiance dans le marché.",
           "Nous portons une attention particulière à toutes les interactions pour garantir à la fois l'efficacité et la fluidité du processus de recherche. La confidentialité et le soin apporté au rédactionnel dans les correspondances avec nos clients et les candidats considérés participent, entre autres éléments, de notre démarche. Nos bureaux, offrant un cadre premium, sont à la disposition de nos clients, français et étrangers, pour organiser des rencontres discrètes."
@@ -492,15 +498,15 @@ export const translations = {
           title: "Nos Forces",
           points: [
             {
-              title: "Séniorité",
+              title: "Séniorité & Engagement",
               description: "La séniorité et l'engagement de notre équipe d'associés."
             },
             {
-              title: "Approche Personnalisée",
+              title: "Approche Haut Niveau & Personnalisée",
               description: "La taille de notre cabinet qui permet une approche de haut niveau, totalement personnalisée."
             },
             {
-              title: "Expertise ETI",
+              title: "ETI familiales ou sous fonds",
               description: "L'expérience de nombreuses recherches de ce niveau, avec une prédilection pour les environnements de type ETI (actionnariat familial ou fonds d'investissement)."
             }
           ]
