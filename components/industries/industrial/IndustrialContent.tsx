@@ -5,13 +5,13 @@ import PracticeContent from '@/components/practices/PracticeContent';
 const recentSearchesFr = [
   "Direction Générale – ETI familiale - Equipementier automobile",
   "Direction Générale – ETI familiale – Machines-outils",
-  "Direction Générale – ETI sous fond – Energies renouvelables",
-  "Direction Industrielle – ETI sous fond – Ingénierie",
+  "Direction Générale – ETI sous LBO – Energies renouvelables",
+  "Direction Industrielle – ETI sous LBO – Ingénierie",
   "Direction Stratégique – ETI sous LBO – Agroalimentaire",
-  "Direction des Operations – ETI sous fond – Génie électrique",
-  "Direction Financière – ETI sous fond – Ingénierie",
-  "Direction des Ressources Humaines – ETI sous fond - Machines-outils",
-  "Direction Commerciale - ETI sous fond – Génie électrique"
+  "Direction des Operations – ETI sous LBO – Génie électrique",
+  "Direction Financière – ETI sous LBO – Ingénierie",
+  "Direction des Ressources Humaines – ETI sous LBO - Machines-outils",
+  "Direction Commerciale - ETI sous LBO – Génie électrique"
 ];
 
 const recentSearchesEn = [

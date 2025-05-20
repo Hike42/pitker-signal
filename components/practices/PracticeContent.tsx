@@ -85,7 +85,15 @@ const PracticeContent = ({ practiceKey, recentSearchesFr, recentSearchesEn }: Pr
 
   const practiceContent = getPracticeContent();
 
-  const renderIntroParagraph = (content: string | readonly string[], index: number) => {
+  const renderIntroParagraph = (content: string | readonly string[] | { type: string; title: string; content: string }, index: number) => {
+    if (typeof content === 'object' && 'type' in content) {
+      return (
+        <div key={index} className="space-y-2">
+          <h3 className="text-lg font-semibold text-pitkerBlue">{content.title}</h3>
+          <p className="leading-relaxed">{content.content}</p>
+        </div>
+      );
+    }
     if (Array.isArray(content)) {
       return (
         <ul key={index} className="list-disc pl-6 space-y-2">

@@ -25,7 +25,7 @@ const recentSearchesEn = [
   "General Manager - Family owned group - Fine art logistics",
   "Chief Executive Officer - Family owned group – Life science",
   "General Manager - Professional federation",
-  "General Manager - Start-up - logtech",
+  "General Manager - Start-up - Logtech",
   "General Manager - Mid size company family owned - Automotive supplier",
   "General Manager - Mid size company family owned - Machines and tools manufacturing",
   "General Manager - Mid size company private equity owned - Renewables energy",

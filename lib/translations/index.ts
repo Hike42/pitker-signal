@@ -156,10 +156,26 @@ export const translations = {
         title: "Industrial – Small & Mid size companies",
         intro: [
           "At PITKER, our industrial practice is dedicated to small and mid-size companies (SMEs), whether family or private equity owned, for which, strategic, operational and human-capital challenges are crucial. To address the specific needs of these small and mid-size organizations, we have developed, region by region, a deep and wide sector expertise and talent pools covering a large scope of industrial functions.",
-          "• Targeted SME's expertise\nWe primarily support companies generating turnovers between 50 and 500 million euros. Companies for which every hiring decision has a direct impact on performance and growth.",
-          "• Broad and local sector expertise\nDrawing on our experience in specialized and diverse fields such as machine and tools manufacturing, precision or industrial engineering, renewable energy, electrical components, food industry or automotive, we have built an extensive network which addresses a wide range of industrial issues and leadership profiles.\nThis sector expertise has been developed locally, in the regions, where our clients operate, allowing us to develop a solid network with local stakeholders and a tailored talent pools to each territory.",
-          "• Industrial leadership network\nOur talent pools include site directors, industrial directors, operations directors and general managers. All are carefully selected to drive transformation, foster innovation and ensure operational excellence.",
-          "• Anticipating transformation\nIn the face of growing digitalization, the rise of artificial intelligence and the intensification of global competition, we identify profiles combining entrepreneurial spirit, creativity and technical expertise, able to secure our clients' long-term resilience and competitiveness.",
+          {
+            type: "section",
+            title: "Targeted SME's expertise",
+            content: "We primarily support companies generating turnovers between 50 and 500 million euros. Companies for which every hiring decision has a direct impact on performance and growth."
+          },
+          {
+            type: "section",
+            title: "Broad and local sector expertise",
+            content: "Drawing on our experience in specialized and diverse fields such as machine and tools manufacturing, precision or industrial engineering, renewable energy, electrical components, food industry or automotive, we have built an extensive network which addresses a wide range of industrial issues and leadership profiles. This sector expertise has been developed locally, in the regions, where our clients operate, allowing us to develop a solid network with local stakeholders and tailored talent pools to each territory."
+          },
+          {
+            type: "section",
+            title: "Industrial leadership network",
+            content: "Our talent pools include site directors, industrial directors, operations directors and general managers. All are carefully selected to drive transformation, foster innovation and ensure operational excellence."
+          },
+          {
+            type: "section",
+            title: "Anticipating transformation",
+            content: "In the face of growing digitalization, the rise of artificial intelligence and the intensification of global competition, we identify profiles combining entrepreneurial spirit, creativity and technical expertise, able to secure our clients' long-term resilience and competitiveness."
+          },
           "Through a tailor-made approach grounded in a deep and solid understanding of local industrial ecosystems, PITKER empowers SMEs to meet their challenges, whether regional or international."
         ],
         strengths: {
@@ -421,10 +437,26 @@ export const translations = {
         title: "Industrie - ETI & PME",
         intro: [
           "Chez PITKER, notre practice Industrie se consacre tout particulièrement aux PME et ETI, qu'il s'agisse d'entreprises familiales ou soutenues par des fonds d'investissement, pour lesquelles les enjeux stratégiques, opérationnels et humains sont déterminants. Pour répondre aux besoins spécifiques de ces structures de taille intermédiaire, nous avons développé, région par région, une expertise pointue et des viviers de talents couvrant l'ensemble des métiers industriels.",
-          "• Expertise ciblée PME & ETI\nNous accompagnons prioritairement des sociétés dont le chiffres d'affaires annuel se situe entre 50 et 500 millions d'euros, pour lesquelles chaque décision de recrutement a un impact direct sur la performance et la croissance.",
-          "• Maîtrise sectorielle étendue et locale\nForts de notre expérience dans des secteurs variés et points tels que les machines-outils, la mécanique de précision, l'ingénierie, les énergies renouvelables, le génie électrique, l'agroalimentaire ou encore l'automobile, nous avons développé un réseau étendu couvrant un large éventail de problématiques industrielles et de profils de dirigeants. Une expertise sectorielle qui s'est construite en région, là où sont implantés nos clients, tissant des liens étroits avec les acteurs locaux et développant des viviers de talents adaptés à chaque territoire.",
-          "• Réseau de leadership industriel\nNos pools de candidats incluent directeurs de site, directeurs industriels, directeurs des opérations, ainsi que des directeurs généraux, rigoureusement sélectionnés pour piloter les transformations, impulser l'innovation et garantir l'excellence opérationnelle.",
-          "• Anticipation des transformations\nFace à l'accélération de la digitalisation, à l'essor de l'intelligence artificielle et à l'intensification de la concurrence globale, nous identifions des profils alliant audace, créativité et expertise technique, aptes à sécuriser la pérennité et la compétitivité de nos clients.",
+          {
+            type: "section",
+            title: "Expertise ciblée PME & ETI",
+            content: "Nous accompagnons prioritairement des sociétés dont le chiffres d'affaires annuel se situe entre 50 et 500 millions d'euros, pour lesquelles chaque décision de recrutement a un impact direct sur la performance et la croissance."
+          },
+          {
+            type: "section",
+            title: "Maîtrise sectorielle étendue et locale",
+            content: "Forts de notre expérience dans des secteurs variés et pointus tels que les machines-outils, la mécanique de précision, l'ingénierie, les énergies renouvelables, le génie électrique, l'agroalimentaire ou encore l'automobile, nous avons développé un réseau étendu couvrant un large éventail de problématiques industrielles et de profils de dirigeants. Une expertise sectorielle qui s'est construite en région, là où sont implantés nos clients, tissant des liens étroits avec les acteurs locaux et développant des viviers de talents adaptés à chaque territoire."
+          },
+          {
+            type: "section",
+            title: "Réseau de leadership industriel",
+            content: "Nos pools de candidats incluent directeurs de site, directeurs industriels, directeurs des opérations, ainsi que des directeurs généraux, rigoureusement sélectionnés pour piloter les transformations, impulser l'innovation et garantir l'excellence opérationnelle."
+          },
+          {
+            type: "section",
+            title: "Anticipation des transformations",
+            content: "Face à l'accélération de la digitalisation, à l'essor de l'intelligence artificielle et à l'intensification de la concurrence globale, nous identifions des profils alliant audace, créativité et expertise technique, aptes à sécuriser la pérennité et la compétitivité de nos clients."
+          },
           "Grâce à une approche sur-mesure, fondée sur une connaissance fine des écosystèmes industriels locaux, PITKER aide les PME et ETI à relever leurs défis, qu'ils soient régionaux ou internationaux."
         ],
         strengths: {
@@ -466,7 +498,7 @@ export const translations = {
           points: [
             {
               title: "Expertise PE",
-              description: "Une forte expérience des recrutements pour les fonds de Private Equity qui nous donne une pertinence de jugement sur les candidats"
+              description: "Une forte expérience des recrutements pour les sociétés en portefeuille de fonds de Private Equity qui nous donne une pertinence de jugement sur les candidats"
             },
             {
               title: "Réseau",

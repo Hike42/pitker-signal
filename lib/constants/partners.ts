@@ -84,7 +84,7 @@ export const PARTNERS: Partner[] = [
       fr: "Industrie"
     },
     email: "m.chabert@pitker.com",
-    linkedin: "https://www.linkedin.com/in/maud-chabert-b2b5b2/",
+    linkedin: "https://www.linkedin.com/in/maud-chabert-3676a38/",
     biography: {
       en: "Maud is an executive search professional who supports her industrial clients in C-level searches. In addition, Maud has a special expertiste in leadership assessment.\n\nBefore co-founding PITKER in 2020, Maud worked for fifteen years at Colgate-Palmolive where she held marketing management positions, both in France and abroad.\n\nMaud is a graduate of EDHEC Lille (Class of 2004) and is certified on the Wave-Saville assessment tool.",
       fr: "Maud est une professionnelle de l'executive search qui accompagne ses clients des secteurs de l'industrie dans le cadre de recherches C-level. Maud est par ailleurs responsable de la practice Assessment de PITKER.\n\nAvant de co-fonder PITKER en 2020, Maud a travaillé près de quinze ans chez Colgate-Palmolive où elle a occupé des fonctions de Direction Marketing, en France et à l'étranger.\n\nMaud est diplômée de l'EDHEC Lille (Promotion 2004), et certifiée sur l'outil d'assessment Wave-Saville."
