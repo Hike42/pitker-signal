@@ -84,16 +84,10 @@ export const Footer = () => {
             </p>
             <nav className="flex space-x-6" aria-label="Liens légaux">
               <Link
-                href="/legal"
+                href="/mentions-legales"
                 className={footerStyles.legalLink}
               >
                 {t.footer['legal-mentions']}
-              </Link>
-              <Link
-                href="/privacy"
-                className={footerStyles.legalLink}
-              >
-                {t.footer['privacy-policy']}
               </Link>
             </nav>
           </div>

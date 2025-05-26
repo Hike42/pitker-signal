@@ -279,6 +279,149 @@ export const translations = {
       location: {
         title: 'Our Office',
       }
+    },
+    legal: {
+      title: 'Mentions Légales',
+      sections: {
+        publisher: {
+          title: '1. Site Publisher',
+          content: 'The website https://pitker.fr/ is published by:',
+          company: 'PITKER, a simplified joint-stock company (SAS)',
+          capital: 'Share capital: €10,000',
+          address: 'Headquarters: 34 Allée Santos Dumont, 92150 Suresnes, France',
+          rcs: 'RCS Nanterre 882 738 628',
+          contact: 'Contact: jm.verdier@pitker.fr'
+        },
+        director: {
+          title: '2. Publication Director',
+          content: 'Baptiste VERDIER'
+        },
+        development: {
+          title: '3. Website Design and Development',
+          content: 'The website was created and developed by Baptiste VERDIER.'
+        },
+        hosting: {
+          title: '4. Hosting',
+          content: 'The website is hosted by:',
+          company: 'Netlify, Inc.',
+          address: '2325 3rd Street, Suite 296, San Francisco, California 94107, United States',
+          contact: 'www.netlify.com – support@netlify.com'
+        },
+        intellectualProperty: {
+          title: '5. Intellectual Property',
+          content: 'All content on this site (texts, images, graphics, logos, structure, source code…) is protected by intellectual property laws. Any reproduction, representation, modification, publication, or adaptation—partial or total—without prior written consent from PITKER is strictly prohibited.',
+          trademarks: 'All trademarks and logos displayed are the property of PITKER or its partners.'
+        },
+        termsOfUse: {
+          title: '6. Terms of Use',
+          content: 'Using this website implies full acceptance of the terms described here. These terms may be modified at any time.',
+          availability: 'The site is accessible at all times, except in cases of technical maintenance. PITKER will strive to inform users in advance.'
+        },
+        liability: {
+          title: '7. Liability',
+          content: 'PITKER shall not be held responsible for direct or indirect damage to the user\'s equipment, or for site inaccessibility.',
+          userResponsibility: 'Users are responsible for using up-to-date, virus-free hardware and modern browsers.'
+        },
+        personalData: {
+          title: '8. Personal Data',
+          consent: 'No personal data is collected without your consent.',
+          cnil: 'This site is not subject to CNIL declaration, as it does not process personal data.',
+          contact: 'For questions related to data protection: jm.verdier@pitker.fr',
+        },
+        cookies: {
+          title: '9. Cookies',
+          content: 'The site may use technical cookies for functionality and analytics.',
+          configuration: 'Users may configure their browser to refuse cookies.'
+        },
+        hyperlinks: {
+          title: '10. Hyperlinks',
+          content: 'This site may contain links to external websites. PITKER assumes no responsibility for their content or privacy policies.'
+        },
+        applicableLaw: {
+          title: '11. Applicable Law and Jurisdiction',
+          content: 'This website is governed by French law. Any dispute shall fall under the exclusive jurisdiction of the French courts.'
+        },
+        legalReferences: {
+          title: '12. Legal References',
+          references: [
+            'French Data Protection Act No. 78-17 of January 6, 1978 (as amended)',
+            'EU General Data Protection Regulation (GDPR) – Regulation (EU) 2016/679',
+            'Law No. 2004-575 of June 21, 2004 (Confidence in the Digital Economy)'
+          ]
+        },
+        definitions: {
+          title: '13. Definitions',
+          user: 'User: anyone accessing the site.',
+          personalData: 'Personal data: any information which allows, directly or indirectly, the identification of a natural person.'
+        }
+      }
+    },
+    privacy: {
+      title: 'Politique de Confidentialité',
+      sections: {
+        introduction: {
+          title: 'Introduction',
+          content: 'Cette Politique de Confidentialité décrit comment PITKER gère la confidentialité sur son site web. À ce jour, nous ne collectons aucune donnée personnelle.',
+          lastUpdate: 'Dernière mise à jour : Mars 2024'
+        },
+        dataController: {
+          title: 'Responsable du Traitement',
+          content: 'En cas de collecte future de données personnelles, le responsable du traitement sera :',
+          company: 'PITKER, Société par Actions Simplifiée (SAS)',
+          address: 'Siège social : 34 Allée Santos Dumont, 92150 Suresnes, France',
+          contact: 'Contact : Jean-Marie VERDIER',
+          email: 'Email : jm.verdier@pitker.fr'
+        },
+        collectedData: {
+          title: 'Données Collectées',
+          content: 'À ce jour, nous ne collectons aucune donnée personnelle sur notre site web.',
+          types: []
+        },
+        purpose: {
+          title: 'Finalité du Traitement',
+          content: 'Notre site web est purement informatif et ne nécessite aucune collecte de données personnelles.',
+          uses: []
+        },
+        legalBasis: {
+          title: 'Base Légale du Traitement',
+          content: 'Aucun traitement de données personnelles n\'est effectué sur ce site.',
+          bases: []
+        },
+        retention: {
+          title: 'Conservation des Données',
+          content: 'Aucune donnée personnelle n\'étant collectée, aucune question de conservation ne se pose.',
+          duration: ''
+        },
+        recipients: {
+          title: 'Destinataires des Données',
+          content: 'Aucune donnée personnelle n\'étant collectée, il n\'y a pas de destinataires.',
+          types: []
+        },
+        rights: {
+          title: 'Vos Droits',
+          content: 'Conformément au RGPD, vous disposez de droits concernant vos données personnelles. Cependant, comme nous ne collectons aucune donnée, ces droits ne sont pas applicables pour le moment.',
+          list: []
+        },
+        cookies: {
+          title: 'Cookies',
+          content: 'Notre site n\'utilise pas de cookies de suivi ou d\'analyse.',
+          management: 'Aucune gestion de cookies n\'est nécessaire.'
+        },
+        security: {
+          title: 'Sécurité des Données',
+          content: 'Bien que nous ne collections aucune donnée personnelle, nous maintenons des mesures de sécurité appropriées pour protéger notre site web.',
+          measures: [
+            'Mises à jour régulières de sécurité',
+            'Contrôles d\'accès',
+            'Sauvegardes régulières'
+          ]
+        },
+        contact: {
+          title: 'Nous Contacter',
+          content: 'Pour toute question concernant notre politique de confidentialité, veuillez contacter :',
+          email: 'jm.verdier@pitker.fr'
+        }
+      }
     }
   },
   fr: {
@@ -294,7 +437,6 @@ export const translations = {
       'follow-linkedin': 'Suivez-nous sur LinkedIn pour rester informé de nos dernières actualités.',
       'all-rights-reserved': 'Tous droits réservés.',
       'legal-mentions': 'Mentions légales',
-      'privacy-policy': 'Politique de confidentialité',
       'office-title': 'Nos Bureaux',
       copyright: 'PITKER. Tous droits réservés.'
     },
@@ -559,6 +701,149 @@ export const translations = {
       },
       location: {
         title: 'Nos Bureaux',
+      }
+    },
+    legal: {
+      title: 'Mentions Légales',
+      sections: {
+        publisher: {
+          title: '1. Éditeur du site',
+          content: 'Le site https://pitker.fr/ est édité par :',
+          company: 'PITKER, Société par Actions Simplifiée (SAS)',
+          capital: 'Capital social : 10 000 €',
+          address: 'Siège social : 34 Allée Santos Dumont, 92150 Suresnes, France',
+          rcs: 'RCS Nanterre 882 738 628',
+          contact: 'Contact : jm.verdier@pitker.fr'
+        },
+        director: {
+          title: '2. Directeur de la publication',
+          content: 'Baptiste VERDIER'
+        },
+        development: {
+          title: '3. Conception et développement',
+          content: 'Site conçu et développé par Baptiste VERDIER.'
+        },
+        hosting: {
+          title: '4. Hébergement',
+          content: 'Le site est hébergé par :',
+          company: 'Netlify, Inc.',
+          address: '2325 3rd Street, Suite 296, San Francisco, California 94107, États-Unis',
+          contact: 'www.netlify.com – support@netlify.com'
+        },
+        intellectualProperty: {
+          title: '5. Propriété intellectuelle',
+          content: 'Le contenu du site (textes, images, graphismes, logo, structure, code source…) est protégé par le Code de la propriété intellectuelle. Toute reproduction, représentation, modification, publication, adaptation – totale ou partielle – du site ou de ses éléments, est interdite sans autorisation écrite préalable de PITKER.',
+          trademarks: 'Les marques et logos figurant sur le site sont déposés par PITKER ou ses partenaires.'
+        },
+        termsOfUse: {
+          title: '6. Conditions d\'utilisation',
+          content: 'L\'utilisation du site https://pitker.fr/ implique l\'acceptation pleine et entière des conditions générales d\'utilisation décrites ici. Ces conditions peuvent être modifiées à tout moment.',
+          availability: 'Le site est accessible à tout moment, sauf interruption pour maintenance technique. PITKER s\'efforcera d\'en informer les utilisateurs en amont.'
+        },
+        liability: {
+          title: '7. Responsabilité',
+          content: 'PITKER ne pourra être tenu responsable des dommages directs ou indirects causés au matériel de l\'utilisateur ou en cas d\'inaccessibilité du site.',
+          userResponsibility: 'L\'utilisateur s\'engage à utiliser un matériel récent, à jour, et sans virus.'
+        },
+        personalData: {
+          title: '8. Données personnelles',
+          consent: 'Aucune donnée personnelle n\'est collectée sans votre consentement.',
+          cnil: 'Aucune déclaration CNIL n\'est requise à ce jour, le site n\'enregistre pas de données personnelles.',
+          contact: 'Pour toute question relative à la protection des données, vous pouvez contacter : jm.verdier@pitker.fr',
+        },
+        cookies: {
+          title: '9. Cookies',
+          content: 'Le site peut utiliser des cookies techniques à des fins de fonctionnement ou de mesure d\'audience.',
+          configuration: 'Vous pouvez configurer votre navigateur pour bloquer les cookies si vous le souhaitez.'
+        },
+        hyperlinks: {
+          title: '10. Liens hypertextes',
+          content: 'Des liens vers d\'autres sites peuvent être proposés. PITKER ne peut être tenu responsable du contenu ou de la politique de confidentialité de ces sites tiers.'
+        },
+        applicableLaw: {
+          title: '11. Droit applicable et juridiction compétente',
+          content: 'Le présent site est régi par le droit français. Tout litige sera de la compétence exclusive des tribunaux français.'
+        },
+        legalReferences: {
+          title: '12. Références légales',
+          references: [
+            'Loi n°78-17 du 6 janvier 1978 modifiée (Informatique et Libertés)',
+            'Règlement (UE) 2016/679 (RGPD)',
+            'Loi n°2004-575 du 21 juin 2004 (Confiance dans l\'économie numérique)'
+          ]
+        },
+        definitions: {
+          title: '13. Définitions',
+          user: 'Utilisateur : toute personne accédant au site.',
+          personalData: 'Informations personnelles : données permettant d\'identifier directement ou indirectement une personne physique.'
+        }
+      }
+    },
+    privacy: {
+      title: 'Politique de Confidentialité',
+      sections: {
+        introduction: {
+          title: 'Introduction',
+          content: 'Cette Politique de Confidentialité décrit comment PITKER gère la confidentialité sur son site web. À ce jour, nous ne collectons aucune donnée personnelle.',
+          lastUpdate: 'Dernière mise à jour : Mars 2024'
+        },
+        dataController: {
+          title: 'Responsable du Traitement',
+          content: 'En cas de collecte future de données personnelles, le responsable du traitement sera :',
+          company: 'PITKER, Société par Actions Simplifiée (SAS)',
+          address: 'Siège social : 34 Allée Santos Dumont, 92150 Suresnes, France',
+          contact: 'Contact : Jean-Marie VERDIER',
+          email: 'Email : jm.verdier@pitker.fr'
+        },
+        collectedData: {
+          title: 'Données Collectées',
+          content: 'À ce jour, nous ne collectons aucune donnée personnelle sur notre site web.',
+          types: []
+        },
+        purpose: {
+          title: 'Finalité du Traitement',
+          content: 'Notre site web est purement informatif et ne nécessite aucune collecte de données personnelles.',
+          uses: []
+        },
+        legalBasis: {
+          title: 'Base Légale du Traitement',
+          content: 'Aucun traitement de données personnelles n\'est effectué sur ce site.',
+          bases: []
+        },
+        retention: {
+          title: 'Conservation des Données',
+          content: 'Aucune donnée personnelle n\'étant collectée, aucune question de conservation ne se pose.',
+          duration: ''
+        },
+        recipients: {
+          title: 'Destinataires des Données',
+          content: 'Aucune donnée personnelle n\'étant collectée, il n\'y a pas de destinataires.',
+          types: []
+        },
+        rights: {
+          title: 'Vos Droits',
+          content: 'Conformément au RGPD, vous disposez de droits concernant vos données personnelles. Cependant, comme nous ne collectons aucune donnée, ces droits ne sont pas applicables pour le moment.',
+          list: []
+        },
+        cookies: {
+          title: 'Cookies',
+          content: 'Notre site n\'utilise pas de cookies de suivi ou d\'analyse.',
+          management: 'Aucune gestion de cookies n\'est nécessaire.'
+        },
+        security: {
+          title: 'Sécurité des Données',
+          content: 'Bien que nous ne collections aucune donnée personnelle, nous maintenons des mesures de sécurité appropriées pour protéger notre site web.',
+          measures: [
+            'Mises à jour régulières de sécurité',
+            'Contrôles d\'accès',
+            'Sauvegardes régulières'
+          ]
+        },
+        contact: {
+          title: 'Nous Contacter',
+          content: 'Pour toute question concernant notre politique de confidentialité, veuillez contacter :',
+          email: 'jm.verdier@pitker.fr'
+        }
       }
     }
   }
