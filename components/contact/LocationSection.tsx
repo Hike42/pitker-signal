@@ -1,7 +1,8 @@
 "use client";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '@/lib/context/LanguageContext';
 import { translations } from '@/lib/translations';
+import Image from 'next/image';
 
 declare global {
   interface Window {
@@ -24,6 +25,7 @@ const LocationSection: React.FC = () => {
   const scriptRef = useRef<HTMLScriptElement | null>(null);
   const { language } = useLanguage();
   const t = translations[language].contact;
+  const [mapError, setMapError] = useState(false);
 
   useEffect(() => {
     if (window.google) {
@@ -31,13 +33,21 @@ const LocationSection: React.FC = () => {
       return;
     }
 
-    window.initMap = loadMap;
+    window.initMap = () => {
+      try {
+        loadMap();
+      } catch (error) {
+        console.error('Error loading map:', error);
+        setMapError(true);
+      }
+    };
 
     if (!scriptRef.current) {
       const script = document.createElement('script');
       script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&callback=initMap`;
       script.async = true;
       script.defer = true;
+      script.onerror = () => setMapError(true);
       scriptRef.current = script;
       document.head.appendChild(script);
     }
@@ -143,7 +153,18 @@ const LocationSection: React.FC = () => {
     <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
       {/* Carte en premier plan */}
       <div className="absolute inset-0">
-        <div ref={mapRef} className="w-full h-full" />
+        {mapError ? (
+          <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+            <Image
+              src="/map-fallback.jpg"
+              alt="Carte de localisation"
+              fill
+              className="object-cover"
+            />
+          </div>
+        ) : (
+          <div ref={mapRef} className="w-full h-full" />
+        )}
       </div>
       
       {/* Gradient sur toute la carte */}

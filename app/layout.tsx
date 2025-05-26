@@ -30,6 +30,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     siteName: "PITKER",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PITKER | Executive Search",
+    description: "Pitker is an executive search consulting firm based in Paris, serving mainly mid-market companies in healthcare, private equity, and industry.",
+    images: ["/navbarlogo.png"],
+    creator: "@pitker",
   }
 };
 
