@@ -1,13 +1,12 @@
 // app/layout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sen } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/context/LanguageContext";
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import { AnimatedLanguageWrapper } from '@/components/animation/AnimatedLanguageWrapper';
 import Analytics from '@/components/Analytics';
 
-const inter = Inter({
+const sen = Sen({
   subsets: ["latin"],
   weight: "400", // ou préciser ["400", "700"] si besoin
 });
@@ -50,11 +49,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${sen.className} antialiased`}>
         <LanguageProvider>
-          <Navbar />
-          {children}
-          <Footer />
+          <AnimatedLanguageWrapper>
+            {children}
+          </AnimatedLanguageWrapper>
           <Analytics />
         </LanguageProvider>
       </body>
