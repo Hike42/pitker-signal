@@ -15,7 +15,7 @@ const recentSearchesFr = [
   "Direction générale - ETI familiale - Machines-outils",
   "Direction générale - ETI sous fond - Énergies renouvelables",
   "Direction générale - ETI en forte croissance détenue par un fond de growth equity - Décarbonation",
-  "Direction générale - PME détenue par un family office - Fabrication et distrib. de produits de consommation premium"
+  "Direction générale - PME détenue par un family office - Fabrication et distrib. de produits de conso. premium"
 ];
 
 const recentSearchesEn = [
@@ -98,15 +98,28 @@ const CEOSearchContent = () => {
           <h2 className="text-3xl md:text-4xl font-light text-pitkerBlue mb-8 md:mb-12 text-center">
             {t.recentSearches.title}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 container mx-auto px-4">
             {recentSearches.map((search, index) => (
               <div 
                 key={index} 
-                className="p-4 md:p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-pitkerBlue group hover:border-pitkerRed"
+                className="group h-[90px]"
               >
-                <p className="text-sm md:text-base text-gray-700 group-hover:text-pitkerBlue transition-colors">
-                  {search}
-                </p>
+                <div className="relative h-full bg-gradient-to-br from-white to-gray-50 hover:from-pitkerBlue/[0.02] hover:to-pitkerRed/[0.02] border-l-[3px] border-pitkerBlue transition-all duration-300">
+                  {/* Contenu principal avec dégradé subtil */}
+                  <div className="h-full py-4 px-6 md:py-5 md:px-8 relative overflow-hidden flex items-center">
+                    {/* Texte */}
+                    <p className="text-sm md:text-base text-gray-600 group-hover:text-pitkerBlue transition-colors duration-300 font-light leading-snug pr-16 line-clamp-2">
+                      {search}
+                    </p>
+
+                    {/* Cercles décoratifs simples et grands */}
+                    <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-pitkerRed/20 group-hover:bg-pitkerRed/30 transition-colors duration-300"></div>
+                    <div className="absolute -top-3 -right-3 w-16 h-16 rounded-full bg-pitkerRed/25 group-hover:bg-pitkerRed/35 transition-colors duration-300"></div>
+                    
+                    {/* Barre rouge animée au hover */}
+                    <div className="absolute bottom-0 left-0 w-full h-[2px] bg-pitkerRed transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

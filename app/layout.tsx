@@ -4,7 +4,7 @@ import { Sen } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/context/LanguageContext";
 import { AnimatedLanguageWrapper } from '@/components/animation/AnimatedLanguageWrapper';
-import Analytics from '@/components/Analytics';
+import { CookieBanner } from '@/components/CookieBanner';
 
 const sen = Sen({
   subsets: ["latin"],
@@ -54,7 +54,7 @@ export default function RootLayout({
           <AnimatedLanguageWrapper>
             {children}
           </AnimatedLanguageWrapper>
-          <Analytics />
+          <CookieBanner />
         </LanguageProvider>
       </body>
     </html>

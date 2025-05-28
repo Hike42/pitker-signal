@@ -22,7 +22,7 @@ export const translations = {
           firstLine: 'Skill and art.',
           secondLine: 'C-level executive searches.'
         },
-        description: 'PITKER is a premium executive search boutique firm serving both midsized companies and large corporates, with a specific focus on Life Sciences, Industrial and Private Equity.'
+        description: 'PITKER is a premium executive search boutique firm serving both Midsize companies and large corporates, with a specific focus on Life Sciences, Industrial and Private Equity.'
       },
       practices: {
         title: 'Our',
@@ -70,7 +70,7 @@ export const translations = {
     whatWeDo: {
       hero: {
         title: 'What we do',
-        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsized companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nInterestingly, in its three preferred sectors and beyond, the firm prides itself for handling a significant number of number one searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
+        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving Midsize companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nInterestingly, in its three preferred sectors and beyond, the firm prides itself for handling a significant number of "number one" searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
       },
       keyStats: {
         title: 'Key Figures',
@@ -78,7 +78,7 @@ export const translations = {
           { number: '2020', description: 'Date of birth' },
           { number: '3', description: 'Senior Partners' },
           { number: '100%', description: 'C-suite coverage' },
-          { number: '2/3', description: 'of our clients are midsized companies' },
+          { number: '2/3', description: 'of our clients are Midsize companies' },
           { number: '1/4', description: 'of our searches concern CEO/GM functions' }
         ]
       }
@@ -129,7 +129,7 @@ export const translations = {
           "The Life Sciences sector stands out for its relentless innovation, global reach, stringent regulatory environment, and the diversity of its players: pharmaceuticals (prescription, OTC, generics and biosimilars), biotechnology (including rare diseases), medical devices and equipment, diagnostics, active ingredients, CDMOs, animal health, and more.",
           "Identifying senior executives in these industries requires in-depth sector expertise and trusted relationships with key stakeholders. PITKER meets these demands by investing daily in understanding this ever-evolving sector, where people make a difference that goes far beyond science.",
           "Serving a client base where Life Sciences industries represent more than half of our portfolio, PITKER conducts executive searches both in France and internationally, leveraging a privileged network of partners. While we have a strong track record in CEO and general management searches, our firm covers all core executive functions (finance, human resources, etc.) as well as sector-specific roles (regulatory affairs, market access, medical affairs, and more).",
-          "Operating across the entire value chain - from R&D to manufacturing and commercialization -PITKER supports both large groups and mid-sized companies, whether owned by family shareholders or private equity."
+          "Operating across the entire value chain - from R&D to manufacturing and commercialization -PITKER supports both large groups and Midsize companies, whether owned by family shareholders or private equity."
         ],
         strengths: {
           title: "Our Strengths",
@@ -153,9 +153,9 @@ export const translations = {
         }
       },
       manufacturing: {
-        title: "Industrial – Small & Mid size companies",
+        title: "Industrial – Small & Midsize companies",
         intro: [
-          "At PITKER, our industrial practice is dedicated to small and mid-size companies (SMEs), whether family or private equity owned, for which, strategic, operational and human-capital challenges are crucial. To address the specific needs of these small and mid-size organizations, we have developed, region by region, a deep and wide sector expertise and talent pools covering a large scope of industrial functions.",
+          "At PITKER, our industrial practice is dedicated to small and Midsize companies (SMEs), whether family or private equity owned, for which, strategic, operational and human-capital challenges are crucial. To address the specific needs of these small and Midsize organizations, we have developed, region by region, a deep and wide sector expertise and talent pools covering a large scope of industrial functions.",
           {
             type: "section",
             title: "Targeted SME's expertise",
@@ -281,7 +281,7 @@ export const translations = {
       }
     },
     legal: {
-      title: 'Mentions Légales',
+      title: 'Legal Mentions',
       sections: {
         publisher: {
           title: '1. Site Publisher',
@@ -294,11 +294,11 @@ export const translations = {
         },
         director: {
           title: '2. Publication Director',
-          content: 'Baptiste VERDIER'
+          content: 'Baptiste Verdier.'
         },
         development: {
           title: '3. Website Design and Development',
-          content: 'The website was created and developed by Baptiste VERDIER.'
+          content: 'The website was created and developed by Baptiste Verdier.'
         },
         hosting: {
           title: '4. Hosting',
@@ -328,11 +328,6 @@ export const translations = {
           cnil: 'This site is not subject to CNIL declaration, as it does not process personal data.',
           contact: 'For questions related to data protection: jm.verdier@pitker.fr',
         },
-        cookies: {
-          title: '9. Cookies',
-          content: 'The site may use technical cookies for functionality and analytics.',
-          configuration: 'Users may configure their browser to refuse cookies.'
-        },
         hyperlinks: {
           title: '10. Hyperlinks',
           content: 'This site may contain links to external websites. PITKER assumes no responsibility for their content or privacy policies.'
@@ -353,6 +348,20 @@ export const translations = {
           title: '13. Definitions',
           user: 'User: anyone accessing the site.',
           personalData: 'Personal data: any information which allows, directly or indirectly, the identification of a natural person.'
+        },
+        cookies: {
+          title: '9. Cookies',
+          content: 'Our website uses essential technical cookies. These cookies are necessary for the proper functioning of the site and cannot be disabled. They do not collect any personal data.',
+          purpose: 'These cookies are used only for:',
+          types: [
+            'Ensuring site security',
+            'Enabling site navigation',
+            'Managing language preferences',
+            'Ensuring proper functioning of technical features'
+          ],
+          duration: 'These cookies are kept for a maximum period of 13 months.',
+          rights: 'In accordance with the "Informatique et Libertés" law and the GDPR, you have the right to access, rectify and delete your personal data. To exercise this right, you can contact us at the following email address: jm.verdier@pitker.fr',
+          configuration: 'You can configure your browser to block cookies if you wish, but this may affect some site features.'
         }
       }
     },
@@ -404,8 +413,8 @@ export const translations = {
         },
         cookies: {
           title: 'Cookies',
-          content: 'Notre site n\'utilise pas de cookies de suivi ou d\'analyse.',
-          management: 'Aucune gestion de cookies n\'est nécessaire.'
+          content: 'Notre site utilise uniquement des cookies techniques nécessaires à son fonctionnement, notamment pour l\'affichage de Google Maps. Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés.',
+          management: 'Vous pouvez configurer votre navigateur pour bloquer les cookies si vous le souhaitez, mais cela pourrait affecter certaines fonctionnalités du site.'
         },
         security: {
           title: 'Sécurité des Données',
@@ -672,11 +681,11 @@ export const translations = {
           title: "Nos Forces",
           points: [
             {
-              title: "Séniorité & Engagement",
+              title: "Séniorité & engagement",
               description: "La séniorité et l'engagement de notre équipe d'associés."
             },
             {
-              title: "Approche Haut Niveau & Personnalisée",
+              title: "Approche de haut niveau & personnalisée",
               description: "La taille de notre cabinet qui permet une approche de haut niveau, totalement personnalisée."
             },
             {
@@ -717,11 +726,11 @@ export const translations = {
         },
         director: {
           title: '2. Directeur de la publication',
-          content: 'Baptiste VERDIER'
+          content: 'Baptiste Verdier.'
         },
         development: {
           title: '3. Conception et développement',
-          content: 'Site conçu et développé par Baptiste VERDIER.'
+          content: 'Site conçu et développé par Baptiste Verdier.'
         },
         hosting: {
           title: '4. Hébergement',
@@ -751,11 +760,6 @@ export const translations = {
           cnil: 'Aucune déclaration CNIL n\'est requise à ce jour, le site n\'enregistre pas de données personnelles.',
           contact: 'Pour toute question relative à la protection des données, vous pouvez contacter : jm.verdier@pitker.fr',
         },
-        cookies: {
-          title: '9. Cookies',
-          content: 'Le site peut utiliser des cookies techniques à des fins de fonctionnement ou de mesure d\'audience.',
-          configuration: 'Vous pouvez configurer votre navigateur pour bloquer les cookies si vous le souhaitez.'
-        },
         hyperlinks: {
           title: '10. Liens hypertextes',
           content: 'Des liens vers d\'autres sites peuvent être proposés. PITKER ne peut être tenu responsable du contenu ou de la politique de confidentialité de ces sites tiers.'
@@ -776,73 +780,20 @@ export const translations = {
           title: '13. Définitions',
           user: 'Utilisateur : toute personne accédant au site.',
           personalData: 'Informations personnelles : données permettant d\'identifier directement ou indirectement une personne physique.'
-        }
-      }
-    },
-    privacy: {
-      title: 'Politique de Confidentialité',
-      sections: {
-        introduction: {
-          title: 'Introduction',
-          content: 'Cette Politique de Confidentialité décrit comment PITKER gère la confidentialité sur son site web. À ce jour, nous ne collectons aucune donnée personnelle.',
-          lastUpdate: 'Dernière mise à jour : Mars 2024'
-        },
-        dataController: {
-          title: 'Responsable du Traitement',
-          content: 'En cas de collecte future de données personnelles, le responsable du traitement sera :',
-          company: 'PITKER, Société par Actions Simplifiée (SAS)',
-          address: 'Siège social : 34 Allée Santos Dumont, 92150 Suresnes, France',
-          contact: 'Contact : Jean-Marie VERDIER',
-          email: 'Email : jm.verdier@pitker.fr'
-        },
-        collectedData: {
-          title: 'Données Collectées',
-          content: 'À ce jour, nous ne collectons aucune donnée personnelle sur notre site web.',
-          types: []
-        },
-        purpose: {
-          title: 'Finalité du Traitement',
-          content: 'Notre site web est purement informatif et ne nécessite aucune collecte de données personnelles.',
-          uses: []
-        },
-        legalBasis: {
-          title: 'Base Légale du Traitement',
-          content: 'Aucun traitement de données personnelles n\'est effectué sur ce site.',
-          bases: []
-        },
-        retention: {
-          title: 'Conservation des Données',
-          content: 'Aucune donnée personnelle n\'étant collectée, aucune question de conservation ne se pose.',
-          duration: ''
-        },
-        recipients: {
-          title: 'Destinataires des Données',
-          content: 'Aucune donnée personnelle n\'étant collectée, il n\'y a pas de destinataires.',
-          types: []
-        },
-        rights: {
-          title: 'Vos Droits',
-          content: 'Conformément au RGPD, vous disposez de droits concernant vos données personnelles. Cependant, comme nous ne collectons aucune donnée, ces droits ne sont pas applicables pour le moment.',
-          list: []
         },
         cookies: {
-          title: 'Cookies',
-          content: 'Notre site n\'utilise pas de cookies de suivi ou d\'analyse.',
-          management: 'Aucune gestion de cookies n\'est nécessaire.'
-        },
-        security: {
-          title: 'Sécurité des Données',
-          content: 'Bien que nous ne collections aucune donnée personnelle, nous maintenons des mesures de sécurité appropriées pour protéger notre site web.',
-          measures: [
-            'Mises à jour régulières de sécurité',
-            'Contrôles d\'accès',
-            'Sauvegardes régulières'
-          ]
-        },
-        contact: {
-          title: 'Nous Contacter',
-          content: 'Pour toute question concernant notre politique de confidentialité, veuillez contacter :',
-          email: 'jm.verdier@pitker.fr'
+          title: '9. Cookies',
+          content: 'Notre site utilise des cookies techniques essentiels à son fonctionnement. Ces cookies sont nécessaires au bon fonctionnement du site et ne peuvent pas être désactivés. Ils ne collectent aucune donnée personnelle.',
+          purpose: 'Ces cookies sont utilisés uniquement pour :',
+          types: [
+            'Assurer la sécurité du site',
+            'Permettre la navigation sur le site',
+            'Gérer les préférences de langue',
+            'Assurer le bon fonctionnement des fonctionnalités techniques'
+          ],
+          duration: 'Ces cookies sont conservés pendant une durée maximale de 13 mois.',
+          rights: 'Conformément à la loi "Informatique et Libertés" et au RGPD, vous disposez d\'un droit d\'accès, de rectification et de suppression des données vous concernant. Pour exercer ce droit, vous pouvez nous contacter à l\'adresse email suivante : jm.verdier@pitker.fr',
+          configuration: 'Vous pouvez configurer votre navigateur pour bloquer les cookies si vous le souhaitez, mais cela pourrait affecter certaines fonctionnalités du site.'
         }
       }
     }

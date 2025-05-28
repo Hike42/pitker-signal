@@ -233,24 +233,28 @@ const PracticeContent = ({ practiceKey, recentSearchesFr, recentSearchesEn }: Pr
             <h2 className="text-3xl md:text-4xl font-light text-pitkerBlue">
               {practiceContent.recentSearches.title}
             </h2>
-            <div className="h-px w-12 md:w-16 bg-pitkerRed mx-3 md:mx-4"></div>
-            <div className="w-8 h-8 md:w-12 md:h-12 rounded-full border-2 border-pitkerRed flex items-center justify-center">
-              <div className="w-5 h-5 md:w-8 md:h-8 bg-pitkerRed rounded-full"></div>
-            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 container mx-auto px-4">
             {recentSearches.map((search, index) => (
               <div 
                 key={index} 
-                className="group relative"
+                className="group h-[90px]"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-pitkerBlue/5 to-pitkerRed/5 rounded-lg transform group-hover:scale-105 transition-transform duration-300"></div>
-                <div className="relative p-4 md:p-6 bg-white/95 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-pitkerBlue group-hover:border-pitkerRed overflow-hidden">
-                  <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-pitkerRed/50 to-pitkerRed/30 rounded-full transform group-hover:scale-110 transition-transform duration-300"></div>
-                  <p className="text-sm md:text-base text-gray-700 group-hover:text-pitkerBlue transition-colors relative z-10">
-                    {search}
-                  </p>
-                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-pitkerBlue via-pitkerRed to-pitkerBlue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <div className="relative h-full bg-gradient-to-br from-white to-gray-50 hover:from-pitkerBlue/[0.02] hover:to-pitkerRed/[0.02] border-l-[3px] border-pitkerBlue transition-all duration-300">
+                  {/* Contenu principal avec dégradé subtil */}
+                  <div className="h-full py-4 px-6 md:py-5 md:px-8 relative overflow-hidden flex items-center">
+                    {/* Texte */}
+                    <p className="text-sm md:text-base text-gray-600 group-hover:text-pitkerBlue transition-colors duration-300 font-light leading-snug pr-16 line-clamp-2">
+                      {search}
+                    </p>
+
+                    {/* Cercles décoratifs simples et grands */}
+                    <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-pitkerRed/20 group-hover:bg-pitkerRed/30 transition-colors duration-300"></div>
+                    <div className="absolute -top-3 -right-3 w-16 h-16 rounded-full bg-pitkerRed/25 group-hover:bg-pitkerRed/35 transition-colors duration-300"></div>
+                    
+                    {/* Barre rouge animée au hover */}
+                    <div className="absolute bottom-0 left-0 w-full h-[2px] bg-pitkerRed transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                  </div>
                 </div>
               </div>
             ))}

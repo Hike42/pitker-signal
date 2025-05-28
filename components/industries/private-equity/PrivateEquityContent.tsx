@@ -5,7 +5,7 @@ import PracticeContent from '@/components/practices/PracticeContent';
 const recentSearchesFr = [
   "Direction Générale - ETI sous LBO - Santé",
   "Direction Générale - ETI en forte croissance détenue par un fond de growth equity - Décarbonation",
-  "Direction Générale - PME détenue par un family office - Fabrication et distrib. de produits de consommation premium",
+  "Direction Générale - PME détenue par un family office - Fabrication et distrib. de produits de conso. premium",
   "Direction Financière - ETI sous LBO - Packaging",
   "Direction Financière - ETI en forte croissance détenue par un fonds d'infrastructure - Énergies renouvelables",
   "Direction Financière - Family office - Activités diversifiées",
