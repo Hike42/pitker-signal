@@ -46,24 +46,28 @@ const IndustryCard = ({ title, description, image, href, color, fullWidth }: Ind
   }, [image]);
 
   return (
-    <motion.div
-      variants={itemVariants}
-      className={`group relative h-[400px] overflow-hidden ${fullWidth ? 'md:col-span-full' : ''}`}
-    >
-      <Link href={href} className="block h-full">
-        <div className="relative h-full">
-          <div className="absolute inset-0">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              priority
-              className={`object-cover transition-transform duration-500 group-hover:scale-110 ${
-                isImageLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
-              onLoad={() => setIsImageLoaded(true)}
-            />
-          </div>
+    <Link href={href} className={`block ${fullWidth ? 'md:col-span-3' : ''}`}>
+      <motion.div
+        variants={itemVariants}
+        whileHover={{ 
+          scale: 1.02,
+          transition: { duration: 0.2 }
+        }}
+        className="group relative h-[300px] md:h-[400px] overflow-hidden"
+      >
+        <div className="relative w-full h-full">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className={`object-cover transition-transform duration-500 group-hover:scale-110 ${
+              isImageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            quality={85}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            onLoad={() => setIsImageLoaded(true)}
+            priority
+          />
           <div 
             className={`absolute inset-0 ${color} transition-opacity duration-300 ${
               isImageLoaded ? 'opacity-80 group-hover:opacity-90' : 'opacity-100'
@@ -84,8 +88,8 @@ const IndustryCard = ({ title, description, image, href, color, fullWidth }: Ind
             </div>
           </div>
         </div>
-      </Link>
-    </motion.div>
+      </motion.div>
+    </Link>
   );
 };
 
