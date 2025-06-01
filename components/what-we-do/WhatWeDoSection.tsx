@@ -18,7 +18,7 @@ interface SectionProps {
 const formatText = (text: string) => {
   if (!text) return '';
   return text
-    .replace(/PITKER/g, '<strong>PITKER</strong>')
+    .replace(/PITKER/g, '<strong class="font-bold">PITKER</strong>')
     .replace(/Life Sciences/g, '<strong class="font-bold">Life Sciences</strong>')
     .replace(/Industrial/g, '<strong class="font-bold">Industrial</strong>')
     .replace(/Private Equity/g, '<strong class="font-bold">Private Equity</strong>')
