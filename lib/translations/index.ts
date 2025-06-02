@@ -22,7 +22,7 @@ export const translations = {
           firstLine: 'Skill and art.',
           secondLine: 'C-level executive searches.'
         },
-        description: 'PITKER is a premium executive search boutique firm serving both Midsize companies and large corporates, with a specific focus on Life Sciences, Industrial and Private Equity.'
+        description: 'PITKER is a premium executive search boutique firm serving both midsize companies and large corporates, with a specific focus on Life Sciences, Industrial and Private Equity.'
       },
       practices: {
         title: 'Our',
@@ -70,7 +70,7 @@ export const translations = {
     whatWeDo: {
       hero: {
         title: 'What we do',
-        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving Midsize companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nInterestingly, in its three preferred sectors and beyond, the firm prides itself for handling a significant number of "number one" searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
+        description: 'Founded in 2020 and headed by three partners, PITKER is a Paris-based premium executive search boutique firm serving midsize companies and large groups in various sectors with Life Sciences, Industrial and Private Equity being its three main focuses.\n\nPITKER covers 100% of the functions of a leadership team: general management, finance, human resources, marketing, sales, legal, R&D, manufacturing & supply, etc.\n\nInterestingly, in its three preferred sectors and beyond, the firm prides itself for handling a significant number of "number one" searches, i.e. Chief Executive Officers, General Managers, etc. These "CEO searches" account for one fourth of all PITKER\'s assignments.\n\nCombining high quality standards, in-depth analysis and a high degree of confidentiality, PITKER offers its clients effective, tailored solutions, in France and abroad, thanks to a network of trusted partner firms.'
       },
       keyStats: {
         title: 'Key Figures',
@@ -78,7 +78,7 @@ export const translations = {
           { number: '2020', description: 'Date of birth' },
           { number: '3', description: 'Senior Partners' },
           { number: '100%', description: 'C-suite coverage' },
-          { number: '2/3', description: 'of our clients are Midsize companies' },
+          { number: '2/3', description: 'of our clients are midsize companies' },
           { number: '1/4', description: 'of our searches concern CEO/GM functions' }
         ]
       }
@@ -129,7 +129,7 @@ export const translations = {
           "The Life Sciences sector stands out for its relentless innovation, global reach, stringent regulatory environment, and the diversity of its players: pharmaceuticals (prescription, OTC, generics and biosimilars), biotechnology (including rare diseases), medical devices and equipment, diagnostics, active ingredients, CDMOs, animal health, and more.",
           "Identifying senior executives in these industries requires in-depth sector expertise and trusted relationships with key stakeholders. PITKER meets these demands by investing daily in understanding this ever-evolving sector, where people make a difference that goes far beyond science.",
           "Serving a client base where Life Sciences industries represent more than half of our portfolio, PITKER conducts executive searches both in France and internationally, leveraging a privileged network of partners. While we have a strong track record in CEO and general management searches, our firm covers all core executive functions (finance, human resources, etc.) as well as sector-specific roles (regulatory affairs, market access, medical affairs, and more).",
-          "Operating across the entire value chain - from R&D to manufacturing and commercialization -PITKER supports both large groups and Midsize companies, whether owned by family shareholders or private equity."
+          "Operating across the entire value chain - from R&D to manufacturing and commercialization -PITKER supports both large groups and midsize companies, whether owned by family shareholders or private equity."
         ],
         strengths: {
           title: "Our Strengths",
@@ -155,7 +155,7 @@ export const translations = {
       manufacturing: {
         title: "Industrial – Small & Midsize companies",
         intro: [
-          "At PITKER, our industrial practice is dedicated to small and Midsize companies (SMEs), whether family or private equity owned, for which, strategic, operational and human-capital challenges are crucial. To address the specific needs of these small and Midsize organizations, we have developed, region by region, a deep and wide sector expertise and talent pools covering a large scope of industrial functions.",
+          "At PITKER, our industrial practice is dedicated to small and midsize companies (SMEs), whether family or private equity owned, for which, strategic, operational and human-capital challenges are crucial. To address the specific needs of these small and midsize organizations, we have developed, region by region, a deep and wide sector expertise and talent pools covering a large scope of industrial functions.",
           {
             type: "section",
             title: "Targeted SME's expertise",

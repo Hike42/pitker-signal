@@ -26,10 +26,10 @@ const recentSearchesEn = [
   "Chief Executive Officer - Family owned group – Life science",
   "General Manager - Professional federation",
   "General Manager - Start-up - Logtech",
-  "General Manager - Mid size company family owned - Automotive supplier",
-  "General Manager - Mid size company family owned - Machines and tools manufacturing",
-  "General Manager - Mid size company private equity owned - Renewables energy",
-  "General Management - Mid size highly growing company under LBO – Decarbonization",
+  "General Manager - Midsize company family owned - Automotive supplier",
+  "General Manager - Midsize company family owned - Machines and tools manufacturing",
+  "General Manager - Midsize company private equity owned - Renewables energy",
+  "General Management - Midsize highly growing company under LBO – Decarbonization",
   "General Management - Small size company family office owned - Premium consumer goods manufacturing and distribution"
 ];
 
