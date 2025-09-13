@@ -10,6 +10,7 @@ interface Translations {
     getConnected: {
       title: string;
       description: string;
+      findOutMore: string;
     };
     news: {
       articles: {
