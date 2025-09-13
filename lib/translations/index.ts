@@ -47,7 +47,8 @@ export const translations = {
       getConnected: {
         title: 'News & Insights',
         linkedin: 'Follow us on LinkedIn',
-        button: 'Follow us on LinkedIn'
+        button: 'Follow us on LinkedIn',
+        findOutMore: 'Find out more'
       },
       news: {
         title: 'News & Insights',
@@ -479,7 +480,8 @@ export const translations = {
       getConnected: {
         title: 'Actualités',
         linkedin: 'Suivez-nous sur LinkedIn',
-        button: 'Suivez-nous sur LinkedIn'
+        button: 'Suivez-nous sur LinkedIn',
+        findOutMore: 'En savoir plus'
       },
       news: {
         title: 'Actualités',

@@ -94,28 +94,32 @@ export const GetConnectedSection = () => {
             {NEWS_LINKS.map((news) => (
               <div
                 key={news.url}
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-white/10 transition-colors duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 hover:bg-white/10 transition-colors duration-300 flex flex-col h-full"
               >
-                <h3 className="text-white text-xl font-light mb-2">
-                  {t.home.news.articles[news.key].title}
-                </h3>
-                <p className="text-white/60 text-sm mb-4">{news.date}</p>
-                <a
-                  href={news.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-pitkerRed hover:text-white transition-colors duration-300"
-                >
-                  <span className="mr-2">Find out more</span>
-                  <svg 
-                    className="w-4 h-4" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
+                <div className="flex-grow">
+                  <h3 className="text-white text-xl font-light mb-2">
+                    {t.home.news.articles[news.key].title}
+                  </h3>
+                  <p className="text-white/60 text-sm mb-4">{news.date}</p>
+                </div>
+                <div className="mt-auto">
+                  <a
+                    href={news.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-pitkerRed hover:text-white transition-colors duration-300"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                    <span className="mr-2">{t.home.getConnected.findOutMore}</span>
+                    <svg 
+                      className="w-4 h-4" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             ))}
           </div>
