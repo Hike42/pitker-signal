@@ -30,7 +30,7 @@ interface Translations {
 const NEWS_LINKS = [
   {
     key: 'newPartner',
-    url: "https://www.linkedin.com/feed/update/urn:li:activity:7298376379413200896/",
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7344030895567269888/",
     date: "2025"
   },
   {

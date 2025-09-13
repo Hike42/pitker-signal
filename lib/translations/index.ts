@@ -53,7 +53,7 @@ export const translations = {
         title: 'News & Insights',
         articles: {
           newPartner: {
-            title: 'New partner at PITKER',
+            title: 'The insides of headhunting (workshop at Nexmove)',
             description: 'Discover our latest addition to the team.'
           },
           careerDevelopment: {
@@ -485,7 +485,7 @@ export const translations = {
         title: 'Actualités',
         articles: {
           newPartner: {
-            title: 'Nouvel associé chez PITKER',
+            title: 'Les coulisses de la recherche de dirigeants (atelier Nexmove)',
             description: 'Découvrez notre nouveau membre de l\'équipe.'
           },
           careerDevelopment: {
