@@ -5,7 +5,17 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['media.licdn.com', 'static.licdn.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.licdn.com',
+      },
+    ],
+    qualities: [75, 85, 100],
   },
   async headers() {
     return [

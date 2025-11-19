@@ -126,7 +126,7 @@ const PartnersSection = () => {
             >
               <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
                 {/* Photo View */}
-                <AnimatePresence mode="wait">
+                <AnimatePresence>
                   <motion.div 
                     key="photo"
                     initial={{ opacity: 1 }}

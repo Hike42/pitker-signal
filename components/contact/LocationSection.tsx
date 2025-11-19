@@ -1,7 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { useLanguage } from '@/lib/context/LanguageContext';
-import { translations } from '@/lib/translations';
 import Image from 'next/image';
 
 declare global {
@@ -23,43 +22,10 @@ const LocationSection: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<google.maps.Map | null>(null);
   const scriptRef = useRef<HTMLScriptElement | null>(null);
-  const { language } = useLanguage();
-  const t = translations[language].contact;
+  const { t } = useLanguage();
   const [mapError, setMapError] = useState(false);
 
-  useEffect(() => {
-    if (window.google) {
-      loadMap();
-      return;
-    }
-
-    window.initMap = () => {
-      try {
-        loadMap();
-      } catch (error) {
-        console.error('Error loading map:', error);
-        setMapError(true);
-      }
-    };
-
-    if (!scriptRef.current) {
-      const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&callback=initMap`;
-      script.async = true;
-      script.defer = true;
-      script.onerror = () => setMapError(true);
-      scriptRef.current = script;
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      if (scriptRef.current && document.head.contains(scriptRef.current)) {
-        document.head.removeChild(scriptRef.current);
-      }
-    };
-  }, []);
-
-  const loadMap = () => {
+  const loadMap = useCallback(() => {
     if (!mapRef.current || mapInstance.current) return;
 
     const location = { lat: 48.875018, lng: 2.312111 };
@@ -147,7 +113,39 @@ const LocationSection: React.FC = () => {
       fillColor: '#E63237',
       fillOpacity: 0.15
     });
-  };
+  }, []);
+
+  useEffect(() => {
+    if (window.google) {
+      loadMap();
+      return;
+    }
+
+    window.initMap = () => {
+      try {
+        loadMap();
+      } catch {
+        // Erreur silencieuse - l'état mapError gère l'affichage du fallback
+        setMapError(true);
+      }
+    };
+
+    if (!scriptRef.current) {
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&callback=initMap`;
+      script.async = true;
+      script.defer = true;
+      script.onerror = () => setMapError(true);
+      scriptRef.current = script;
+      document.head.appendChild(script);
+    }
+
+    return () => {
+      if (scriptRef.current && document.head.contains(scriptRef.current)) {
+        document.head.removeChild(scriptRef.current);
+      }
+    };
+  }, [loadMap]);
 
   return (
     <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
@@ -174,7 +172,7 @@ const LocationSection: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-full md:w-1/2 lg:w-1/3">
         <div className="container mx-auto h-full flex items-end justify-start px-4 md:px-8 lg:px-12 pb-4 md:pb-6 lg:pb-8">
           <div className="w-full max-w-md bg-white p-4 md:p-6 lg:p-8 rounded-sm shadow-lg">
-            <h3 className="text-lg md:text-xl font-light text-pitkerBlue mb-2 md:mb-4">{t.location.title}</h3>
+            <h3 className="text-lg md:text-xl font-light text-pitkerBlue mb-2 md:mb-4">{t.contact.location.title}</h3>
             <address className="not-italic text-sm md:text-base text-gray-600 mb-4 md:mb-6">
               143 Boulevard Haussmann<br />
               75008 Paris, France

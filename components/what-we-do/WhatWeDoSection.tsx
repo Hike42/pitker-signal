@@ -1,7 +1,6 @@
 // components/WhatWeDoSection.tsx
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/lib/context/LanguageContext';
 import { translations } from '@/lib/translations';

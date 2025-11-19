@@ -49,9 +49,8 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const handleSetLanguage = (newLanguage: Language) => {
     if (newLanguage in translations) {
       setLanguage(newLanguage);
-    } else {
-      console.warn(`Language "${newLanguage}" is not supported`);
     }
+    // Si la langue n'est pas supportée, on ignore silencieusement
   };
 
   return (

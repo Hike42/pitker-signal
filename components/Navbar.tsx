@@ -8,12 +8,10 @@ import { LanguageToggle } from './navigation/LanguageToggle';
 import { MenuButton } from './navigation/MenuButton';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/lib/context/LanguageContext';
-import { translations } from '@/lib/translations';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible] = useState(true);
-  const { language } = useLanguage();
+  const { t } = useLanguage();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -30,10 +28,10 @@ const Navbar = () => {
   };
 
   const NAV_LINKS = [
-    { href: '/what-we-do', label: translations[language].navigation['what-we-do'] },
-    { href: '/people', label: translations[language].navigation['people'] },
-    { href: '/practices', label: translations[language].navigation['practices'] },
-    { href: '/contact', label: translations[language].navigation['contact'] }
+    { href: '/what-we-do', label: t.navigation['what-we-do'] },
+    { href: '/people', label: t.navigation.people },
+    { href: '/practices', label: t.navigation.practices },
+    { href: '/contact', label: t.navigation.contact }
   ];
 
   const menuStyles = {
@@ -89,7 +87,7 @@ const Navbar = () => {
             <motion.div 
               variants={linkVariants}
               initial="hidden"
-              animate={isVisible ? "visible" : "hidden"}
+              animate="visible"
               className="flex items-center gap-4 md:hidden"
               style={{ willChange: 'transform, opacity' }}
             >

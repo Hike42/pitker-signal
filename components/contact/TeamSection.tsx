@@ -146,7 +146,7 @@ const TeamSection: React.FC = () => {
   return (
     <section id="contacts-section" className="py-4 md:py-8 lg:py-16 bg-white">
       <div className="container mx-auto px-4 md:px-8">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.div
             key={language}
             initial={isFirstLoad ? { opacity: 0, y: 20 } : false}

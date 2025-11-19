@@ -38,7 +38,8 @@ export async function GET(request: Request) {
       image: data.data.image?.url || '',
     });
   } catch (error) {
-    console.error('LinkedIn API error:', error);
+    // En production, on ne log pas les erreurs dans la console
+    // L'erreur est déjà retournée dans la réponse JSON
     return NextResponse.json({ 
       error: 'Failed to fetch LinkedIn data',
       details: error instanceof Error ? error.message : 'Unknown error'

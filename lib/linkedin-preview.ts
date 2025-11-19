@@ -26,8 +26,9 @@ export const getLinkedInPreview = cache(async (url: string): Promise<LinkedInPre
       image: data.image || '',
       url: url
     };
-  } catch (error) {
-    console.error('Error fetching LinkedIn preview:', error);
+  } catch {
+    // Erreur silencieuse - on retourne des valeurs vides
+    // L'erreur est déjà gérée par le composant appelant
     return {
       title: '',
       image: '',
