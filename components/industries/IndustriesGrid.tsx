@@ -1,10 +1,11 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/navigation/LocalizedLink';
 import Image from 'next/image';
 import { useLanguage } from '@/lib/context/LanguageContext';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import type { Variants } from 'framer-motion';
+import { useState } from 'react';
 
 interface IndustryCardProps {
   title: string;
@@ -15,7 +16,7 @@ interface IndustryCardProps {
   fullWidth: boolean;
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -26,7 +27,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -41,9 +42,6 @@ const IndustryCard = ({ title, description, image, href, color, fullWidth }: Ind
   const { t } = useLanguage();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   
-  useEffect(() => {
-    setIsImageLoaded(false);
-  }, [image]);
 
   return (
     <Link href={href} className={`block ${fullWidth ? 'md:col-span-3' : ''}`}>
@@ -95,12 +93,7 @@ const IndustryCard = ({ title, description, image, href, color, fullWidth }: Ind
 
 const IndustriesGrid = () => {
   const { t, language } = useLanguage();
-  const [key, setKey] = useState(0);
-  
-  // Forcer le re-rendu du composant quand la langue change
-  useEffect(() => {
-    setKey(prev => prev + 1);
-  }, [language]);
+
   
   const practices = [
     {
@@ -141,14 +134,14 @@ const IndustriesGrid = () => {
     <div className="w-full">
       <div className="container mx-auto px-4 py-8">
         <motion.div 
-          key={key}
+          key={language}
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {practices.map((industry, index) => (
-            <IndustryCard key={`${key}-${index}`} {...industry} />
+            <IndustryCard key={`${language}-${index}-${industry.image}`} {...industry} />
           ))}
         </motion.div>
       </div>

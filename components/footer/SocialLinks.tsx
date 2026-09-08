@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/components/navigation/LocalizedLink';
 
 const SOCIAL_LINKS = {
   LINKEDIN: 'https://www.linkedin.com/company/pitker'

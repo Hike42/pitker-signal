@@ -22,19 +22,14 @@ export const siteMetadata = {
   organization: {
     name: "PITKER",
     url: "https://pitker.fr",
-    logo: "https://pitker.fr/logo.svg",
+    logo: "https://pitker.fr/navbarlogo.png",
     description: "PITKER est un cabinet de conseil en recrutement de dirigeants de premier plan, spécialisé dans l'executive search et le leadership advisory.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "3 rue de Messine",
+      streetAddress: "143 Boulevard Haussmann",
       addressLocality: "Paris",
       postalCode: "75008",
       addressCountry: "FR"
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+33-1-XX-XX-XX-XX", // À mettre à jour
-      contactType: "customer service"
     },
     sameAs: [
       "https://www.linkedin.com/company/pitker"
@@ -71,7 +66,7 @@ export const defaultMetadata: Metadata = {
     description: siteMetadata.description,
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-img.png",
         width: 1200,
         height: 630,
         alt: "PITKER - Cabinet de Conseil en Recrutement de Dirigeants",
@@ -86,7 +81,7 @@ export const defaultMetadata: Metadata = {
     card: "summary_large_image",
     title: siteMetadata.title,
     description: "Cabinet de conseil en recrutement de dirigeants spécialisé dans la santé, le private equity et l'industrie. Expert en executive search et leadership advisory.",
-    images: ["/og-image.png"],
+    images: ["/og-img.png"],
   },
   alternates: {
     canonical: siteMetadata.siteUrl,
@@ -95,7 +90,4 @@ export const defaultMetadata: Metadata = {
       'en': `${siteMetadata.siteUrl}/en`
     }
   },
-  verification: {
-    google: "à_demander_au_client", // À mettre à jour
-  }
 }; 

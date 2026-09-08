@@ -2,11 +2,12 @@
 "use client";
 
 import { useState } from 'react';
-import Link from 'next/link';
+import Link from '@/components/navigation/LocalizedLink';
 import Image from 'next/image';
 import { LanguageToggle } from './navigation/LanguageToggle';
 import { MenuButton } from './navigation/MenuButton';
 import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 import { useLanguage } from '@/lib/context/LanguageContext';
 
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const linkVariants = {
+  const linkVariants: Variants = {
     hidden: { y: -20, opacity: 0 },
     visible: { 
       y: 0, 
@@ -105,6 +106,9 @@ const Navbar = () => {
           }}
           transition={{ duration: 0.3 }}
           className="md:hidden overflow-hidden bg-white fixed top-16 left-0 right-0 z-50"
+          id="mobile-menu"
+          inert={!isOpen}
+          aria-hidden={!isOpen}
           role="menu"
           aria-label="Menu mobile"
           style={{ willChange: 'height, opacity' }}

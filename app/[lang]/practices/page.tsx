@@ -1,8 +1,6 @@
+import { pageMetadata } from '@/lib/page-metadata';
 import MainLayout from '@/components/layouts/MainLayout';
 import IndustriesGrid from '@/components/industries/IndustriesGrid';
-import { metadata } from './metadata';
-
-export { metadata };
 
 export default function IndustriesPage() {
   return (
@@ -10,4 +8,7 @@ export default function IndustriesPage() {
       <IndustriesGrid />
     </MainLayout>
   );
-} 
+}
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  return pageMetadata("/practices", (await params).lang);
+}

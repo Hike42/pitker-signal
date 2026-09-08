@@ -1,9 +1,7 @@
+import { pageMetadata } from '@/lib/page-metadata';
 import MainLayout from '@/components/layouts/MainLayout';
 import CeoSearchContent from '@/components/industries/ceo-search/CeoSearchContent';
 import CeoSearchContacts from '@/components/industries/ceo-search/CeoSearchContacts';
-import { metadata } from './metadata';
-
-export { metadata };
 
 export default function CeoSearchPage() {
   return (
@@ -12,4 +10,7 @@ export default function CeoSearchPage() {
       <CeoSearchContacts />
     </MainLayout>
   );
-} 
+}
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  return pageMetadata("/practices/ceo-search", (await params).lang);
+}

@@ -1,9 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 import { useLanguage } from '@/lib/context/LanguageContext';
 import { translations } from '@/lib/translations';
-import Link from 'next/link';
+import Link from '@/components/navigation/LocalizedLink';
 import { FaMicroscope, FaIndustry, FaLaptopCode, FaCompass } from 'react-icons/fa';
 import { memo } from 'react';
 
@@ -79,7 +80,7 @@ const getPractices = (t: typeof translations.fr | typeof translations.en): Pract
   }
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -90,7 +91,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20, scale: 0.95 },
   visible: {
     opacity: 1,

@@ -1,16 +1,9 @@
+import { pageMetadata } from '@/lib/page-metadata';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { HeroSection } from '@/components/home/HeroSection';
 import { PracticesSection } from '@/components/home/PracticesSection';
 import { GetConnectedSection } from '@/components/home/GetConnectedSection';
-
-export const metadata = {
-  title: 'Leadership Advisory & Executive Search | PITKER',
-  description: 'PITKER delivers Leadership Advisory and Executive Search to dynamic organizations.',
-  alternates: {
-    canonical: '/'
-  }
-};
 
 export default function Page() {
   return (
@@ -24,4 +17,7 @@ export default function Page() {
       <Footer />
     </main>
   );
+}
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  return pageMetadata("/", (await params).lang);
 }

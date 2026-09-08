@@ -1,23 +1,26 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import { useLanguage } from '@/lib/context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
+function getConsent() {
+  try { return localStorage.getItem('cookieConsent') === 'true'; } catch { return false; }
+}
+function subscribe(callback: () => void) {
+  window.addEventListener('storage', callback);
+  window.addEventListener('pitker-consent', callback);
+  return () => { window.removeEventListener('storage', callback); window.removeEventListener('pitker-consent', callback); };
+}
 export const CookieBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
   const { language } = useLanguage();
-
-  useEffect(() => {
-    const hasConsented = localStorage.getItem('cookieConsent');
-    if (!hasConsented) {
-      setIsVisible(true);
-    }
-  }, []);
-
+  const consented = useSyncExternalStore(subscribe, getConsent, () => true);
+  const isVisible = !dismissed && !consented;
   const handleAccept = () => {
-    localStorage.setItem('cookieConsent', 'true');
-    setIsVisible(false);
+    try { localStorage.setItem('cookieConsent', 'true'); } catch { /* Storage may be unavailable. */ }
+    setDismissed(true);
+    window.dispatchEvent(new Event('pitker-consent'));
   };
 
   const bannerText = {

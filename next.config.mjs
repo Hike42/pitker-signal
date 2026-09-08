@@ -1,5 +1,8 @@
-const path = require('path');
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import bundleAnalyzer from '@next/bundle-analyzer';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
@@ -78,4 +81,4 @@ const nextConfig = {
   }
 };
 
-module.exports = withBundleAnalyzer(nextConfig); 
+export default withBundleAnalyzer(nextConfig); 

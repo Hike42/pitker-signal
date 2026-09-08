@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/navigation/LocalizedLink';
 import { PARTNERS } from '@/lib/constants/partners';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/lib/context/LanguageContext';
@@ -132,11 +132,9 @@ const TeamSection: React.FC = () => {
   }));
   const { language } = useLanguage();
   const t = translations[language].contact;
-  const [isFirstLoad, setIsFirstLoad] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsFirstLoad(false);
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 100);
@@ -149,7 +147,7 @@ const TeamSection: React.FC = () => {
         <AnimatePresence>
           <motion.div
             key={language}
-            initial={isFirstLoad ? { opacity: 0, y: 20 } : false}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}

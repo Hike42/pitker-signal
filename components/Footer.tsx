@@ -1,7 +1,7 @@
 // components/Footer.tsx
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/navigation/LocalizedLink';
 import { FooterLogo } from './footer/FooterLogo';
 import { SocialLinks } from './footer/SocialLinks';
 import { useLanguage } from '@/lib/context/LanguageContext';

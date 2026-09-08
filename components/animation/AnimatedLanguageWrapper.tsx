@@ -16,7 +16,7 @@ export const AnimatedLanguageWrapper = ({ children }: AnimatedLanguageWrapperPro
       <AnimatePresence mode="wait">
         <motion.div
           key={language}
-          initial={{ opacity: 0 }}
+          initial={false}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
@@ -29,7 +29,7 @@ export const AnimatedLanguageWrapper = ({ children }: AnimatedLanguageWrapperPro
       <AnimatePresence>
         <motion.div
           key={`overlay-${language}`}
-          initial={{ opacity: 0 }}
+          initial={false}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}

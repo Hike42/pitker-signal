@@ -1,75 +1,25 @@
 'use client';
-
-import React, { createContext, useContext, ReactNode, useState, useEffect } from 'react';
+import { createContext, useContext, type ReactNode } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { translations } from '@/lib/translations';
-
-type Language = keyof typeof translations;
-
+import { localizedPath, type Language } from '@/lib/i18n';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: typeof translations[Language];
 }
-
-export const LanguageContext = createContext<LanguageContextType>({
-  language: 'en',
-  setLanguage: () => {},
-  t: translations.en,
-});
-
-interface LanguageProviderProps {
-  children: ReactNode;
-}
-
-export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  const [language, setLanguage] = useState<Language>('en');
-  const [isInitialized, setIsInitialized] = useState(false);
-
-  useEffect(() => {
-    // Récupérer la langue sauvegardée
-    const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && savedLanguage in translations) {
-      setLanguage(savedLanguage);
-    } else {
-      // Détecter la langue du navigateur
-      const browserLanguage = navigator.language.split('-')[0] as Language;
-      if (browserLanguage in translations) {
-        setLanguage(browserLanguage);
-      }
-    }
-    setIsInitialized(true);
-  }, []);
-
-  useEffect(() => {
-    if (isInitialized) {
-      localStorage.setItem('language', language);
-    }
-  }, [language, isInitialized]);
-
-  const handleSetLanguage = (newLanguage: Language) => {
-    if (newLanguage in translations) {
-      setLanguage(newLanguage);
-    }
-    // Si la langue n'est pas supportée, on ignore silencieusement
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+export function LanguageProvider({ children, language }: { children: ReactNode; language: Language }) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const setLanguage = (next: Language) => {
+    if (next === language) return;
+    router.push(localizedPath(pathname, next) + window.location.search + window.location.hash);
   };
-
-  return (
-    <LanguageContext.Provider 
-      value={{ 
-        language, 
-        setLanguage: handleSetLanguage, 
-        t: translations[language] 
-      }}
-    >
-      {children}
-    </LanguageContext.Provider>
-  );
-};
-
-export const useLanguage = () => {
+  return <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>{children}</LanguageContext.Provider>;
+}
+export function useLanguage() {
   const context = useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error('useLanguage doit être utilisé à l\'intérieur d\'un LanguageProvider');
-  }
+  if (!context) throw new Error('useLanguage doit être utilisé dans un LanguageProvider');
   return context;
-}; 
+}
