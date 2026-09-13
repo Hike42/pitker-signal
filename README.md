@@ -29,7 +29,7 @@ Les pages françaises n’ont pas de préfixe. Les versions anglaises sont sous 
 
 Logo et étoile PITKER d’origine. Bleu `#003769`, rouge `#E63237`, blanc et gris. Les textes institutionnels, biographies, e-mails et adresse proviennent du site existant. Les textes éditoriaux proviennent exclusivement du site d’origine ; seuls quelques libellés courts de navigation peuvent différer. Aucun sélecteur de direction artistique dans le site client.
 
-Prototype de présentation avec `noindex,nofollow`. Les liens e-mail ouvrent une messagerie ; aucune demande n’est envoyée automatiquement. La page Contact charge la carte Google Maps avec NEXT_PUBLIC_GOOGLE_MAPS_API_KEY et conserve un lien vers Google Maps. Une carte OpenStreetMap prend le relais si le service Google est indisponible. Les contenus légaux ont été repris de l’existant. Les polices sont chargées depuis Google Fonts.
+Prototype de présentation avec `noindex,nofollow`. Les liens e-mail ouvrent une messagerie ; aucune demande n’est envoyée automatiquement. La page Contact affiche un plan SVG local des rues OpenStreetMap et conserve un lien externe vers Google Maps. Aucun service de cartographie ni clé API n’est appelé au chargement. Les contenus légaux ont été repris de l’existant. Les polices sont chargées depuis Google Fonts.
 
 ## Vérifications
 
@@ -46,6 +46,6 @@ Les tests vérifient le rendu serveur des vingt pages, les langues, l’identit�
 
 Branche `main`. Dépôt indépendant : git@github.com:Hike42/pitker-signal.git. Les fichiers .env.local restent exclus de Git. Aucun déploiement ni envoi au client n’est réalisé automatiquement.
 
-## Configuration de la carte
+## Plan de localisation
 
-Configurer `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` dans `.env.local` avant le build, ou dans les variables de l’hébergement. Le fichier local a été repris du projet d’origine et n’est pas versionné. La clé publique doit autoriser le domaine de présentation côté Google.
+Le plan `public/design/pitker-street-plan.svg` est un asset local construit à partir des rues OpenStreetMap (données © OpenStreetMap contributors, ODbL). Il est servi sans JavaScript de cartographie, sans clé API et sans requête externe. L’étoile provient du favicon original PITKER. L’attribution est visible sous le plan. Données extraites le 13 septembre 2026 ; plan simplifié de localisation, sans navigation interactive.

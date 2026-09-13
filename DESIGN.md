@@ -21,4 +21,4 @@ Les portraits des associés et les images sectorielles sont repris du projet ini
 
 Build de production et vérification TypeScript réussis. ESLint réussi. 21 tests HTTP réussis, incluant les 20 URL françaises et anglaises, les liens principaux, les contacts, les redirections et les pages inconnues. Vérification de l’indépendance du dépôt et de ses ressources.
 
-La mise en page est responsive et prévoit la réduction des animations. Carte Google Maps vérifiée en chargement réel dans Chromium sur les trois sites : carte interactive chargée, contrôles visibles, aucune erreur d’authentification Google.
+La mise en page est responsive et prévoit la réduction des animations. Plan de rues SVG local, étoile PITKER et attribution OpenStreetMap ; aucun appel à un service de cartographie au chargement.
