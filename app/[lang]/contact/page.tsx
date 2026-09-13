@@ -1,16 +1,4 @@
+import Site from '@/components/design/Site';
 import { pageMetadata } from '@/lib/page-metadata';
-import MainLayout from '@/components/layouts/MainLayout';
-import TeamSection from '@/components/contact/TeamSection';
-import LocationSection from '@/components/contact/LocationSection';
-
-export default function ContactPage() {
-  return (
-    <MainLayout>
-      <TeamSection />
-      <LocationSection />
-    </MainLayout>
-  );
-}
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
-  return pageMetadata("/contact", (await params).lang);
-}
+export default function Page({ params }: { params: Promise<{lang:string}> }) { return <Site params={params} path="/contact"/>; }
+export async function generateMetadata({params}:{params:Promise<{lang:string}>}) { return { ...pageMetadata("/contact",(await params).lang), robots: { index:false, follow:false } }; }

@@ -1,11 +1,11 @@
 {
-  "name": "pitker",
+  "name": "pitker-signal",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack --hostname localhost --port 3222",
     "build": "next build --webpack",
-    "start": "next start",
+    "start": "next start --hostname localhost --port 3222",
     "lint": "eslint .",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "playwright test",

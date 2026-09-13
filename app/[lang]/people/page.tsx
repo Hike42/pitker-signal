@@ -1,14 +1,4 @@
+import Site from '@/components/design/Site';
 import { pageMetadata } from '@/lib/page-metadata';
-import MainLayout from '@/components/layouts/MainLayout';
-import PartnersSection from '@/components/people/PartnersSection';
-
-export default function Page() {
-  return (
-    <MainLayout>
-      <PartnersSection />
-    </MainLayout>
-  );
-}
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
-  return pageMetadata("/people", (await params).lang);
-}
+export default function Page({ params }: { params: Promise<{lang:string}> }) { return <Site params={params} path="/people"/>; }
+export async function generateMetadata({params}:{params:Promise<{lang:string}>}) { return { ...pageMetadata("/people",(await params).lang), robots: { index:false, follow:false } }; }

@@ -1,56 +1,47 @@
-# PITKER
+# PITKER — Signal
 
-Site vitrine bilingue construit avec Next.js 16 (App Router), React 19, TypeScript et Tailwind CSS 3.
+Site de présentation indépendant de la direction artistique **Signal**. Ce dépôt contient son code, ses ressources et son historique Git. Il ne dépend d’aucun autre dossier PITKER.
 
-## Installation
+## Présentation locale
 
-Node.js 24 LTS recommandé (`.nvmrc`), minimum 22.12.
+Node.js 24 ou supérieur.
 
 ```sh
-nvm install
-nvm use
 npm ci
-cp .env.example .env.local
 npm run dev
 ```
 
-Ne remplacez pas un `.env.local` existant : ajoutez seulement les variables manquantes.
-`NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` est facultative. Sans clé ou si le service échoue, la page contact conserve l’adresse et un lien vers Google Maps. Restreindre la clé aux domaines du site dans Google Cloud.
+Ouvrir **http://localhost:3222**. Le port est propre à cette proposition afin de pouvoir ouvrir les trois sites simultanément.
 
-## Langues et référencement
+## Pages
 
-Les URL françaises restent sans préfixe (`/contact`). Les pages anglaises sont sous `/en` (`/en/contact`). L’URL détermine le contenu, la langue HTML et les métadonnées dès le rendu serveur, sans détection navigateur ni localStorage. Le sélecteur conserve le chemin, la recherche et l’ancre ; les liens internes conservent la langue.
+- Accueil
+- Le cabinet : `/what-we-do`
+- Les associés et leurs biographies : `/people`
+- Expertises : `/practices`
+- Pages Life Sciences, Industrie, Private Equity et CEO Search
+- Contact : `/contact`
+- Mentions légales : `/mentions-legales`
 
-`proxy.ts` réécrit les URL françaises vers le segment interne `[lang]`. `/fr/*` redirige vers l’URL française publique ; `/en/legal-notice` redirige vers `/en/mentions-legales`.
+Les pages françaises n’ont pas de préfixe. Les versions anglaises sont sous `/en`. Le sélecteur de langue conserve la page, les paramètres et l’ancre.
 
-- `app/[lang]/` : pages et layout, prérendus pour les deux langues.
-- `lib/i18n.ts` : langues, chemins et routes du sitemap.
-- `lib/translations/` : contenus français et anglais.
-- `lib/page-metadata.ts` : titres, descriptions, canonical et hreflang par page.
-- `constants/metadata.ts` : identité et données structurées communes.
-- `components/` : sections du site et navigation.
+## Identité et présentation
 
-## Vérification
+Logo et étoile PITKER d’origine. Bleu `#003769`, rouge `#E63237`, blanc et gris. Les textes institutionnels, biographies, e-mails et adresse proviennent du site existant. Les accroches de présentation sont des propositions éditoriales. Aucun sélecteur de direction artistique dans le site client.
+
+Prototype de présentation avec `noindex,nofollow`. Les liens e-mail ouvrent une messagerie ; aucune demande n’est envoyée automatiquement. L’accès à Google Maps est un lien explicite. Les contenus légaux ont été repris de l’existant. Les polices sont chargées depuis Google Fonts.
+
+## Vérifications
 
 ```sh
 npm run lint
 npm run typecheck
 npm run build
-npx playwright install chromium
 npm test
-# Ou toute la chaîne (Chromium doit être installé) :
-npm run check
 ```
 
-Les tests utilisent le build de production sur le port 3100 : rendu serveur et SEO des 20 URL, changements de langue, navigation mobile, carte indisponible, redirections et sitemap. Ils ne nécessitent pas de clé Google Maps réelle ; la CI utilise une valeur fictive et les tests interceptent le service. GitHub Actions exécute ces contrôles et l’audit npm.
+Les tests vérifient le rendu serveur des vingt pages, les langues, l’identité, la navigation et les coordonnées. Ils ne nécessitent pas de navigateur installé.
 
-Le build utilise Webpack pour conserver la compatibilité de `@next/bundle-analyzer` (`ANALYZE=true npm run build`). Le développement utilise Turbopack. ESLint reste en version 9, compatible avec les peer dependencies de `eslint-plugin-react`. Tailwind reste en version 3 pour préserver le rendu avant la refonte graphique.
+## Git
 
-## Production
-
-```sh
-npm run build
-npm start
-```
-
-Configurer Node.js 24 et les variables publiques dans l’hébergement avant le build. La police Sen est téléchargée par `next/font` pendant le build, qui nécessite donc un accès à Google Fonts. Aucun déploiement n’est effectué par le workflow de qualité.
+Branche `main`. Dépôt local indépendant, sans remote configuré. Aucun déploiement ni envoi au client n’est réalisé automatiquement.

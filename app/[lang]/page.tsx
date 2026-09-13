@@ -1,23 +1,4 @@
+import Site from '@/components/design/Site';
 import { pageMetadata } from '@/lib/page-metadata';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { HeroSection } from '@/components/home/HeroSection';
-import { PracticesSection } from '@/components/home/PracticesSection';
-import { GetConnectedSection } from '@/components/home/GetConnectedSection';
-
-export default function Page() {
-  return (
-    <main className="flex flex-col min-h-screen">
-      <Navbar />
-      <div className="flex-grow">
-        <HeroSection />
-        <PracticesSection />
-        <GetConnectedSection />
-      </div>
-      <Footer />
-    </main>
-  );
-}
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
-  return pageMetadata("/", (await params).lang);
-}
+export default function Page({ params }: { params: Promise<{lang:string}> }) { return <Site params={params} path="/"/>; }
+export async function generateMetadata({params}:{params:Promise<{lang:string}>}) { return { ...pageMetadata("/",(await params).lang), robots: { index:false, follow:false } }; }
