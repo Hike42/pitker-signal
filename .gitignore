@@ -43,3 +43,6 @@ next-env.d.ts
 !.env.example
 /playwright-report/
 /test-results/
+
+# Netlify local build artifacts and site linkage
+/.netlify/

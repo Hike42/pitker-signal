@@ -8,6 +8,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  poweredByHeader: false,
   outputFileTracingRoot: path.join(__dirname),
   images: {
     remotePatterns: [
@@ -47,12 +48,12 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: `
               default-src 'self';
-              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com;
+              script-src 'self' 'unsafe-inline' ${process.env.NODE_ENV === 'development' ? "'unsafe-eval'" : ''};
               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
               img-src 'self' data: https:;
               font-src 'self' https://fonts.gstatic.com;
-              connect-src 'self' https://api.microlink.io https://*.googleapis.com https://*.gstatic.com https://*.google.com;
-              frame-src 'self' https://www.openstreetmap.org;
+              connect-src 'self';
+              frame-src 'none';
               object-src 'none';
               base-uri 'self';
               form-action 'self';

@@ -4,7 +4,7 @@ export const siteMetadata = {
   title: "PITKER | Executive Search & Leadership Advisory",
   titleTemplate: "%s",
   description: "PITKER est un cabinet de conseil en recrutement de dirigeants de premier plan, spécialisé dans l'executive search et le leadership advisory. Experts en recrutement dans les secteurs de la santé, du private equity et de l'industrie à Paris et à l'international.",
-  siteUrl: "https://pitker.fr",
+  siteUrl: (process.env.SITE_URL || process.env.DEPLOY_PRIME_URL || process.env.URL || "http://localhost:3222").replace(/\/$/, ""),
   keywords: [
     "executive search",
     "recrutement dirigeants",

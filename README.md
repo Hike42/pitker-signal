@@ -49,3 +49,15 @@ Branche `main`. Dépôt indépendant : git@github.com:Hike42/pitker-signal.git. 
 ## Plan de localisation
 
 Le plan `public/design/pitker-street-plan.svg` est un asset local construit à partir des rues OpenStreetMap (données © OpenStreetMap contributors, ODbL). Il est servi sans JavaScript de cartographie, sans clé API et sans requête externe. L’étoile provient du favicon original PITKER. L’attribution est visible sous le plan. Données extraites le 13 septembre 2026 ; plan simplifié de localisation, sans navigation interactive.
+
+## Netlify
+
+`netlify.toml` fixe le build `npm run build`, le dossier `.next` et Node 24. L’adaptateur OpenNext est détecté et maintenu automatiquement par Netlify : ne pas ajouter de plugin historique, de redirection SPA `/* /index.html 200`, ni d’export statique.
+
+Les photographies utilisent `next/image` avec des tailles adaptatives et le CDN Images Netlify. Next.js conserve la gestion du cache HTML et des assets ; aucun cache permanent n’est forcé sur les pages. La protection des sessions pendant les redéploiements est activée via `NETLIFY_NEXT_SKEW_PROTECTION`.
+
+Les URL de métadonnées et du sitemap utilisent `SITE_URL` si fourni, sinon `DEPLOY_PRIME_URL` / `URL` injectés par Netlify. Les maquettes restent en `noindex,nofollow` pour la présentation client.
+
+Le plan de contact est un SVG local avec attribution OpenStreetMap. Aucune clé Maps n’est nécessaire ; les anciennes variables Maps peuvent être retirées dans Netlify. Les liens d’itinéraire ne s’ouvrent qu’au clic.
+
+Vérification locale : `npm run check` avec Node 24 ou ultérieur. Une modification poussée sur `main` déclenche le déploiement si le dépôt est connecté à Netlify. Après déploiement, vérifier `/`, `/en`, `/contact`, la redirection `/fr/contact` et une page métier, ainsi que le chargement des images.

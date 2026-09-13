@@ -1,3 +1,5 @@
+/* The local SVG is already resolution-independent and needs no image CDN. */
+/* eslint-disable @next/next/no-img-element */
 import type { Language } from '@/lib/i18n';
 import { translations } from '@/lib/translations';
 
