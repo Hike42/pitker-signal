@@ -32,7 +32,8 @@ export default function ContactMap({ lang }: { lang: Language }) {
   useEffect(() => {
     let disposed = false;
     let map: google.maps.Map | undefined;
-    let marker: google.maps.Circle | undefined;
+    const circles: google.maps.Circle[] = [];
+    const frames: number[] = [];
     let listener: google.maps.MapsEventListener | undefined;
     const fallback = () => { if (!disposed) setState('fallback'); };
     failures.add(fallback);
@@ -41,15 +42,35 @@ export default function ContactMap({ lang }: { lang: Language }) {
     loadMaps(key).then(() => {
       if (disposed || !container.current || authenticationFailed) { fallback(); return; }
       const center = { lat: 48.875018, lng: 2.312111 };
-      map = new google.maps.Map(container.current, { center, zoom: 16, mapTypeControl: false, streetViewControl: true, fullscreenControl: true, zoomControl: true, gestureHandling: 'cooperative', clickableIcons: false });
-      marker = new google.maps.Circle({ center, radius: 12, map, fillColor: '#E63237', fillOpacity: 1, strokeColor: '#FFFFFF', strokeWeight: 2 });
+      map = new google.maps.Map(container.current, {
+        center, zoom: 15, disableDefaultUI: true, zoomControl: true,
+        gestureHandling: 'cooperative', clickableIcons: false,
+        styles: [
+          { featureType: 'poi', stylers: [{ visibility: 'off' }] },
+          { featureType: 'transit', stylers: [{ visibility: 'off' }] },
+        ],
+      });
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      [150, 100, 50].forEach((radius, index) => {
+        const circle = new google.maps.Circle({ center, radius, map, strokeColor: '#003769', strokeOpacity: 0.7, strokeWeight: 1, fillOpacity: 0, clickable: false });
+        circles.push(circle);
+        if (reducedMotion) return;
+        const animate = (time: number) => {
+          if (disposed) return;
+          circle.setRadius(radius + Math.sin(time / 1000) * 20);
+          frames[index] = requestAnimationFrame(animate);
+        };
+        frames[index] = requestAnimationFrame(animate);
+      });
+      circles.push(new google.maps.Circle({ center, radius: 25, map, strokeWeight: 0, fillColor: '#E63237', fillOpacity: 1, clickable: false }));
       listener = google.maps.event.addListenerOnce(map, 'idle', () => { if (!disposed && !authenticationFailed) setState('google'); });
     }).catch(fallback);
     const timer = window.setTimeout(() => { if (!disposed) setState(current => current === 'loading' ? 'fallback' : current); }, 20000);
-    return () => { disposed = true; failures.delete(fallback); window.clearTimeout(timer); listener?.remove(); marker?.setMap(null); if (map) google.maps.event.clearInstanceListeners(map); };
+    return () => { disposed = true; failures.delete(fallback); window.clearTimeout(timer); listener?.remove(); frames.forEach(cancelAnimationFrame); circles.forEach(circle => { google.maps.event.clearInstanceListeners(circle); circle.setMap(null); }); if (map) google.maps.event.clearInstanceListeners(map); };
   }, []);
   return <div className="contact-map" data-map-state={state} aria-label={translations[lang].contact.location.title}>
     <div className="google-map-canvas" ref={container} hidden={state === 'fallback'} />
+    <div className="map-brand-shade" aria-hidden="true" />
     {state === 'loading' && <p className="map-loading" role="status">{lang === 'fr' ? 'Retrouvez-nous au cœur de Paris' : 'Find us in the heart of Paris'}</p>}
     {state === 'fallback' && <iframe title={translations[lang].contact.location.title} src="https://www.openstreetmap.org/export/embed.html?bbox=2.303111%2C48.870518%2C2.321111%2C48.879518&layer=mapnik&marker=48.875018%2C2.312111" loading="eager" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />}
   </div>;
