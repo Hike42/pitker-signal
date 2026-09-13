@@ -15,10 +15,10 @@ Une marque de conseil affirmée : bleu PITKER, typographie Manrope monumentale, 
 
 Aucune image de synthèse spécifique : les formes décoratives sont réalisées en CSS, l’étoile et les photographies proviennent du site existant.
 
-Les portraits des associés et les images sectorielles sont repris du projet initial. Les documents juridiques et les coordonnées sont également repris de l’existant. Les accroches de la nouvelle direction sont des propositions éditoriales.
+Les portraits des associés et les images sectorielles sont repris du projet initial. Les documents juridiques et les coordonnées sont également repris de l’existant. Les accroches inventées ont été retirées. Tous les contenus éditoriaux sont repris du site d’origine, via les traductions et les données des associés. Seuls quelques libellés courts d’interface peuvent différer.
 
 ## Validation de cette version
 
 Build de production et vérification TypeScript réussis. ESLint réussi. 21 tests HTTP réussis, incluant les 20 URL françaises et anglaises, les liens principaux, les contacts, les redirections et les pages inconnues. Vérification de l’indépendance du dépôt et de ses ressources.
 
-La mise en page est responsive et prévoit la réduction des animations. Aucun contrôle visuel automatisé dans un navigateur n’a été effectué dans cette session.
+La mise en page est responsive et prévoit la réduction des animations. Carte Google Maps vérifiée en chargement réel dans Chromium sur les trois sites : carte interactive chargée, contrôles visibles, aucune erreur d’authentification Google.

@@ -6,6 +6,8 @@ for (const lang of ['fr','en']) {
   test(`${lang} ${path}: content, identity and navigation`,async({request})=>{
    const response=await request.get(url);expect(response.status()).toBe(200);
    const html=await response.text();
+   for(const invented of ['Les grandes trajectoires','Le prochain cap est','Une même exigence.','La suite commence par une conversation','Les CV racontent','Notre prochain défi'])expect(html).not.toContain(invented);
+   if(path==='/contact')expect(html).toContain('contact-map');
    expect(html).toContain(`<html lang="${lang}"`);
    expect((html.match(/<h1(?:\s|>)/g)||[]).length).toBe(1);
    expect(html).toContain('alt="PITKER"');

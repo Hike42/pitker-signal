@@ -51,8 +51,8 @@ const nextConfig = {
               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
               img-src 'self' data: https:;
               font-src 'self' https://fonts.gstatic.com;
-              connect-src 'self' https://api.microlink.io https://*.googleapis.com https://*.gstatic.com;
-              frame-src 'self';
+              connect-src 'self' https://api.microlink.io https://*.googleapis.com https://*.gstatic.com https://*.google.com;
+              frame-src 'self' https://www.openstreetmap.org;
               object-src 'none';
               base-uri 'self';
               form-action 'self';
